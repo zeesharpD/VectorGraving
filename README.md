@@ -1,0 +1,2 @@
+# VectorGraving
+This is a set of files that make it possible for a user to typeset music without    any proprietary program or language. The core of these files is a library written    in Scalable Vector Graphics (XML) that contains all of the key elements needed    to notate, engrave, typeset standard music. The secondary files are templates of    staff paper, layed out as simply as possible to begin a new work.
