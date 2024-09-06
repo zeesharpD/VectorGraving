@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Music Notation SVG page 3, New</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="musMan.css" type="text/css">
+  <link rel=icon href=vectorgraving.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <style>
+   /**/
+   img.one5 {margin-left:1.5in;
+   }
+   img#ts {margin:1.5in .5in;
+   }
+   img#tl {margin-top:.375in; margin-left:1.25in;
+   }
+   img.one {margin-left:1in;
+   }
+   img#pt {padding-top:2em;
+   }
+  </style>
+  <!--[if lt IE 9]>
+   <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('article');
+    document.createElement('footer');
+   </script>
+  <![endif]-->
+ </head>
+ 
+ <body>
+  <section>
+   <a class="home" href="../StartHere.htm">Home</a>
+   <h2>Groups Within a Measure</h2>
+   <hr>
+   <div>
+    <p>There are several groups that are not called from the library with an #id,
+     although parts within them do. This page explains why, and how to use them.
+     They are:</p>
+    <ul>
+     <li><a href="#extn">extension line for Roman numerals (for guitar music)</a>
+     <li><a href="#pink">a pinky bar (for guitar music)</a>
+     <li><a href="#trip">a triplet figure symbol</a>
+     <li><a href="#firsec">first and second ending brackets</a>
+     <li><a href="#oct">an octava symbol</a>
+    </ul>
+   </div>
+   <hr>
+   <div>
+    <h3><a id="extn">Extention Line</a></h3>
+    <p>In guitar music, a Roman numeral is typically used to indicate a barred
+     cord. When it is held for a time, a line following it shows for how long.
+     I use a dashed line. Unlike a solid line, when you scale a dashed line
+     the dashes and spaces stretch (or shrink). In addition, there is a separate
+     end marker, so you use a group, and set position and length were needed
+     in the sheet music without referencing the library.</p>
+    <p class="cen">
+     <img src="dash.png" width="430" height="410" alt="music engraving"
+      id="pt"/></p>
+    <pre>
+     <code>
+      &#60;use x="24" y="0" xlink:href="#V"/&#62;
+      &#60;g transform="translate(24,0)"&#62;&#60;!-- dashed line; same coordinates as top note --&#62;
+       &#60;line x1="42" y1="-150" x2="180" y2="-150"
+        style="stroke:#665; stroke-dasharray:12,18; stroke-width:3"/&#62;
+       &#60;use x="180" y="-150" xlink:href="#exlnd"/&#62;
+      &#60;/g&#62;
+      &#60;use x="24" y="0" xlink:href="#hanu"/&#62;&#60;use x="24" y="36" xlink:href="#hanu"/&#62;
+      &#60;use x="24" y="60" xlink:href="#hand"/&#62;&#60;use x="24" y="108" xlink:href="#hand"/&#62;
+     </code>
+    </pre>
+    <p>Occasionally, you may want to use the line without the end marker;
+     no need for a 'group'; place and length as needed, but remember; you're
+     now in the measures coordinate grid, not an internal group.</p>
+    <hr>
+    <h3><a id="pink">Pinky Bar</a></h3>
+    <p>What I call a pinky bar is a short bar using a finger other than the index.
+     Barring the first two strings with the little finger comes up fairly often;
+     hence the name. As with the extension line, you set position and length were needed.</p>
+    <p class="cen">
+     <img src="p-bar.png" width="253" height="279" alt="music engraving"/></p>
+    <pre>
+     <code>
+      &#60;g transform="translate(24,12)"&#62;&#60;!-- at top note coords --&#62;
+       &#60;line x1="-21" y1="-132" x2="24" y2="-132" style="stroke:#665; stroke-width:3"/&#62;
+       &#60;use x="-21" y="-132" xlink:href="#pbnd"/&#62;&#60;use x="24" y="-132" xlink:href="#pbnd"/&#62;
+      &#60;/g&#62;
+      &#60;use x="24" y="12" xlink:href="#note"/&#62;&#60;use x="24" y="36" xlink:href="#note"/&#62;
+      &#60;use x="24" y="72" xlink:href="#solnu.5"/&#62;
+     </code>
+    </pre>
+    <hr>
+    <h3><a id="trip">Triplet Symbol</a></h3>
+    <p>The arch of the triplet symbol is treated the same as a slur.
+     The three needs to be adjusted as the arch is rotated and scaled.</p>
+    <p class="cen">
+     <img src="trip.png" width="323" height="194" alt="music engraving"/></p>
+    <pre>
+     <code>
+      &#60;g transform="translate(32,-30)"&#62;
+       &#60;use xlink:href="#triarc" transform="scale(.96,1)"/&#62;
+       &#60;text class="instruct" x="57" y="-33"&#62;3&#60;/text&#62;
+      &#60;/g&#62;
+      &#60;use x="18" y="60" xlink:href="#solnu"/&#62;
+      &#60;use xlink:href="#be" transform="translate(32,-25) scale(.96,1)"/&#62;
+      &#60;use x="66" y="48" xlink:href="#solnu-1"/&#62;&#60;use x="114" y="60" xlink:href="#solnu"/&#62;
+     </code>
+    </pre>
+    <hr>
+    <h3><a id="firsec">First &#38; Second Ending</a></h3>
+    <p>Like the former symbols with lines, first and second ending brackets
+     are in a group to extend the line to whatever length you need (while holding
+     all the parts together). Unlike a dashed line, the second line in this
+     group can be extended by scaling x, if you choose.</p>
+    <p class="cen">
+     <img src="1_2end.png" width="549" height="68" alt="music engraving"/></p>
+    <pre>
+     <code>
+      &#60;g transform="translate(0,0)"&#62;&#60;!-- first ending; note coords here --&#62;
+       &#60;line x1="-42" y1="42" x2="-42" y2="-1.5" transform="translate(0,-150)"
+        style="stroke:#333;stroke-width:3;shape-rendering:crispEdges"/&#62;
+       &#60;line x1="-42" y1="0" x2="200" y2="0" transform="translate(0,-150)"
+        style="stroke:#333;stroke-width:3;shape-rendering:crispEdges"/&#62;&#60;!-- second line extended where needed --&#62;
+       &#60;text class="repno" x="-33" y="-117"&#62;1.&#60;/text&#62;
+      &#60;/g&#62;
+     </code>
+    </pre>
+    <hr>
+    <h3><a id="oct">Octava</a></h3>
+    <p>Use of the octava is no different than other symbols with lines.</p>
+    <p class="cen">
+     <img src="octava.png" width="323" height="242" alt="music engraving"/></p>
+    <pre>
+     <code>
+      &#60;g transform="translate(50,36)"&#62;&#60;!-- octava; note coords here --&#62;
+       &#60;polyline points="-21,42 -21,0 39,0" transform="translate(0,-150)"
+        style="fill:none;stroke:#333;stroke-width:3;shape-rendering:crispEdges"/&#62;
+       &#60;text class="repno" x="-18" y="-117"&#62;8va&#60;/text&#62;
+       &#60;line x1="57" y1="-150" x2="200" y2="-150"
+        style="stroke:#333;stroke-dasharray:12,18;stroke-width:3"/&#62;
+       &#60;use x="200" y="-150" xlink:href="#exlnd"/&#62;
+      &#60;/g&#62;
+     </code>
+    </pre>
+   </div>
+   <hr>
+   <a href="musMan-4.htm">Next&#160;<b class="arrow">&#8658;</b></a>
+   <a class="prev"
+    href="musMan-2.htm"><b class="arrow">&#8656;</b>&#160;Previous</a>
+   <hr>
+   <footer>Copyright &#169; 2015 Dana Steven Gormel</footer>
+  </section>
+ </body>
+</html>

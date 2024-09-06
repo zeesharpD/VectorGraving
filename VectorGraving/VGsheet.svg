@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="munocss.css"?>
+ 
+<svg version="1.1" width="280" height="50"
+ xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+ xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full">
+ 
+ <title>VectorGraving for Sheet Music</title>
+
+ <metadata>
+  <rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:dc="http://purl.org/dc/terms/">
+   <rdf:Description about="http://www.guitarscripts.heliohost.org/GS3_files/Music_Notation_SVG/ReadMeFirst.htm"
+    dc:created="2015-01-30"
+    dc:creator="Dana Steven Gormel"
+    dc:modified="2015-01-30"
+    dc:rights="&#169; Dana Steven Gormel">
+   </rdf:Description>
+  </rdf:RDF>
+ </metadata>
+ 
+ <defs>
+  
+  <linearGradient id="vgfill" x1="0%" y1="100%" x2="100%" y2="0%">
+   <stop offset="0%" style="stop-color:#333; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#bbb; stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="penfill" x1="0%" y1="0%" x2="0%" y2="90%">
+   <stop offset="0%" style="stop-color:#000; stop-opacity:1"/>
+   <stop offset="100%" style="stop-color:#eee; stop-opacity:1"/>
+  </linearGradient>
+  
+  <desc> my hand letters </desc>
+  <path id="e" class="sig" transform="translate(0,-2)" d="M1.5,10.25
+   C11,10.5 20,6 20,3.25 C20,1 17,.5 15,.5
+   C11,.5 6.25,3.75 6.25,9 C6.25,14.5 17,17 24.5,17
+   C31,17 34,16 34,15"/>
+  <path id="c" class="sig" transform="translate(0,-4)" d="M15,3
+   Q15,.5 13.5,.5 C6.6,.5 1.5,7 1.5,11
+   C1.5,17 7,19 14,19 Q19,19 20.5,17"/>
+  <path id="t" class="sig" transform="translate(0,-26)" d="M6,1.5
+   Q11.5,18 16,41
+   M.5,24.5
+   Q11.5,26 30,24.5"/>
+  <path id="o" class="sig" transform="translate(0,-2)" d="M12,.75
+   C6,.75 .75,5 .75,10.5 C.75,15 4,17 9,17
+   14,17 17.5,13.5,17.5,9 C17.5,6 15,.75 12,.75"/>
+  <path id="r" class="sig" transform="translate(0,-3)" d="M.75,5.5
+   L9.5,18.5 C5,8 8,.75 18.5,.75 Q20,.75 22,1.5"/>
+  <path id="a" class="sig" transform="translate(0,-2)" d="M14.25,1.25
+   V2.25 Q1.5,5.75 1.5,13
+   Q1.5,16.5 5.75,16.5 C11.25,16.5 16.25,12.25 18.5,4.75
+   C15.25,17 23,20 24,18.25"/>
+  <path id="v" class="sig" transform="translate(0,-3)" d="M1,2.25
+   Q5.5,11 7.5,17 Q13.25,8.5 20.5,.75"/>
+  <path id="i" class="sig" transform="translate(0,-8)" d="M1.5,1.5
+   L2.75,3.5 M5.5,9.5 L10.25,22.5"/>
+  <path id="n" class="sig" stroke-linejoin="bevel" transform="translate(0,-1)"
+   d="M1.5,4
+   L6,17 Q8.5,1.5 13,1.5 19,1.5 23,16 H24"/>
+  <path id="g" class="sig" d="M14,1.5
+   C6.5,1.5 1.5,5.5 1.5,10.5 Q1.5,15 7,15 Q12.75,15 19,10.25
+   M16.25,5
+   Q19.5,12.25 23.5,16.25 Q29.5,22.25 29.5,26.5
+   Q29.5,33 19,33 Q13,33 10,31.5"/>
+  
+ </defs>
+ <!--
+ <rect id="border" width="280" height="50"
+  stroke="#9c9" stroke-width="2" fill="none"/>
+  -->
+  
+ <g id="VG" transform="translate(3,15) scale(1)">
+  <path id="V" stroke="#9d9d9d" stroke-width=".25" fill="url(#vgfill)" opacity="1"
+   transform="translate(200,0) scale(.67)"
+   d="M0,9.5
+   L4.5,5 12.25,20.5 Q14.5,25 15,28
+   C19,19 30,2.5 44,1 V1.5 C29,6.5 19.5,25.5 16.5,36
+   H10.75 Q10.25,32 8.25,28 L0,11.5 0,9.5z"/>
+  <path id="G" stroke="#888" stroke-width=".25" fill="url(#vgfill)" opacity="1"
+   transform="translate(223,0) scale(.67)"
+   d="M0,20
+   Q0,15 4,11 L12,3 Q15,0 20.25,0
+   Q25,0 25,3.5 L21,7.5
+   Q18,7.5 17.25,3.5 13,3.5 9.75,6.75 L7.5,9
+   Q5,11.5 5,17 C5,26 12,32 26,32 C32,32 37,28.5 37,27
+   Q37,25 35,25 H23 L27.75,20.25
+   H38 Q42,20.25 42,23 42,24 41,25 L36,30
+   Q30,36 19,36 C7,36 0,30 0,20"/>
+  <g id="pen" transform="translate(95,20) scale(1.1)">
+   <g id="tip" stroke="#555" stroke-width=".25">
+    <path fill="url(#penfill)" d="M0,0
+     Q1.75,-.25 3.5,-2.25 L10,-1.5 V0 H0z"/>
+    <path id="hole" stroke="#000" stroke-width=".25" fill="#555"
+     d="M6,0
+     C6,-.875 8,-.875 8,0 H6z"/>
+   </g>
+   <path id="stylus" stroke="#999" stroke-width=".25" fill="url(#penfill)"
+    d="M10,0
+    V-1.5 C10,-4.5 14,-3 17,-2 Q18.5,-1.5 20,-1.5
+    C23,-1.5 26.5,-3.5 32,-3.5 C37.5,-3.5 45,-1.125 49,-1.125
+    H70 Q79,-1.125 88,-2 C89,-2.08 90,-1 90,0"/>
+   <use xlink:href="#tip" transform="matrix(1,0,0,-1,0,0)"/>
+   <use xlink:href="#stylus" transform="matrix(1,0,0,-1,0,0)"/>
+  </g>
+  <text x="253" y="29" style="font:15px sans-serif;fill:#555">&#8482;</text>
+  <!---->
+  <g transform="translate(6,19) scale(.2)">
+   <use xlink:href="#V" transform="translate(-328,-20) scale(1.5)"/>
+   <use xlink:href="#e"/><use x="36" xlink:href="#c"/><use x="60" xlink:href="#t"/>
+   <use x="93" xlink:href="#o"/><use x="117" xlink:href="#r"/>
+   <use xlink:href="#G" transform="translate(-162,-20) scale(1.5)"/>
+   <use x="222" xlink:href="#r"/><use x="246" xlink:href="#a"/><use x="276" xlink:href="#v"/>
+   <use x="303" xlink:href="#i"/><use x="321" xlink:href="#n"/><use x="354" xlink:href="#g"/>
+  </g>
+  
+ </g>
+  
+</svg>

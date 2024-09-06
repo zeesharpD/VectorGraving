@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+ /* Music Notation library */
+text.finger {font:bold 21px 'futura bk bt',sans-serif; fill:#036;
+}
+text.finger2 {font:bold 21px 'futura bk bt',sans-serif; fill:#630;
+}
+text.barno {font:bold 21px 'futura bk bt',sans-serif; fill:#665;
+}
+text.instruct {font:33px calligrapher,cursive;
+}
+text.pgno {font:39px calligrapher,cursive; fill:#665;
+}
+text.repno {font:italic 39px urwalcuint,serif; fill:#333; letter-spacing:5px;
+}
+ /* 'repnoS' is for systems */
+text.repnoS {font:italic 39px 'calligraph421 bt',serif; fill:#333; letter-spacing:4px;
+}
+text.sx2L {font:39px urwalcuint,serif; fill:#333;
+}
+text.sx2S {font:30px urwalcuint,serif; fill:#333;
+}
+ /* sheet music templates; class '*S' for systems */
+text.title {font:63px calligrapher,cursive; fill:#333;
+}
+.auth {font:48px calligrapher,cursive; fill:#333; /* removed 'text' for last page info group */
+}
+text.msrno {font:bold 30px calligrapher,cursive;
+}
+text.titleS {font-family:'calligraph421 bt',serif; font-size:63px; fill:#333;
+}
+text.authS {font-family:'calligraph421 bt',serif; font-size:48px; fill:#333;
+}
+text.msrnoS {font-family:'calligraph421 bt',serif; font-size:30px; font-weight:bold;
+}
+text.instruct {font-family:calligrapher,cursive; font-size:33px;
+}
+text.sheco {font:30px 'futura medium bt',sans-serif; text-decoration:underline;
+}
+text.sup {font:12px calligrapher,cursive; fill:#333;
+}
+text.supS {font:12px 'calligraph421 bt',serif; fill:#333;
+}
+ /* 'sig' is for my hand writing in VGsheet.svg */
+.sig {stroke:#5f5f5f; stroke-width:3; stroke-linecap:round; fill:none;
+}

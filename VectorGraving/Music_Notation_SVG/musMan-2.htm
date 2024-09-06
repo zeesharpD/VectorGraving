@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Music Notation SVG page 2</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="musMan.css" type="text/css">
+  <link rel=icon href=vectorgraving.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <style>
+   /**/
+   img.one5 {margin-left:1.5in;
+   }
+   img#ts {margin:1.5in .5in;
+   }
+   img#tl {margin-top:.375in; margin-left:1.25in;
+   }
+   img.one {margin-left:1in;
+   }
+   img#pt {padding-top:2em;
+   }
+  </style>
+  <!--[if lt IE 9]>
+   <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('article');
+    document.createElement('footer');
+   </script>
+  <![endif]-->
+ </head>
+ 
+ <body>
+  <section>
+   <a class="home" href="../StartHere.htm">Home</a>
+   <h2>Beams, Slurs and Ties</h2>
+   <hr>
+   <div>
+    <h3>Beams</h3>
+    <p>The default beam in the library is simply a rectangle 100px by 15px.
+     Since they will usually need to be transformed for angle and scale,
+     they have additional attributes;</p>
+    <pre>
+     <code>
+      &#60;use xlink:href="#be" transform="translate(x,y) skewY(n&#176;) scale(1,1)"&#62;
+     </code>
+    </pre>
+    <p>The 'translate' gives the beam it's own 0,0 within the measure,
+     so that the transforms are centered on the upper-left hand corner of the beam;
+     not of the measure. The 'skewY' is the angle in degrees the beam will be;
+     default is clockwise, a hyphen(minus) '-' is counter clockwise.
+     The 'scale' is the length it will be. The number 100 is probably the most
+     convenient number for a default value: if the length it needs to reach is
+     257px, then you scale(2.57,1); or 89px: scale(.89,1).
+    </p>
+   </div>
+   <article>
+    <p>On a standard stem<span class="purple">*</span> (up), the beam is placed
+     +14x,-85y of the note coordinates. The code for the image at right is:</p>
+    <pre>
+     <code>
+      &#60;use x="50" y="48" xlink:href="#solnu"/&#62;&#60;!-- note --&#62;
+      &#160;&#60;!-- beam --&#62;
+      &#60;use xlink:href="#be" transform="translate(64,-37)
+       skewY(0) scale(1.25,1)"/&#62;
+      &#60;use x="175" y="48" xlink:href="#solnu"/&#62;&#60;!-- note --&#62;
+     </code>
+    </pre>
+    <p class="info">
+     <span class="purple">*</span> The library contains notes with long and short stems.
+    </p>
+   </article>
+   <aside>
+    <img src="be-1.png" width="230" height="206" alt="music engraving" class="one5"/>
+   </aside>
+   <hr>
+   <article>
+    <p>To calculate the angle [skewY()] of a beam, divide the interval of the notes
+     by the distance between them: 12 &#247; 114 = .105, which is the tangent
+     of the angle. With a scientific calculator, invert the tan to degrees: 6.01&#176;.</p>
+    <pre>
+     <code>
+      &#60;use x="50" y="48" xlink:href="#solnu"/&#62;
+      &#60;use xlink:href="#be" transform="translate(64,-37)
+       skewY(-6.01) scale(1.14,1.01)"/&#62;
+      &#60;use x="164" y="36" xlink:href="#solnu"/&#62;
+     </code>
+    </pre>
+    <p>Notice that the scale 'y' has increased also. A very small amount for this angle,
+     but important to know why.</p>
+    <p>As the angle increases the beam becomes narrower. The beam on the left has
+     no 'y' scaling. The beam on the right has been compensated. To calculate
+     the proportion of scale for 'y':<br>
+     15 &#247; cos(angle&#176;) &#247; 15, or:<br>
+     15 &#247; [cos(6.01&#176;)=15.08] &#247; 15 = 1.01; for the upper example, and<br>
+     15 &#247; [cos(35.75&#176;)=18.48] &#247; 15 = 1.23; for this example.</p>
+    <pre>
+     <code>
+      &#60;use x="200" y="84" xlink:href="#solnu"/&#62;
+      &#60;use xlink:href="#be"
+       transform="translate(214,-1) skewY(-35.75) scale(1,1.23)"/&#62;
+      &#60;use x="300" y="12" xlink:href="#solnu"/&#62;
+     </code>
+    </pre>
+   </article>
+   <aside>
+    <img src="be-2.png" width="230" height="206" alt="music engraving" class="one5"/>
+    <img src="be-3.png" width="350" height="225" alt="music engraving" id="ts"/>
+   </aside>
+   <div>
+    <p>Most of the time a skewY() and a scale(,) are all you need for beams
+     (8th, 16th, 32nd). The exceptions are a dotted eighth note followed by a
+     sixteenth note, or a double dotted eighth note followed by a thirty second, etc.,
+     and the reverse of these; <i>but only for notes with stem down.</i>
+     This is because beams with partial beams need to be flipped. There is no flip()
+     transform in SVG, but there is transform="matrix(1,0,0,1,0,0)".</p>
+    <p>It would be more comfortable to take the blue pill, but the red pill will
+     show you how far down the rabbit hole goes.</p>
+    <p>A matrix can execute all of the transforms together:<br>
+     scale, translate, skewX, skewY, rotate<br>
+     or whichever ones you need.</p>
+    <ul>
+     <li>transform="matrix(1,0,0,1,0,0)" : this changes nothing
+     <li>(<span class="red">-1</span>,0,0,1,0,0)&nbsp;&nbsp; : this flips x
+     <li>(1,0,0,<span class="red">-1</span>,0,0)&nbsp;&nbsp; : this flips y
+     <li>(<span class="red">2</span>,0,0,<span class="red">2</span>,0,0)
+      &nbsp;&nbsp;&nbsp;
+      : this scales x and y [use whatever numbers you need]
+     <li>(1,0,0,1,<span class="red">24,6</span>)&nbsp; : this translates
+     <li>(1,0,<span class="red">.25</span>,1,0,0)
+      : this skews x [the number needs to be the <u>tangent</u> of the angle you want]
+     <li>(1,<span class="red">.25</span>,0,1,0,0)
+      : this skews y [using a 1 or -1 will give a 45&deg; angle]
+     <li>(<span class="red">cos,sin,-sin,cos,</span>0,0)
+      : this rotates clockwise; move the minus to the first sin for counter clockwise
+    </ul>
+    <p>Notice that with matrix you use tangent rather than angle for skews.
+     In addition, you must multiply the tangent of skewY by the scale of 'x' to get
+     the correct angle. I have yet to learn how to use 'rotate' in combination with
+     the other properties, but you can still use rotate() and matrix().
+     <i>Always rotate first!</i><br>
+     Also, you must add 15px,y to the position of a
+     flipped beam (the width of a beam).
+    </p>
+   </div>
+   <article>
+    <p>Here it is at work:</p>
+    <pre>
+     <code>
+      &#60;use x="50" y="24" xlink:href="#solnd"/&#62;
+      &#60;use x="50" y="33" xlink:href="#dot"/&#62;
+      &#60;use xlink:href="#be.1r" transform="matrix(1.5,.24,0,-1.01,36,109)"/&#62;
+      &#60;use x="200" y="48" xlink:href="#solnd"/&#62;
+     </code>
+    </pre>
+   </article>
+   <aside>
+    <img src="be-4.png" width="250" height="180" alt="music engraving" id="tl"/>
+   </aside>
+   <hr>
+   <div>
+    <h3><a id="slur">Slurs and Ties</a></h3>
+    <p>Unlike beams, slurs are rotated for angle. As with beams, the default
+     slur/tie is 100px long, and horizontal. It's x,y 0,0 is the left point.
+     The instructions for flipping a beam are the same for slur/tie's.</p>
+    <hr>
+   </div>
+   <article>
+    <p>Placement of slurs/ties is partly a matter of taste. I've seen some sheet music
+    where they touch the notes, and I don't like the look of that. At right is
+    x+24px, y-18px, and a scale of x1.14; 12px before the next notes center
+    (150-24-12=114). This works well for note to note, stem up, but different
+    arrangements need different placement.</p>
+    <pre>
+     <code>
+      &#60;use x="50" y="72" xlink:href="#solnu"/&#62;
+      &#60;use xlink:href="#slr"
+       transform="translate(74,54) rotate(0) scale(1.14,1)"/&#62;
+      &#60;use x="200" y="72" xlink:href="#solnu"/&#62;
+     </code>
+    </pre>
+   </article>
+   <aside>
+    <img src="slr-1.png" width="250" height="180" alt="music engraving" class="one"/>
+   </aside>
+   <article>
+    <p>A slur from stem to stem is the easiest to place. From note to note it will
+     need to be shortened at both ends.</p>
+    <pre>
+     <code>
+      &#60;use x="50" y="36" xlink:href="#solnu"/&#62;
+      &#60;use xlink:href="#be"
+       transform="translate(64,-49) skewY(16.07) scale(1.25,1.04)"/&#62;
+      &#60;use xlink:href="#slr"
+       transform="translate(68,-56) rotate(16.07) scale(1.28,1)"/&#62;
+      &#60;use x="175" y="72" xlink:href="#solnu"/&#62;
+     </code>
+    </pre>
+   </article>
+   <aside>
+    <img src="slr-2.png" width="266" height="220" alt="music engraving" class="one"/>
+   </aside>
+   <hr>
+   <a href="musMan-3.htm">Next&#160;<b class="arrow">&#8658;</b></a>
+   <a class="prev"
+    href="musMan-1.htm"><b class="arrow">&#8656;</b>&#160;Previous</a>
+   <hr>
+   <footer>Copyright &#169; 2015 Dana Steven Gormel</footer>
+  </section>
+ </body>
+</html>

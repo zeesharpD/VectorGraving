@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Start File for Vector Graving</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel=icon href="vectorgraving.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <style>
+   /**/
+   body {margin:2em 3em; font:normal 17px sans-serif; color:#410;
+    background:#ffe;
+   }
+   h1 {text-align:center; color:#366; border-bottom:2px solid #bcc;
+    padding:1em; text-shadow:5px 5px 4px #777;
+   }
+   h2,h3 {text-align:center; color:#366;
+    padding:.5em; text-shadow:4px 4px 3px #777;
+   }
+   p {padding:.4em;
+   }
+   a:link {color:#933;
+   }
+   a:visited {color:#933;
+   }
+   a:hover {color:#393;
+   }
+   hr {color:#699; background:#699; border:0; width:40%; height:2px;
+    margin-top:2em; box-shadow:2px 2px 2px #999;
+   }
+   div {display:table-row;
+   }
+   aside {display:table-cell; border:1px solid #bcc; color:#147; 
+    padding:.3em; margin:0 12px 1px 0; clear:left; width:33%; height:auto;
+   }
+   section {border:1px solid #bcc; display:table-cell; width:67%; height:auto;
+    padding:.3em; margin:0 2px 1px;
+   }
+   .sig {stroke:#5f5f5f; stroke-width:3; stroke-linecap:round; fill:none;
+   } /* for #VG svg */
+   svg {margin:3% 0 0 15%;
+   }
+  </style>
+  <!--[if lt IE 9]>
+   <script>
+    document.createElement('section');
+    document.createElement('aside');
+   </script>
+  <![endif]-->
+  
+  <!--
+  <svg width="" height="" xmlns="http://www.w3.org/2000/svg">
+  </svg>
+   <g transform="translate(,)">
+    <rect width="" height="18"/>
+    <text x="3" y="15"></text>
+   </g>
+  <g id="tp">
+   <image width="2550" height="3300" xlink:href="blank-staff_3-1.svg">
+    <animateTransform attributeName="transform" attributeType="XML"
+     type="scale" values="0;.3;.3;.3;0" dur="8s" fill="freeze"
+    />
+   </image>
+  </g>
+     <text x="9" y="30" class="dsc"></text>
+     <text x="9" y="45" class="dsc"></text>
+     <text x="9" y="60" class="dsc"></text>
+     <text x="9" y="75" class="dsc"></text>
+  -->
+ </head>
+ 
+ <body>
+  <h1>Vector Graving SVG Music Notation</h1>
+  <p>Even though there is no Graphical User Interface for this process, the advantages
+   are considerable over a music notation program. It is 100% extensible. There is
+   nothing you cannot have in you're files, or how the symbols are placed. Every existing
+   glyph, symbol, item in the library can be altered to suit yourself. All of the most
+   complex symbols are already in the library. It only takes me a matter of minutes
+   to create the ones that aren't there yet, and I will gladly provide them for you
+   at you're request, while also showing you how easy it is to do you're self.</p>
+  <p>Viewing the files/templates is a matter of choice. Most modern browsers can read
+   SVG files. Whereas I use my default browser for designing glyphs, I use
+   <a href="http://xmlgraphics.apache.org/" target="_blank">Batik</a>
+   for creating sheet music. You will need to install Java to run this
+   program, if you don't already have it.</p>
+  <p>If you don't already have one, I highly recommend getting an advanced text/code
+   editor.
+   <a href="http://www.flos-freeware.ch/" target="_blank">Notepad2</a>
+   is my favorite. I also use
+   <a href="http://www.pnotepad.org/" target="_blank">Programmer's Notepad</a>
+   because you can open multiple files in tabs. There are many others available.
+   Programs such as these make editing code much easier, and the files you will be
+   creating are, after all, text files.</p>
+  <p>Here is a finished PDF:&nbsp;
+   <a href="Fantasy.pdf">Fantasy - Fernando Sor</a><br>
+   Here is the first page of an SVG file:&nbsp;
+   <a href="SamG-1.svg">Samuel Goldenberg - Modest Musorgsky</a></p>
+  <hr>
+  <h2>Contents</h2>
+  <div>
+   <aside>blank2sys_3-1.svg &rarr; blank2sys_5.svg</aside>
+   <section>These are the two staff system templates. The ones with -1
+    are title pages.
+   </section></div>
+  <div>
+   <aside>blank-staff_3-1.svg &rarr; blank-staff_5.svg</aside>
+   <section>These are the single staff templates, also with -1 title pages.
+   </section></div>
+  <div>
+   <aside>music-notasys2.svg<br>
+    music-notation2.svg</aside>
+   <section>These are the system and single staff libraries that the respective<br>
+    templates are linked to.
+   </section></div>
+  <div>
+   <aside><a href="munolib2_index.htm">munolib2_index.htm</a><br>
+    <a href="munolibS_index.htm">munolibS_index.htm</a></aside>
+   <section>These are the indexes for the single staff and system libraries.
+    They are a list of what's in the libraries, the 'id's', and directions
+    for their use.</section></div>
+  <div>
+   <aside>Folder, Music_Notation_SVG</aside>
+   <section>This contains a 'primer' for the process. Open
+    <a href="./Music_Notation_SVG/ReadMeFirst.htm">here.</a>
+   </section></div>
+  <div>
+   <aside><a href="TemplateUse.htm">TemplateUse.htm</a></aside>
+   <section>This is a more detailed guide for using a template.</section></div>
+  <div>
+   <aside><a href="extraHelp.htm">extraHelp.htm</a></aside>
+   <section>This is a more detailed guide for manipulating objects.</section></div>
+  <div>
+   <aside><a href="SVGmus_examples.htm">SVGmus_examples.htm</a></aside>
+   <section>These are visual examples of parts of the library.</section></div>
+  <hr>
+  <p>As a point of clarity, there are many places in the help files that show +x or
+   +y. These are for emphasis, not what is actually written in the code. Only
+   negative numbers require the operator '-', a hyphen, not an actual minus
+   '&minus;' sign. The upper left-hand corner of all blocks or groups
+   is 0,0. Right is positive x. Down is positive y. Left is negative x.
+   Up is negative y.</p>
+  <p>After reviewing an index, the primer, and template usage, open a title page
+   template in both a viewer and a text editor. If you just want to experiment,
+   putting in a few items will not ruin the template. If you intend to keep going,
+   'save as' and the new name you choose. Make whatever changes you like as
+   pointed-out in 'TemplateUse.htm'. Replace the words 'Title', 'sub title', and
+   'Composer', with the actual names. If there is no sub title, delete that line.</p>
+  <h3>Dana Steven Gormel - dastgo9@gmail.com</h3>
+  <svg width="360" height="36" xmlns="http://www.w3.org/2000/svg">
+   <use xlink:href="#VG" xml:base="VGsheet.svg" opacity=".8"
+    transform="translate(0,-18) scale(1.33)"/>
+  </svg>
+ </body>
+</html>

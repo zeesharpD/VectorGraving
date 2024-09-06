@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Music Notation SVG page 1; systems</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="musMan.css" type="text/css"
+   charset="utf-8" media="screen">
+  <link rel=icon href=vectorgraving.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <meta name="Keywords" content="music engraving, music notation, sheet music, svg, source, staff, matrix, glyphs, library, template, index, system">
+  <meta name="Description" content="Music Notation with Scalable Vector Graphics">
+  <meta name="Author" content="Dana Steven Gormel">
+  <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+  <meta name="dcterms.created" content="2014-02-13">
+  <meta name="dcterms.modified" content="2015-09-08">
+  <meta name="dcterms.rights" content="&#169; Dana Steven Gormel">
+  <meta name="dcterms.dateCopyrighted" content="2015-01">
+  <style>
+   pre#sys {margin-left:.75in;}
+  </style>
+  <!--[if IE]>
+   <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('article');
+    document.createElement('footer');
+   </script>
+  <![endif]-->
+ </head>
+ 
+ <body>
+  <section>
+   <h2>System layout</h2>
+   <hr>
+   <article>
+    <p>The first system templates I created are for keyboard. The cleffs and
+     braces are included in the groups. Both staves use the same coordinate
+     system (top line is y=0). Unlike a single staff page, a system is a group
+     in itself with each staff being a group within the system. This makes a more
+     complex template, but the parts are well marked. Keep them intact so navigating
+     the file is easier. Below is a skeleton of a two staff system.
+    </p>
+   </article>
+   <aside>
+    <img width="388" height="294" src="sys-1.png" alt="music engraving"/>
+   </aside>
+   <div>
+    <pre id="sys">
+     <code>
+      &#60;g id="body" transform="translate(180,690) scale(1)"&#62;
+       &#60;g&#62;&#60;desc&#62; system 1-1 &#60;/desc&#62;&#60;!-- indent 216 --&#62;<span class="higrn">system 1 of page 1</span>
+        &#60;use xlink:href="#sys2-1"/&#62;
+        &#60;g&#62;&#60;desc&#62; ........................... staff 1-1 &#60;/desc&#62;<span class="higrn">staff 1 of system 1</span>
+         &#60;g transform="translate(336,0)"&#62;&#60;desc&#62; msr 1-1 &#60;/desc&#62;<span class="higrn">measure 1 of staff 1</span>
+          &#60;!-- ................................. beat 1 --&#62;
+          &#60;!-- ................................. beat 2 --&#62;
+         &#60;/g&#62;
+         &#60;g transform="translate(1281,0)"&#62;&#60;desc&#62; msr 2-1 &#60;/desc&#62;
+          &#60;use xlink:href="#sysbar"/&#62;
+          &#60;!-- ................................. beat 1 --&#62;
+          &#60;!-- ................................. beat 2 --&#62;
+         &#60;/g&#62;
+        &#60;/g&#62;&#60;!-- end of staff --&#62;
+        &#60;g transform="translate(0,240)"&#62;
+        &#60;desc&#62; .............................. staff 2-1 &#60;/desc&#62;<span class="higrn">staff 2 of system 1</span>
+         &#60;g transform="translate(348,0)"&#62;&#60;desc&#62; msr 1-2 &#60;/desc&#62;<span class="higrn">measure 1 of staff 2; system 1</span>
+          &#60;!-- ................................. beat 1 --&#62;
+          &#60;!-- ................................. beat 2 --&#62;
+         &#60;/g&#62;
+         &#60;g transform="translate(906,0)"&#62;&#60;desc&#62; msr 2-2 &#60;/desc&#62;
+          &#60;!-- ................................. beat 1 --&#62;
+          &#60;!-- ................................. beat 2 --&#62;
+         &#60;/g&#62;
+        &#60;/g&#62;&#60;!-- end of staff --&#62;
+        &#60;use x="2184" y="0" xlink:href="#sysbar"/&#62;
+       &#60;/g&#62;&#60;!-- end of system --&#62;
+      &#60;/g&#62;&#60;!-- end of body --&#62;
+     </code>
+    </pre>
+   </div>
+   <div>
+    <a href="musMan-1.htm#bottom">Back to page 1</a>
+   </div>
+   <hr>
+   <footer>Copyright &#169; 2015 Dana Steven Gormel</footer>
+  </section>
+  
+ </body>
+</html>

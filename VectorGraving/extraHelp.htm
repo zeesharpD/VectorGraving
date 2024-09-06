@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Extra Help</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel=icon href="vectorgraving.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <style>
+   /**/
+   body {margin:2pc 3pc; font:normal 15px sans-serif; color:#520;
+   }
+   p {border:1px solid #cc9; padding:.4em;
+   }
+   div {margin-bottom:.1em;
+   }
+   a:link {color:#933;
+   }
+   a:visited {color:#933;
+   }
+   a:hover {color:#393;
+   }
+   rect.txt {stroke:none; fill:#444;
+   }
+   text {font:italic 13px sans-serif; fill:#722;
+   }
+   text.calc {font:normal 15px serif; fill:#100;
+   }
+   hr {color:#9cc; background:#9cc; border:0; width:33%; height:2px;
+    margin-bottom:2em;
+   }
+  </style>
+  <!--
+   <svg width="" height="" xmlns="http://www.w3.org/2000/svg"
+    xml:base="music-notation2.svg">
+   </svg>
+   <g transform="translate(,)">
+    <rect width="" height="18"/>
+    <text x="3" y="15"></text>
+   </g>
+   <text x="9" y="30" class="dsc"></text>
+   <use x="" y="" xlink:href="#"/>
+   <use xlink:href="#" transform="translate() skewY() scale()"/>
+   <circle id="mark" r="1.5" stroke="none" fill="#933"/>
+   <defs></defs>
+  -->
+ </head>
+ 
+ <body>
+  <p>Ledger lines are a narrow section of staff. Negative numbers 'y' will be the
+   same as other objects, but positive numbers will be used differently.
+   To get one ledger below the staff at the y120 position, the ledger is placed
+   at y="24", and so on.</p>
+  <div>
+   <button id="an1" value="animate" type="button">animate</button>
+  </div>
+  <svg width="480" height="204" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
+   <g transform="translate(0,78)">
+    <use xlink:href="#staff" transform="scale(.2,1)">
+     <animate attributeName="opacity" values="1;.2;.2;.2;.2;.2;.2;1"
+      dur="12s" begin="an1.click" fill="freeze"
+     />
+    </use>
+    <use x="120" y="0" xlink:href="#ldg">
+     <animate attributeName="y" attributeType="XML"
+      values="0;0;0;-24;-48;-72;-72;-12;24"
+      dur="10s" begin="an1.click" fill="freeze"
+     />
+    </use>
+   </g>
+  </svg>
+  <p>Beams are 100 pixels in width and 15 pixels in height, with the upper
+   left-hand corner being 0,0. For notes with stem up, placing this point at
+   +14x, -85y of the note head will put the beam at the stem head, no matter what
+   type of compound beam is used. Keep in-mind, -85y is for a standard stem.
+   Long and short stems are in 12px increments/decrements.<br>
+   Notes with stem down will be treated differently. X is now -14, and subtract 15px
+   from 85y and make it positive: +70</p>
+  <div>
+   <button id="an2" value="animate" type="button">animate</button>
+  </div>
+  <svg width="480" height="120" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg" style="margin-top:1.5em">
+   <g transform="translate(36,18) scale(1)">
+    <use x="-14" y="85" xlink:href="#solnu" opacity=".7">
+     <animate attributeName="opacity" values=".7;0"
+      begin="an2.click" dur="5s" fill="freeze"
+     />
+    </use>
+    <use x="-14" y="1" xlink:href="#solnd" opacity="0">
+     <animate attributeName="opacity" values="0;0;0;.7"
+      begin="an2.click" dur="6s" fill="freeze"
+     />
+    </use>
+    <g transform="translate(0,0)">
+     <use xlink:href="#be" opacity=".5"/>
+     <circle id="mark" r="1" stroke="none" fill="#f30" opacity=".7"/>
+     <polyline id="point" stroke="#000" shape-rendering="crispEdges"
+      stroke-dasharray="8,8" fill="none" points="-12,0 0,0 0,-12">
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="rotate" values="0;0;0;-22.5;-45" begin="an2.click" dur="5s" fill="freeze"
+      />
+     </polyline>
+     <animateTransform attributeName="transform" attributeType="XML"
+      type="translate" values="0,0;0,0;-28,71"
+      begin="an2.click" dur="5s" fill="freeze"
+     />
+    </g>
+   </g>
+  </svg>
+  <p>For every additional beam (stem down), 'y' will be shortened by 21px.
+   The spacing between beams is 6px, so 15 + 6 = 21; 70 &minus; 21 = 49.</p>
+  <div>
+   <button id="an3" value="animate" type="button">animate</button>
+  </div>
+  <svg width="480" height="138" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
+   <g transform="translate(36,30) scale(1)">
+    <use x="-14" y="0" xlink:href="#solnd" opacity=".7"/>
+    <g transform="translate(-28,70)">
+     <use xlink:href="#be" opacity=".5">
+      <animate attributeName="opacity" values=".5;0"
+       begin="an3.click" dur="4s" fill="freeze"
+      />
+     </use>
+     <use xlink:href="#be2" opacity="0">
+      <animate attributeName="opacity" values="0;0;.5"
+       begin="an3.click" dur="5s" fill="freeze"
+      />
+      <animate attributeName="y" values="0;0;0;-21"
+       begin="an3.click" dur="6s" fill="freeze"
+      />
+     </use>
+     <use xlink:href="#mark" xml:base="extraHelp.htm">
+      <animate attributeName="y" values="0;0;0;-21"
+       begin="an3.click" dur="6s" fill="freeze"
+      />
+     </use>
+     <use xlink:href="#point" xml:base="extraHelp.htm" transform="rotate(-45)">
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="translate" values="0,0;0,0;0,0;0,-21"
+       begin="an3.click" dur="6s" fill="freeze"
+      />
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="rotate" values="-45,0,0;-45,0,0;-45,0,0;-45,-26,-11"
+       begin="an3.click" dur="6s" fill="freeze"
+      />
+     </use>
+    </g>
+   </g>
+  </svg>
+  <p>When using three and more beams, its's a good practice to use longer stems
+   (up or down); how much will depend on the music or what you think looks good.</p>
+  <p>In addition to a single beam, there are currently 9 compound beams in the
+   library. Solid 2, 3, and 4 beams are treated as shown above; remembering that
+   for stem down each extra beam is &minus;21y of the beam before. Beams with partial
+   beams are also treated the same for stem up, but for stem down will need to be
+   flipped. This is done with &lt;transform="matrix()"&gt;, rather than
+   &lt;transform="translate() skewY() scale()"&gt;.
+   Refer to <a href="./Music_Notation_SVG/musMan-2.htm">Music Notation SVG, page 2</a>
+   for using a matrix. Flipped beams can then be treated much like stem up: 'y' is
+   now +85 from the note head for any compound beam.</p>
+  <div>
+   <button id="an4" value="animate" type="button">animate</button>
+  </div>
+  <svg width="300" height="126" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
+   <g transform="translate(36,30) scale(1)">
+    <use x="-14" y="0" xlink:href="#solnd" opacity=".7"/>
+    <g transform="translate(-28,49)">
+     <use x="0" y="0" xlink:href="#be" opacity=".5">
+      <animate attributeName="y"
+       begin="an4.click" values="0;0;21" dur="5s" fill="freeze"
+      />
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="scale" begin="an4.click" values="1,1;1,1;1,0;1,1" dur="5s" fill="freeze"
+      />
+     </use>
+     <use x="0" y="21" xlink:href="#be" transform="scale(.5,1)" opacity=".5">
+      <animate attributeName="y"
+       begin="an4.click" values="21;21;0" dur="5s" fill="freeze"
+      />
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="scale" begin="an4.click" values=".5,1;.5,1;.5,0;.5,1" dur="5s" fill="freeze"
+      />
+     </use>
+     <use xlink:href="#mark" xml:base="extraHelp.htm">
+      <animate attributeName="y" values="0;0;0;35"
+       begin="an4.click" dur="5s" fill="freeze"
+      />
+     </use>
+     <use xlink:href="#point" xml:base="extraHelp.htm" transform="rotate(-45)">
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="translate" values="0,0;0,0;0,0;0,50"
+       begin="an4.click" dur="5s" fill="freeze"
+      />
+      <animateTransform attributeName="transform" attributeType="XML"
+       type="rotate" values="-45,0,0;-45,0,0;-45,0,0;-45,42,18"
+       begin="an4.click" dur="5s" fill="freeze"
+      />
+     </use>
+    </g>
+   </g>
+  </svg>
+  <p>Pre-made beam groups, whether in the library or custom ones in the &lt;defs&gt;,
+   will move, skew and scale as one. There are instances, however, when you may
+   want to use a beam group and a single beam together (or any other combination).
+   These will need to be treated differently. If this were a horizontal beam,
+   adding the additional beam is as simple as +14x of the third note, and +42y of
+   the first beam. At this angle, the top of the beam has moved down 30.75px at the
+   third note (150 x .205). The angle has also increased the scale(Y) of the beam to
+   1.02, so 42 x 1.02 = 42.87 + 30.75 = 73.62. This is how far down (Y) the single
+   beam is placed from the first stem head, which in this case is a half-step long
+   (solnu.1). In most cases you can round the number to the nearest pixel.
+  </p>
+  <svg width="540" height="210" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg" opacity="1">
+   <g transform="translate(0,96)">
+    <use xlink:href="#staff"/>
+    <g id="math" transform="translate(74,-85)">
+     <line stroke="#c63" stroke-width="1" stroke-dasharray="99,45" x2="243"/>
+     <text x="108" y="5" class="calc">234</text>
+     <line stroke="#c63" stroke-width="1" x1="150" y1="6" x2="150" y2="48"/>
+     <text x="126" y="21" class="calc">150</text>
+     <line stroke="#c63" stroke-width="1" stroke-dasharray="21,15"
+      x1="234" y1="-9" x2="234" y2="48"/>
+     <text x="227" y="25" class="calc">48 &#247; 234 = .205, invert tan = 11.59°</text>
+    </g>
+    <use x="60" y="12" xlink:href="#solnu.1"/>
+    <use xlink:href="#be2" transform="translate(74,-85) skewY(11.59) scale(2.34,1.02)"/>
+    <use x="135" y="24" xlink:href="#solnu"/>
+    <use x="210" y="36" xlink:href="#solnu"/>
+    <use xlink:href="#be" transform="translate(224,-11.4) skewY(11.59) scale(.42,1.02)"/>
+    <use x="252" y="48" xlink:href="#solnu"/>
+    <use x="294" y="60" xlink:href="#solnu.1"/>
+   </g>
+  </svg>
+  <p>If there are a number of instances &horbar; I go by 3 or more &horbar; of this
+   beam group, you can put it in the &lt;defs&gt; and not have to calculate the
+   position of the short beam every time. The example above would be written like this:</p>
+  <pre>
+   <code>
+    &lt;g id="be2.1"&gt;
+     &lt;use xlink:href="#be2"/&gt;
+     &lt;use xlink:href="#be" transform="translate(64,42) scale(.18,1.02)"/&gt;
+    &lt;/g&gt;
+   </code>
+  </pre>
+  <p>The 64x of the translate is the proportion for a default 100px beam. It comes
+   from 150 &#247; 234 = .64 of the example. The .18x of the scale is likewise.
+   In the example the spacing of the 32<sup>nd</sup> notes is 42px, so 42 &#247;
+   234 = .18.</p>
+  <div>
+   <button id="an5" value="animate" type="button">animate</button>
+  </div>
+  <svg width="360" height="126" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
+   <defs>
+    <g id="be2.1">
+     <use xlink:href="#be2"/>
+     <use xlink:href="#be" transform="translate(64,42) scale(.18,1)"/>
+    </g>
+   </defs>
+    <animateTransform attributeName="transform" attributeType="XML"
+     type="scale" begin="an5.click" values="1,1;2.34,1.02" dur="5s" fill="freeze"
+    />
+   <use x="26" y="12" xlink:href="#be2.1" xml:base="extraHelp.htm">
+    <animateTransform attributeName="transform" attributeType="XML"
+     type="skewY" begin="an5.click" from="0" to="25" dur="5s" fill="freeze"
+    />
+   </use>
+  </svg>
+  <p>Creating a custom beam by itself would be used when the notes that accompany
+   it are at different intervals. If the notes are identical, then you can include
+   them in the group; but change the id to something more appropriate &horbar;
+   I might call it id="sx32d2" (16<sup>th's</sup>, 32<sup>nd</sup>, down by
+   2<sup>nd's</sup>). You can use whatever makes sense to you, but you cannot
+   start it with a number.</p>
+  <p>You can also create a custom beam and use it in both the &lt;defs&gt; and
+   the body of the music, if there are a number of instances of identical note
+   groups and variables.</p>
+ </body>
+</html>

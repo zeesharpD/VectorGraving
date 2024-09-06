@@ -1,0 +1,12 @@
+ 
+ change 'Home' address in musMan.htm pages  !DONE!
+ -
+ add @font-face rules to other templates; only blank-staff_3-1 has them  !DONE!
+ -
+ add emty beams to defs in all templates
+ -
+ remove y="0"(x?) in templates
+ -
+ make 'tenuto' 24px
+ -
+ shorten stems at top .25px

@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg version="1.1" width="1024" height="768"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full">
+
+ <title>Music Notation Library; Systems (old)</title>
+
+ <metadata>
+  <rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:dc="http://purl.org/dc/terms/">
+   <rdf:Description rdf:about="http://www.guitarscripts.heliohost.org/GS3_files/Music_Notation_SVG/ReadMeFirst.htm"
+    dc:created="2013-12"
+    dc:creator="Dana Steven Gormel"
+    dc:modified="2019-10-02"
+    dc:rights="&#169; 2015 Dana Steven Gormel">
+   </rdf:Description>
+  </rdf:RDF>
+ </metadata>
+
+ <style type="text/css">
+  /* */
+  text.finger {font:bold 21px 'futura bk bt',sans-serif; fill:#036;
+  }
+  text.barno {font:bold 21px 'futura bk bt',sans-serif; fill:#665;
+  }
+  text.instruct {font:33px calligrapher,cursive;
+  }
+  text.pgno {font:39px calligrapher,cursive; fill:#665;
+  }
+  text.repno {font:italic 39px pegasus,serif; fill:#333; letter-spacing:4px;
+  }
+ </style>
+
+ <defs><!-- all positioning x,y should be multiple of 3, whenever possible,
+  for accurate viewing at scale(.333)-[1/3] -->
+
+  <desc> indented first line staff </desc>
+   <g id="staff-1"
+    style="stroke:#000;stroke-width:3;shape-rendering:crispEdges">
+    <line id="stfLine-1" x1="216" y1="0" x2="2190" y2="0"/>
+    <use y="24" xlink:href="#stfLine-1"/><use y="48" xlink:href="#stfLine-1"/>
+    <use y="72" xlink:href="#stfLine-1"/><use y="96" xlink:href="#stfLine-1"/>
+   </g>
+  <desc> staff </desc>
+   <g id="staff" style="stroke:#000;stroke-width:3;shape-rendering:crispEdges">
+    <line id="stfLine" x1="0" y1="0" x2="2190" y2="0"/>
+    <use y="24" xlink:href="#stfLine"/><use y="48" xlink:href="#stfLine"/>
+    <use y="72" xlink:href="#stfLine"/><use y="96" xlink:href="#stfLine"/>
+   </g>
+  <desc> to line up the following virticaly:
+         T x+6, C x+38, F x+37 </desc>
+  <desc> treble clef </desc>
+   <path id="T-clef"
+    stroke="#000" stroke-width=".5" fill="#000" transform="scale(.89)"
+    d="M10.5,125.5
+    Q7,122 7,127.5 C7,134.4 13.45,140 20.5,140
+    C30.76,140 36.33,133.88 40.33,122.5 L72.5,26
+    C75.53,16.9 76.5,11.38 76.5,6.5 C76.5,-6 72,-15.5 65.25,-15.5
+    C61.25,-15.5 58,-10.57 58,-4.5 C58,5.28 63.3,14.3 74,25
+    C82.15,33.15 92.95,36.02 104,30.33
+    Q99.29,42.75 101.64,52.17 104,61.59 104,70
+    C104,91.97 90.97,108 66,108 C45.24,108 32,95.9 32,81
+    C32,67.21 42.76,56 56,56 C68.86,56 77.5,66.59 77.5,77
+    C77.5,87.8 67.55,95.8 63,96 L62.75,95.5
+    C70,91 72,86 72,81.5
+    C72,73.05 65.93,67 54.5,67 C44.72,67 39,75.29 39,85.5
+    C39,96.71 49.76,105 63,105 C82.31,105 96.5,93.35 96.5,79
+    Q96.5,70.6 94.48,64.53 90.33,52.1 91,46
+    C86.2,47 78.25,47.25 71,40 C60.65,29.65 55,18 55,4
+    C55,-7.69 59.88,-19.63 67.5,-27.25 Q70.25,-30 73,-27.25
+    C80.59,-19.66 84.78,-3.36 75,26 L42.33,124
+    C38.28,136.15 30.47,143.5 20.5,143.5 C11,143.5 1.5,136.5 1.5,125.5
+    C1.5,119 5.5,111 14,111 Q16,111 17.5,112.5
+    L23.5,118.5 Q26.5,121.5 21.75,126.25 16.5,131.5 14,129 L10.5,125.5"
+   />
+  <desc> 'C' clef </desc>
+   <g id="C-clef" transform="scale(.89)">
+    <rect width="12" height="108" shape-rendering="crispEdges"/>
+    <rect x="18" width="4" height="108" shape-rendering="crispEdges"/>
+    <path id="C-half" stroke="#000" stroke-width=".5" fill="#000"
+     d="M25.5,54
+     C30.3,49.2 35.38,37.5 34,31
+     C35.02,39 40,43.5 48,43.5 C56,43.5 60,37 60,24
+     C60,11 56,2 47,2 C42,2 37.5,2 33,7 Q30.88,9.13 35,8.63
+     L38,8.25 Q42.75,7.66 43.5,13.5 Q44.25,19.5 40,20.03
+     L34,20.78 C31,21.16 28.5,18 28.5,13
+     C28.5,4.5 36,-.5 51,-.5 C64,-.5 72,11 72,24
+     C72,38 65,48.5 52,48.5 C46,48.5 41.5,47 38.5,44
+     Q35,47.5 35,54 L25.25,54"/>
+    <use xlink:href="#C-half" transform="matrix(1,0,0,-1,0,108)"/>
+   </g>
+  <desc> 'F' clef </desc>
+   <g id="F-clef" transform="scale(.89)">
+    <path stroke="#000" fill="#000"
+     d="M13,21 L17,17 C21,18 25,21 27,24.5 Q28,27 26,29 L20,35 Q17.5,37.5 14.5,37
+     C11,36.5 4,34 4,23 Q4,15 11,8 19,0 29,0 C46,0 58,15 58,30 C58,43 55,53 43,66
+     C29,80 10,87 2,87 Q0,87 0,86 L9,77 Q9,79 11,79 C33,76 49,61 49,36 C49,20 39,8 24,8
+     C14,8 9,16 13,21 z"/>
+    <path id="hash" stroke="#000" fill="#000"
+     d="M74,12 L66,20 Q60,18 62,15 L69,8 Q69,10 74,12 z"/>
+    <use y="26" xlink:href="#hash"/>
+   </g>
+  <desc> "G" </desc>
+   <g id="G-clf" transform="translate(15,26) scale(1,1.16)">
+    <path d="M28,16 L35,9 V8 Q29,1 21,1 Q20,1 18,2 L3,18 Q1,20 1,26 Q1,51 21,51
+     Q22,51 23,50 L28,45 V61 Q21,61 18,54 L11,61 Q12,69 23,69 Q25,69 26,68 L35,59
+     V38 L40,33 H33 L26,40 H28 V44 Q8,44 8,18 Q8,13 10,11 L13,8 Q21,8 28,16 z"
+     style="fill:#000; stroke:#000; stroke-width:1"/>
+   </g>
+  <desc> bar lines </desc>
+   <rect id="bar" width="6" height="96" shape-rendering="crispEdges"/><!-- 1 staff -->
+   <rect id="sysbar" width="6" height="336" shape-rendering="crispEdges"/><!-- 2 staves -->
+   <use id="sybr3" xlink:href="#sysbar" transform="scale(1,1.71)"/><!-- 3 staves -->
+   <g id="dobar2"><!-- double 2 staves; 0x is right edge -->
+    <use x="-21" xlink:href="#sysbar"/>
+    <use x="-6" xlink:href="#sysbar"/>
+   </g>
+  <desc> end of music bars </desc>
+   <g id="e-bar2" transform="translate(2190,0)" shape-rendering="crispEdges">
+    <rect x="-12" y="0" width="12" height="336"/>
+    <rect x="-26" y="0" width="6" height="336"/>
+   </g>
+  <desc> brace </desc>
+   <g id="brace" transform="translate(-36,-4.5)">
+    <path id="brc" stroke="#000" stroke-width=".5" fill="#000"
+     d="M30,3
+     H27 Q.75,38 8,81.5 L11,99.5
+     Q18.75,146 1,172.5 H4 Q25,144.5 19,90.5
+     L17,72.5 Q12,27.5 30,3 z"/>
+    <use xlink:href="#brc" transform="matrix(1,0,0,-1,0,345)"/>
+   </g>
+  <desc> accolades and parts </desc>
+   <path id="accap" d="M0,0 Q21,0 33,-15 21,9 9,9 H0 V0"/>
+   <rect id="acline" width="9" height="344"/>
+
+   <g id="acld" fill="#333"><!-- 2 staves -->
+    <use x="-18" y="-12.75" xlink:href="#accap"/>
+    <use x="-18" y="-4" xlink:href="#acline"/>
+    <use xlink:href="#accap" transform="matrix(1,0,0,-1,-18,347)"/>
+   </g>
+   <g id="acld3" fill="#333"><!-- 3 staves -->
+    <use x="-18" y="-13" xlink:href="#accap"/>
+    <use x="-18" y="-4" xlink:href="#acline" transform="scale(1,1.71)"/>
+    <use xlink:href="#accap" transform="matrix(1,0,0,-1,-18,662)"/>
+   </g>
+
+  <desc> 2 staff system with treb.+bass; title </desc>
+   <g id="sys2-1">
+    <use x="216" xlink:href="#brace"/>
+    <use x="216" xlink:href="#sysbar"/>
+    <use xlink:href="#staff-1"/>
+    <use x="222" xlink:href="#T-clef"/>
+    <use y="240" xlink:href="#staff-1"/>
+    <use x="253" y="240" xlink:href="#F-clef"/>
+   </g>
+  <desc> 2 staff system with treb.+bass; full </desc>
+   <g id="sys2">
+    <use xlink:href="#brace"/>
+    <use xlink:href="#sysbar"/>
+    <use xlink:href="#staff"/>
+    <use x="6" xlink:href="#T-clef"/>
+    <use y="240" xlink:href="#staff"/>
+    <use x="37" y="240" xlink:href="#F-clef"/>
+   </g>
+  <desc> ledger lines </desc>
+   <g id="ldg" style="stroke:#000;stroke-width:3;shape-rendering:crispEdges">
+    <line x1="-24" y1="0" x2="24" y2="0"/>
+    <line x1="-24" y1="24" x2="24" y2="24"/>
+    <line x1="-24" y1="48" x2="24" y2="48"/>
+    <line x1="-24" y1="72" x2="24" y2="72"/>
+    <line x1="-24" y1="96" x2="24" y2="96"/>
+   </g>
+  <desc> short ledger lines </desc>
+   <use id="sldg" xlink:href="#ldg" transform="scale(.875,1)"/>
+  <desc> extra short ledger lines </desc>
+   <use id="xsldg" xlink:href="#ldg" transform="scale(.75,1)"/>
+  <desc> for grace notes, et.al. </desc>
+   <use id="gldg" xlink:href="#ldg" transform="scale(.5,1)"/>
+  <desc> extentions for ledger lines </desc>
+   <line id="ldgx" x1="24" y1="0" x2="54" y2="0" stroke="#000" stroke-width="3"
+    shape-rendering="crispEdges"/>
+   <g id="ldgx2">
+    <use xlink:href="#ldgx"/>
+    <use x="0" y="24" xlink:href="#ldgx"/>
+   </g>
+  <desc> wide ledger lines (replaces ldgx) </desc>
+   <g id="ldgw" stroke="#000" stroke-width="3" shape-rendering="crispEdges">
+    <line x1="-24" y1="0" x2="54" y2="0"/>
+    <line x1="-24" y1="24" x2="54" y2="24"/>
+    <line x1="-24" y1="48" x2="54" y2="48"/>
+    <line x1="-24" y1="72" x2="54" y2="72"/>
+    <line x1="-24" y1="96" x2="54" y2="96"/>
+   </g>
+  <desc> sharp(s) and keys </desc>
+   <g id="sharp" transform="translate(-21,0)"><!-- adjusted for note coords -->
+    <polygon points="-18,-1 -18,-8 0,-18 0,-11 -18,-1"/>
+    <polygon points="-18,18 -18,11 0,1 0,8 -18,18"/>
+    <polygon points="-15,39 -15,-28.5 -12,-31.5 -12,36 -15,39"
+     shape-rendering="crispEdges"/>
+    <polygon points="-6,31.5 -6,-36 -3,-39 -3,28.8 -6,31.5"
+     shape-rendering="crispEdges"/>
+   </g>
+   <g id="shrp2"><!-- D major and B minor -->
+    <use x="156" y="0" xlink:href="#sharp"/><use x="183" y="36" xlink:href="#sharp"/>
+   </g>
+   <g id="shrp3"><!-- A major and F# minor -->
+    <use xlink:href="#shrp2"/><use x="210" y="-12" xlink:href="#sharp"/>
+   </g>
+   <g id="shrp4"><!-- E major and C# minor -->
+    <use xlink:href="#shrp3"/><use x="237" y="24" xlink:href="#sharp"/>
+   </g>
+  <desc> flat(s) and keys </desc>
+   <g id="flat" transform="translate(-21,-3)"><!-- adjusted for note coords -->
+    <polygon points="-16,25 -16,-37 -13,-40 -13,22 -16,25"
+     shape-rendering="crispEdges"/>
+    <path d="M-15,-5
+     Q-12,-9 -8,-9 Q.5,-9 .5,0 Q.5,4 -3,7 L-5,9 Q-14,19 -14,24
+     L-14,17 L-8,10 Q-5,7 -5,4 Q-5,-4 -14,-4 L-15,-5 z"
+    />
+   </g>
+   <g id="doflt"><!-- double flat -->
+    <use x="-16.5" xlink:href="#flat"/><use xlink:href="#flat"/>
+   </g>
+   <g id="flt2"><!-- B-flat major and G minor -->
+    <use x="156" y="48" xlink:href="#flat"/><use x="183" y="12" xlink:href="#flat"/>
+   </g>
+   <g id="flt3"><!-- E-flat major and C minor -->
+    <use xlink:href="#flt2"/><use x="210" y="60" xlink:href="#flat"/>
+   </g>
+   <g id="flt4"><!-- A-flat major and F minor -->
+    <use xlink:href="#flt3"/><use x="237" y="24" xlink:href="#flat"/>
+   </g>
+   <g id="flt5"><!-- D-flat major and B-flat minor -->
+    <use xlink:href="#flt4"/><use x="264" y="72" xlink:href="#flat"/>
+   </g>
+  <desc> natural </desc>
+   <g id="ntl" transform="translate(-27,0)"><!-- adjusted for note coords -->
+    <polygon points="-6,-3.5 -6,-9.5 6,-15.5 6,-9.5 -6,-3.5"/><!-- diagonal -->
+    <polygon points="-6,15.5 -6,9.5 6,3.5 6,9.5 -6,15.5"/>
+    <polygon points="-6,15.5 -6,-37 -3,-40 -3,12.5 -6,15.5" shape-rendering="crispEdges"/>
+    <polygon points="3,40 3,-12.5 6,-15.5 6,37 3,40" shape-rendering="crispEdges"/>
+   </g>
+  <desc> double sharp </desc>
+   <g id="doshrp" transform="translate(-30,0) scale(.89)"><!-- adjusted for note coords -->
+    <path id="arm" d="M-13,-13 H-7 L-6,-10 L1,1 L-10,-6 L-13,-7 V-13 z"/>
+    <use xlink:href="#arm" transform="rotate(90)"/>
+    <use xlink:href="#arm" transform="rotate(180)"/>
+    <use xlink:href="#arm" transform="rotate(-90)"/>
+   </g>
+  <desc> a 'one' </desc>
+   <path id="a1" stroke="#000" stroke-width=".25" fill="#000"
+    d="M.5,9.75
+    C4,6.75 10.5,2 13.5,1 C16,.167 17.5,0 17.5,12
+    V39 L7.5,46 V25 C7.5,12 5,9 1.75,11 L.5,9.75z"/>
+  <desc> a 'two' </desc>
+   <path id="a2" stroke="#000" stroke-width=".5" fill="#000"
+    d="M2.5,7.75
+    Q11,.25 16.5,.25 C25,.25 28.25,6 28.25,12
+    C28.25,19 21.75,27.25 13.5,35.5
+    Q30,35.5 32.75,34.5 L24,45.25
+    Q21,44 13,44 Q6.25,44 3.25,44.5 L1.5,42.5
+    C18.5,25.5 19.25,22 19.25,16 C19.25,9.5 14.5,8 9,8
+    Q6,8 3.25,9 L2.5,7.75 z"/>
+  <desc> a 'three' </desc>
+   <path id="a3"
+    style="stroke:#000;stroke-width:1;fill:#000"
+    d="M1,8 Q6,.5 12,.5 C21.5,.5 23,8 19.5,12 L15,17 C28.5,23 25.5,37 5.5,46
+     L4.5,44.5 C18,35 17,24 3,23 L3,22 C14,18 15,5 1,8 z"/>
+  <desc> a 'four' </desc>
+   <path id="a4"
+    style="stroke:#000;stroke-width:1;fill:#000" transform="translate(0,2) scale(.98)"
+    d="M20,.5 Q.5,19 .5,28.5 .5,34 17.5,33 V45 L26,40 V32.5 L30,32 L36,23
+     C9,26 1,28 22,1.5 L20,.5 z M18.5,24.5 V14.5 L27,9.5 V23.5"/>
+  <desc> a 'five' </desc>
+   <path id="a5" style="fill:#000;stroke:#000;stroke-width:1" transform="scale(.9)"
+    d="M33,1.5 Q18,3 16,1 L15.5,0 H12.5 L0,21 Q27,35 3.5,49 V52 Q44,30 8.5,13.5
+     L10.5,9.5 Q14,13 25,11.5 L33,1.5 z"/>
+  <desc> a 'six' </desc>
+   <path id="a6" style="fill:#000;stroke:#000;stroke-width:1" transform="scale(.89)"
+    d="M23.5,0 Q0,17 0,31 Q0,49 14,49 C21,49 33,42 34,30
+    Q34,10 14.5,23 C21,24 25,32 25,36 Q25,41.5 21,41.5
+    C15,41.5 8.5,36 8.5,25 Q8.5,15 22.5,3 L23.5,0 z"/>
+  <desc> a 'seven' </desc>
+   <path id="a7" stroke="#000" stroke-width=".25" fill="#000"
+    d="M10,1
+    C14,4 23,4 30,2.75 L31.5,4.5
+    Q29.5,6.25 27.25,10.75 L21.75,21.75 Q16,33.25 16.5,40.5
+    L5,46.5 21,13.25 H14 C6,13.25 3,12.5 1,9.25 L10,1"/>
+  <desc> an 'eight' </desc>
+   <path id="a8" stroke="#000" stroke-width=".5" fill="#000"
+    d="M13,2.75
+    L9,6.75 C4.25,11.5 3,13.25 3,16
+    C3,19 5,20.88 13.25,25 C22.5,29.5 23.5,31.5 23.5,34.75
+    C23.5,37.25 21,40 17,40 C13,40 11,37 11,33
+    C11,31 11.5,29 18,22.5 C31,9.5 31.5,8 31.5,6.5
+    C31.5,3.5 29.5,1.5 27,1.5 C24.5,1.5 22.5,2 17.5,7
+    C21,8 23,9.5 23,11.5 C23,13.5 22,15 15.5,21.5
+    C4.5,32.5 1.5,36 1.5,41 C1.5,46 6,48.5 11,48.5
+    C15.5,48.5 20,44 23,41 C30,34 32,31 32,28
+    C32,26 32,24.25 20.5,18.5 C12.5,14.5 11,13 11,10.5
+    Q11,8.5 13.75,4 L13,2.75 z"/>
+  <desc> a 'nine' </desc>
+   <path id="a9" stroke="#000" stroke-width=".25" fill="#000"
+    d="M21,24.5
+    L15,28.5 Q12.75,30 10,30
+    C5,30 2,24 2,18 C2,10.5 13,1 20,1
+    C29,1 34,8 34,17 C34,27 26,37 12.5,46.5 L11,44.5
+    C23,36 25,27 25,24 C25,14 19.5,7.75 14,7.75
+    C11.25,7.75 10.5,10 10.5,12 C10.5,16.5 13,23 21,24.5"/>
+  <desc> a 'twelve' </desc>
+   <g id="a12">
+    <use xlink:href="#a1"/><use x="21" xlink:href="#a2"/>
+   </g>
+  <desc> 2/4 time </desc>
+   <g id="a2-4" transform="translate(120,0)">
+    <use x="1" y="1.25" xlink:href="#a2"/><use y="48" xlink:href="#a4"/>
+   </g>
+  <desc> 3/4 time </desc>
+   <g id="a3-4" transform="translate(120,0)">
+    <use x="6" y="1" xlink:href="#a3"/><use y="48.5" xlink:href="#a4"/>
+   </g>
+   <!-- x87 is default for a key of C or A_m; add: 33 for one accidental and 30
+    for each additional accidental in the key signature;
+    subtract: 75 following a bar -->
+  <desc> 4/4 time </desc>
+   <g id="a4-4" transform="translate(120,0)">
+    <use y=".5" xlink:href="#a4"/><use y="48.5" xlink:href="#a4"/>
+   </g>
+  <desc> 5/4 time </desc>
+   <g id="a5-4" transform="translate(120,0)">
+    <use x="3" y="1.5" xlink:href="#a5"/><use y="48.5" xlink:href="#a4"/>
+   </g>
+  <desc> 6/4 time </desc>
+   <g id="a6-4" transform="translate(120,0)">
+    <use x="3" y="3" xlink:href="#a6"/><use y="48.5" xlink:href="#a4"/>
+   </g>
+  <desc> 6/8 time </desc>
+   <g id="a6-8" transform="translate(120,0)">
+    <use x="1.5" y="3" xlink:href="#a6"/><use y="47" xlink:href="#a8"/>
+   </g>
+  <desc> 12/8 time </desc>
+   <g id="a12-8">
+    <use x="120" y="1" xlink:href="#a12"/><use x="129" y="47.5" xlink:href="#a8"/>
+   </g>
+  <desc> cut time and common </desc>
+   <g id="ct" transform="translate(120,13.5)">
+    <path id="cm" style="fill:#000; stroke:#000; stroke-width:1"
+     d="M30.5,18.5 L39,12 Q38,8 30.5,8 C14,8 .5,20 .5,35 C.5,49 10,60 23,60
+     Q28,60 32,57 L38.5,51.5 V50 Q36.5,52 34,52 C23,52 9.5,46 9.5,28
+     C9.5,18 15,14 20,14 Q28,14 30.5,18.5 z"/>
+    <polygon points="21,0 19.5,0 16.5,2.5 18,2.5 18,70.5 21,68 21,0"/>
+   </g>
+   <use id="com" xlink:href="#cm" transform="translate(120,14)"/>
+  <desc> solid note head </desc>
+   <path id="note" d="M-13.5,0 A1.55,1 -36 1,1 13.5,0 A1.55,1 -36 1,1 -13.5,0 z"/>
+  <desc> hollow note head </desc>
+   <path id="holno" fill-rule="evenodd"
+    d="M-13.5,0 A1.55,1 -36 1,1 13.5,0 A1.55,1 -36 1,1 -13.5,0 z
+    M-8,0 A2.8,1 -36 1,1 8,0 A2.8,1 -36 1,1 -8,0 z"/>
+  <desc> whole note </desc><!-- the '.5's give you a center pixel -->
+   <path id="whln"
+    d="M-17.5,0 A1.4,1 0 1,1 17.5,0 A1.4,1 0 1,1 -17.5,0
+    M-14.5,0 A2.5,1 14.04 1,1 14.5,0 A2.5,1 14.04 1,1 -14.5,0 z"
+    style="fill:#000; stroke:#000; fill-rule:evenodd"/>
+  <desc> stem </desc>
+   <polygon id="stem" points="11.75,-82.5 14.75,-85.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-82.5" shape-rendering="crispEdges"/>
+   <!-- To create a longer stem on a note simply place a 'stem' at the note
+    coords and scale it's 'y'; for stem down rotate(180,x,y); see: SVG Reference -->
+  <desc> solid note with stem up </desc>
+   <g id="solnu">
+    <use xlink:href="#note"/><use xlink:href="#stem"/>
+   </g>
+  <desc> long stem: +12 </desc>
+  <!-- the +y on all long stems keeps the bottom of stem from showing -->
+   <polygon id="stem.1" points="11.75,-94.5 14.75,-97.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-94.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +24 </desc>
+   <polygon id="stem.2" points="11.75,-106.5 14.75,-109.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-106.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +36 </desc>
+   <polygon id="stem.3" points="11.75,-118.5 14.75,-121.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-118.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +48 </desc>
+   <polygon id="stem.4" points="11.75,-130.5 14.75,-133.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-130.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +60 </desc>
+   <polygon id="stem.5" points="11.75,-142.5 14.75,-145.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-142.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +72 </desc>
+   <polygon id="stem.6" points="11.75,-154.5 14.75,-157.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-154.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +84 </desc>
+   <polygon id="stem.7" points="11.75,-166.5 14.75,-169.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-166.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +96 </desc>
+   <polygon id="stem.8" points="11.75,-178.5 14.75,-181.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-178.5" shape-rendering="crispEdges"/>
+  <desc> long stem: +108 </desc>
+   <polygon id="stem.9" points="11.75,-190.5 14.75,-193.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-190.5" shape-rendering="crispEdges"/>
+  <desc> short stem: -12 </desc>
+   <polygon id="stem-1" points="11.75,-70.5 14.75,-73.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-70.5" shape-rendering="crispEdges"/>
+  <desc> short stem: -24 </desc>
+   <polygon id="stem-2" points="11.75,-58.5 14.75,-61.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-58.5" shape-rendering="crispEdges"/>
+  <desc> short stem: -36 </desc>
+   <polygon id="stem-3" points="11.75,-46.5 14.75,-49.5 14.75,-5.5 14,-3.75
+    11.75,-11 11.75,-46.5" shape-rendering="crispEdges"/>
+  <desc> solid note stem up 1 half step long </desc>
+   <g id="solnu.1">
+    <use xlink:href="#note"/><use xlink:href="#stem.1"/>
+   </g>
+  <desc> solid note stem up 2 half steps long </desc>
+   <g id="solnu.2">
+    <use xlink:href="#note"/><use xlink:href="#stem.2"/>
+   </g>
+  <desc> solid note stem up 3 half steps long </desc>
+   <g id="solnu.3">
+    <use xlink:href="#note"/><use xlink:href="#stem.3"/>
+   </g>
+  <desc> solid note stem up 4 half steps long </desc>
+   <g id="solnu.4">
+    <use xlink:href="#note"/><use xlink:href="#stem.4"/>
+   </g>
+  <desc> solid note stem up 5 half steps long </desc>
+   <g id="solnu.5">
+    <use xlink:href="#note"/><use xlink:href="#stem.5"/>
+   </g>
+   <desc> solid note stem up 6 half steps long </desc>
+   <g id="solnu.6">
+    <use xlink:href="#note"/><use xlink:href="#stem.6"/>
+   </g>
+  <desc> solid note stem up 7 half steps long </desc>
+   <g id="solnu.7">
+    <use xlink:href="#note"/><use xlink:href="#stem.7"/>
+   </g>
+  <desc> solid note stem up 8 half steps long </desc>
+   <g id="solnu.8">
+    <use xlink:href="#note"/><use xlink:href="#stem.8"/>
+   </g>
+  <desc> solid note stem up 9 half steps long </desc>
+   <g id="solnu.9">
+    <use xlink:href="#note"/><use xlink:href="#stem.8"/>
+   </g>
+  <desc> solid note stem up 1 half step short </desc>
+   <g id="solnu-1">
+    <use xlink:href="#note"/><use xlink:href="#stem-1"/>
+   </g>
+  <desc> solid note stem up 2 half steps short </desc>
+   <g id="solnu-2">
+    <use xlink:href="#note"/><use xlink:href="#stem-2"/>
+   </g>
+  <desc> solid note stem up 3 half steps short </desc>
+   <g id="solnu-3">
+    <use xlink:href="#note"/><use xlink:href="#stem-3"/>
+   </g>
+  <desc> solid note with stem down </desc>
+   <g id="solnd">
+    <use xlink:href="#solnu" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 1 half step long</desc>
+   <g id="solnd.1">
+    <use xlink:href="#solnu.1" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 2 half steps long</desc>
+   <g id="solnd.2">
+    <use xlink:href="#solnu.2" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 3 half steps long</desc>
+   <g id="solnd.3">
+    <use xlink:href="#solnu.3" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 4 half steps long</desc>
+   <g id="solnd.4">
+    <use xlink:href="#solnu.4" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 5 half steps long</desc>
+   <g id="solnd.5">
+    <use xlink:href="#solnu.5" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 6 half steps long</desc>
+   <g id="solnd.6">
+    <use xlink:href="#solnu.6" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 7 half steps long</desc>
+   <g id="solnd.7">
+    <use xlink:href="#solnu.7" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 8 half steps long</desc>
+   <g id="solnd.8">
+    <use xlink:href="#solnu.8" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 9 half steps long</desc>
+   <g id="solnd.9">
+    <use xlink:href="#solnu.9" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 1 half step short</desc>
+   <g id="solnd-1">
+    <use xlink:href="#solnu-1" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 2 half steps short</desc>
+   <g id="solnd-2">
+    <use xlink:href="#solnu-2" transform="rotate(180)"/>
+   </g>
+  <desc> solid note with stem down 3 half steps short</desc>
+   <g id="solnd-3">
+    <use xlink:href="#solnu-3" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem up </desc>
+   <g id="hanu">
+    <use xlink:href="#holno"/><use xlink:href="#stem"/>
+   </g>
+  <desc> half note stem up 1 half step long </desc>
+   <g id="hanu.1">
+    <use xlink:href="#holno"/><use xlink:href="#stem.1"/>
+   </g>
+  <desc> half note stem up 2 steps long </desc>
+   <g id="hanu.2">
+    <use xlink:href="#holno"/><use xlink:href="#stem.2"/>
+   </g>
+  <desc> half note stem up 3 steps long </desc>
+   <g id="hanu.3">
+    <use xlink:href="#holno"/><use xlink:href="#stem.3"/>
+   </g>
+  <desc> half note stem up 4 steps long </desc>
+   <g id="hanu.4">
+    <use xlink:href="#holno"/><use xlink:href="#stem.4"/>
+   </g>
+  <desc> half note stem up 5 steps long </desc>
+   <g id="hanu.5">
+    <use xlink:href="#holno"/><use xlink:href="#stem.5"/>
+   </g>
+  <desc> half note stem up 6 steps long </desc>
+   <g id="hanu.6">
+    <use xlink:href="#holno"/><use xlink:href="#stem.6"/>
+   </g>
+  <desc> half note stem up 7 steps long </desc>
+   <g id="hanu.7">
+    <use xlink:href="#holno"/><use xlink:href="#stem.7"/>
+   </g>
+  <desc> half note stem up 8 steps long </desc>
+   <g id="hanu.8">
+    <use xlink:href="#holno"/><use xlink:href="#stem.8"/>
+   </g>
+  <desc> half note stem up 9 steps long </desc>
+   <g id="hanu.9">
+    <use xlink:href="#holno"/><use xlink:href="#stem.9"/>
+   </g>
+  <desc> half note stem up 1 half step short </desc>
+   <g id="hanu-1">
+    <use xlink:href="#holno"/><use xlink:href="#stem-1"/>
+   </g>
+  <desc> half note stem down </desc>
+   <g id="hand">
+    <use xlink:href="#holno"/><use xlink:href="#stem" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 1 half step long</desc>
+   <g id="hand.1">
+    <use xlink:href="#hanu.1" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 2 steps long</desc>
+   <g id="hand.2">
+    <use xlink:href="#hanu.2" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 3 steps long</desc>
+   <g id="hand.3">
+    <use xlink:href="#hanu.3" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 4 steps long</desc>
+   <g id="hand.4">
+    <use xlink:href="#hanu.4" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 5 steps long</desc>
+   <g id="hand.5">
+    <use xlink:href="#hanu.5" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 6 steps long</desc>
+   <g id="hand.6">
+    <use xlink:href="#hanu.6" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 7 steps long</desc>
+   <g id="hand.7">
+    <use xlink:href="#hanu.7" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 8 steps long</desc>
+   <g id="hand.8">
+    <use xlink:href="#hanu.8" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down 9 steps long</desc>
+   <g id="hand.9">
+    <use xlink:href="#hanu.9" transform="rotate(180)"/>
+   </g>
+  <desc> half note stem down half step short</desc>
+   <use id="hand-1" xlink:href="#hanu-1" transform="rotate(180)"/>
+  <desc> flag up </desc>
+   <path id="flagu" style="stroke:#000; stroke-width:1; fill:#000"
+    d="M0,0 Q0,7 8,19 Q18,33 18,44 Q18,61 5,72 Q15,60 15,48 Q15,39 9,33
+    Q2,26 0,23 L-.5,21 V-.5,-3.5 L0,0 z" transform="scale(1.07,.89)"/>
+  <desc> flag down </desc>
+   <use id="flagd" xlink:href="#flagu"
+    transform="rotate(-4,-12,79.5) matrix(1,0,.09,-1,-12,79.5)"/>
+  <desc> one flag and stem up, no note </desc>
+   <g id="eistmu">
+    <use xlink:href="#stem"/><use x="15" y="-81" xlink:href="#flagu"/>
+   </g>
+  <desc> one flag and stem down, no note </desc>
+   <g id="eistmd">
+    <use xlink:href="#stem" transform="rotate(180)"/><use xlink:href="#flagd"/>
+   </g>
+  <desc> eighth note stem up </desc>
+   <g id="eitnu">
+    <use xlink:href="#solnu"/><use x="15" y="-81" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem up, half step long </desc>
+   <g id="eitnu.1">
+    <use xlink:href="#solnu.1"/><use x="15" y="-93" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem up, whole step long </desc>
+   <g id="eitnu.2">
+    <use xlink:href="#solnu.2"/><use x="15" y="-105" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem down </desc>
+   <g id="eitnd">
+    <use xlink:href="#solnd"/><use xlink:href="#flagd"/>
+   </g>
+  <desc> eighth note stem down, half step long </desc>
+   <g id="eitnd.1">
+    <use xlink:href="#solnd.1"/><use y="12" xlink:href="#flagd"/>
+   </g>
+  <desc> eighth note stem down, whole step long </desc>
+   <g id="eitnd.2">
+    <use xlink:href="#solnd.2"/><use y="24" xlink:href="#flagd"/>
+   </g>
+  <desc> eighth note stem down, 3rd long </desc>
+   <g id="eitnd.3">
+    <use xlink:href="#solnd.3"/><use y="36" xlink:href="#flagd"/>
+   </g>
+  <desc> eighth note stem down, 4th long </desc>
+   <g id="eitnd.4">
+    <use xlink:href="#solnd.4"/><use y="48" xlink:href="#flagd"/>
+   </g>
+  <desc> 16th note stem up </desc>
+   <g id="sxtnu">
+    <g id="flags">
+     <path id="flg" style="stroke:#000; stroke-width:1; fill:#000"
+      d="M0,0 Q1,8 8,19 Q18,33 18,44 Q18,61 5,72 Q15,61 15,50 Q15,40 9,34
+       Q2,27 -3,21 L-.5,0 z"
+      transform="translate(14.5,-81) scale(.78,.72) skewX(8)"/>
+     <path id="flg2" style="stroke:#000; stroke-width:1; fill:#000"
+      d="M0,0 Q1,8 8,19 Q18,33 18,44 Q18,61 5,72 Q15,61 15,50 Q15,40 9,34
+       Q2,27 -.5,21 V-.5,-3.5 L0,0 z"
+      transform="translate(14.5,-55) scale(.78,.72)"
+     />
+    </g>
+    <use xlink:href="#solnu"/>
+   </g>
+  <desc> 16th note stem down </desc>
+   <g id="sxtnd">
+    <use xlink:href="#solnd"/>
+    <use xlink:href="#flags" transform="matrix(1.2,0,0,-.89,-30,9)"/>
+   </g>
+  <desc> 32nd note stem up </desc>
+   <g id="thr2nu">
+    <g id="thr2f">
+     <use y="-31" xlink:href="#flg"/><use y="0" xlink:href="#flg"/>
+     <use y="1" xlink:href="#flg2"/>
+    </g>
+    <use xlink:href="#note"/>
+    <use y="1" xlink:href="#stem.2" transform="scale(1,1.06)"/>
+   </g>
+  <desc> 32nd note stem down </desc>
+   <g id="thr2nd">
+    <use xlink:href="#thr2f" transform="matrix(1.2,0,0,-1,-30,6)"/>
+    <use xlink:href="#note"/>
+    <use y="1" xlink:href="#stem.2" transform="rotate(180) scale(1,1.13)"/>
+   </g>
+  <desc> 64th note stem up </desc>
+   <g id="sx4nu">
+    <g id="sx4f">
+     <use y="-57" xlink:href="#flg"/><use y="-29" xlink:href="#flg"/>
+     <use y="-1" xlink:href="#flg"/><use y="0" xlink:href="#flg2"/>
+    </g>
+    <use xlink:href="#note"/><use xlink:href="#stem.4" transform="scale(1,1.04)"/>
+   </g>
+  <desc> 64th note stem down </desc>
+   <g id="sx4nd">
+    <use xlink:href="#sx4f" transform="matrix(1.2,0,0,-1,-30,9)"/>
+    <use xlink:href="#note"/>
+    <use y="1" xlink:href="#stem.4" transform="rotate(180) scale(1,1.13)"/>
+   </g>
+  <desc> grace notes (need one for stem down?) </desc>
+   <g id="grace_" transform="translate(-36,12)"><!-- lower to upper -->
+    <use xlink:href="#eitnu" transform="scale(.6)"/>
+    <line x1="-3" y1="-15" x2="24" y2="-42" stroke="#000" stroke-width="2"/>
+    <use xlink:href="#slr" transform="rotate(-18.43) matrix(.48,0,0,-.8,-6,12)"/>
+   </g>
+   <g id="grace-" transform="translate(-36,-12)"><!-- upper to lower -->
+    <use xlink:href="#eitnu" transform="scale(.6)"/>
+    <line x1="-3" y1="-15" x2="24" y2="-42" stroke="#000" stroke-width="2"/>
+    <use xlink:href="#slr"
+     transform="rotate(18.43) matrix(.48,0,0,-.8,-3,12)"/>
+   </g>
+   <g id="grace-3" transform="translate(-36,-24)"><!-- upper to lower 3rd -->
+    <use xlink:href="#eitnu" transform="scale(.6)"/>
+    <line x1="-3" y1="-15" x2="24" y2="-42" stroke="#000" stroke-width="2"/>
+    <use xlink:href="#slr" transform="rotate(45,0,15) matrix(.39,0,0,-.8,0,15)"/>
+   </g>
+   <g id="grace-w" transform="translate(-66,-12)"><!-- upper to lower wide -->
+    <use xlink:href="#eitnu" transform="scale(.6)"/>
+    <line x1="-3" y1="-15" x2="24" y2="-42" stroke="#000" stroke-width="2"/>
+    <use xlink:href="#slr" transform="rotate(10.3) matrix(.69,0,0,-.8,-3,18)"/>
+   </g>
+   <g id="gracex" transform="translate(-36,0)"><!-- no slur, no interval -->
+    <use xlink:href="#eitnu" transform="scale(.6)"/>
+    <line x1="-3" y1="-15" x2="24" y2="-42" stroke="#000" stroke-width="2"/>
+   </g>
+  <desc> double acciaccatura </desc>
+   <g id="doac" transform="translate(-48,0) scale(.6)"><!-- lower to upper; two beams -->
+    <use xlink:href="#solnu.2"/>
+    <use xlink:href="#be2" transform="translate(14,-108.5) skewY(-12) scale(.39,1)"/>
+    <use x="39" y="-21" xlink:href="#solnu.1"/>
+   </g>
+   <g id="doac3" transform="translate(-66,0) scale(.6)"><!-- lower to upper; three beams -->
+    <use xlink:href="#solnu.3"/>
+    <use xlink:href="#be3" transform="translate(14,-120.5) skewY(-11) scale(.48,1)"/>
+    <use x="48" y="-21" xlink:href="#solnu.2"/>
+   </g>
+  <desc> hollow harmonic head </desc>
+   <path id="hohar" style="stroke:#000;fill:none;stroke-width:3"
+    d="M-14,0 Q-6,-6 0,-14 Q6,-6 14,0 Q6,6 0,14 Q-6,6 -14,0 z"/>
+  <desc> solid harmonic head </desc>
+   <path id="sohar" style="stroke:#000;stroke-width:3;fill:#000"
+    d="M-14,0 Q-6,-6 0,-14 Q6,-6 14,0 Q6,6 0,14 Q-6,6 -14,0 z"/>
+  <desc> harmonic stem </desc><!-- longer than note stem -->
+   <polygon id="hrstm" shape-rendering="crispEdges"
+    points="13,0 13,-82 16,-85 16,0 13,0"/>
+  <desc> half note harmonic stem up </desc>
+   <g id="hahru">
+    <use xlink:href="#hohar"/><use xlink:href="#hrstm"/>
+   </g>
+  <desc> half note harmonic stem down </desc>
+   <g id="hahrd">
+    <use xlink:href="#hahru" transform="rotate(180)"/>
+   </g>
+  <desc> solid harmonic stem up </desc>
+   <g id="slhru">
+    <use xlink:href="#sohar"/><use xlink:href="#hrstm"/>
+   </g>
+  <desc> solid harmonic stem down </desc>
+   <g id="slhrd">
+    <use xlink:href="#slhru" transform="rotate(180)"/>
+   </g>
+  <desc> beam / give beams a translate +14x -85y (for stem up)
+                or -14,+70 (for stem down) of the note head
+                to establish x=0 y=0 at the stem head;
+                !always skew before scale when not using a matrix!
+                for stem down subtract 21 for each additional beam
+  </desc>
+   <rect id="be" width="100" height="15"/>
+  <desc> 2 beams </desc>
+   <g id="be2">
+    <use xlink:href="#be"/><use x="0" y="21" xlink:href="#be"/>
+   </g>
+  <desc> 3 beams </desc>
+   <g id="be3">
+    <use xlink:href="#be"/><use x="0" y="21" xlink:href="#be"/><use x="0" y="42" xlink:href="#be"/>
+   </g>
+  <desc> 4 beams </desc>
+   <g id="be4">
+    <use xlink:href="#be2"/><use y="42" xlink:href="#be2"/>
+   </g>
+  <desc> beam and one half beam left </desc>
+   <g id="be1.5l" xml:base="music-notation.svg">
+    <use xlink:href="#be"/>
+    <use x="0" y="21" xlink:href="#be" transform="scale(.5,1)"/>
+   </g>
+  <desc> beam and one half beam right </desc>
+   <g id="be1.5r" xml:base="music-notation.svg">
+    <use xlink:href="#be"/>
+    <rect x="66.67" y="21" width="33.33" height="15"/>
+   </g>
+  <desc> beam and one partial beam left </desc>
+   <g id="be.1l">
+    <use xlink:href="#be"/><rect x="0" y="21" width="24" height="15"/>
+   </g>
+  <desc> beam and one partial beam right </desc>
+   <g id="be.1r">
+    <use xlink:href="#be"/><rect x="76" y="21" width="24" height="15"/>
+   </g>
+  <desc> beam and two partial beams both sides </desc>
+   <g id="be.2">
+    <use xlink:href="#be"/>
+    <rect x="82" y="21" width="18" height="15"/>
+    <rect x="0" y="21" width="18" height="15"/>
+   </g>
+  <desc> beam and two partial beams on right </desc>
+   <g id="be.3r">
+    <use xlink:href="#be"/>
+    <rect x="76" y="21" width="24" height="15"/>
+    <rect x="76" y="42" width="24" height="15"/>
+   </g>
+  <desc> slur and tie
+   put in a 'g' with a translate ±15x ±93y of the note head
+   to establish x=0 y=0 @ the stem head, then 'rotate', 'scale'</desc>
+   <path id="slr" d="M0,0 C12,-30 88,-30 100,0 C82,-21 18,-21 0,0 z"/>
+   <path id="tie" d="M0,0 C6,-45 94,-45 100,0 C88,-36 12,-36 0,0 z"/>
+  <desc> half slur: left,up / put in 'g' </desc>
+   <path id="hslrl" d="M0,0 C15,-22 50,-24 100,-24 V-18 C50,-20 15,-16 0,0 z"
+    fill="#000" stroke="none"/>
+  <desc> half slur: right,up / put in 'g' </desc>
+   <use id="hslrr" xlink:href="#hslrl" transform="matrix(-1,0,0,1,0,0)"/>
+  <desc> half tie: left,up / put in 'g' </desc>
+   <path id="htiel" d="M0,0 C10,-35 50,-38 100,-38 V-32 C50,-32 13,-29 0,0 z"
+    fill="#000" stroke="none"/>
+  <desc> half tie: right,up / put in 'g' </desc>
+   <use id="htier" xlink:href="#htiel" transform="matrix(-1,0,0,1,0,0)"/>
+  <desc> dot and double-dot for notes;
+   with a note on a space 0,0; on a line 0,±9 </desc>
+   <circle id="dot" cx="27" cy="0" r="3"/>
+   <g id="dodot">
+    <use xlink:href="#dot"/><use x="12" xlink:href="#dot"/>
+   </g>
+  <desc> a larger dot for repeats, et.al. </desc>
+   <circle id="dotl" cx="0" cy="0" r="4"/>
+  <desc> whole/half rest </desc><!-- put whole on line; half on space -->
+   <rect id="hlfr" x="-15" width="30" height="12"
+    shape-rendering="crispEdges"/>
+  <desc> quarter rest </desc>
+   <path id="qrr" transform="translate(-12,-36) scale(1.2)"
+    d="M0,0 L15,15 Q23,23 17,26 Q9,30 19,45 L20,48 L18,46
+     Q15,43 12,46 Q7,51 11,60 L3,52 C-4,45 8,36 14,42 L7,35
+     Q-2,26 5,19 L7,17 Q10,14 6,9 L1,3 L0,0 z"/>
+  <desc> eighth rest </desc>
+   <path id="etr" transform="translate(-12,-20)"
+    style="stroke:#000; stroke-width:1; fill:#000"
+    d="M27,1.5 Q14,10 9,2 C3,-5 -2.5,10.5 1,11.5 4.5,13.5 10,6 7.5,5
+     Q12,12 20,8 C8,19 4.5,31 4.5,40 8,31 11,20 22,8 L28,1.5 z"/>
+  <desc> sixteenth rest </desc>
+   <g id="sxtr" transform="translate(-12,-21)">
+    <!-- modified 'etr' -->
+    <path style="stroke:#000; stroke-width:1; fill:#000"
+     d="M27,1.5 Q14,10 9,2 C3,-5 -2.5,10.5 1,11.5 C4.5,13.5 10,6 7.5,5
+     Q12,12 20,8 C8,19 4.5,31 3.5,45 8,31 11,20 22,8 L28,1.5 z"/>
+    <!-- second 'nob' -->
+    <path style="stroke:#000; stroke-width:1; fill:#000"
+     d="M12.5,19.5 Q6,22 3,17 C-3,10 -8.5,25.5 -5,26.5 C-1.5,28.5 4,21 1.5,20
+     Q5.5,26 11,23 L12.5,19.5 z"
+    />
+   </g>
+  <desc> thirty second rest </desc>
+   <g id="thr2r" stroke="#000" stroke-width="1" fill="#000"
+    transform="translate(-12,-21)">
+    <path
+     d="M27,1.5 Q14,10 9,2 C3,-5 -2.5,10.5 1,11.5 C4.5,13.5 10,6 7.5,5
+     Q12,12 20,8 C8,19 4.5,31 1.5,55 8,31 11,20 22,8 L28,1.5 z"/>
+    <!-- second 'nob' -->
+    <path id="nob2"
+     d="M12.5,19.5 Q6,22 3,17 C-3,10 -8.5,25.5 -5,26.5 C-1.5,28.5 4,21 1.5,20
+     Q5.5,26 11,23 L12.5,19.5 z"/>
+    <!-- third 'nob' -->
+    <path id="nob3" transform="translate(-4,15)"
+     d="M10.5,20 Q5.5,21.5 3,17 C-3,10 -8.5,25.5 -5,26.5 C-1.5,28.5 4,21 1.5,20
+     Q5,25.5 9.5,23.75 L10.5,20 z"
+    />
+   </g>
+
+  <desc> LEFT-OFF HERE; 1 </desc>
+
+  <desc> fingering numbers </desc>
+   <circle id="fnrng" r="15"
+    style="stroke:#036; stroke-width:3; fill:none"/><!-- fnrng +18,+36Ln or 24Sp -->
+   <line id="slide" x1="-18" y1="0" x2="-9" y2="0"
+    stroke="#036" stroke-width="3" shape-rendering="crispEdges"/>
+   <text class="finger" id="f0" x="-6" y="7.5">0</text><!-- x,y centers -->
+   <text class="finger" id="f1" x="-6" y="7.5">1</text>
+   <text class="finger" id="f2" x="-6" y="7.5">2</text>
+   <text class="finger" id="f3" x="-6" y="7.5">3</text>
+   <text class="finger" id="f4" x="-6.5" y="7.5">4</text>
+   <text class="finger" id="f5" x="-6" y="7.5">5</text>
+   <text class="finger" id="f6" x="-6" y="7.5">6</text>
+   <!-- fingering nos. at circle if used; alone: [upper notes] x-12,y(line)-39
+    (space)-28; [lower notes] x-30,y(line)+17 (space)+24 -->
+  <desc> Roman numerals </desc>
+   <line id="I" x1="0" y1="-120" x2="0" y2="-168"
+    stroke="#665" stroke-width="3"/>
+   <path id="V" d="M-10.5,-168 Q-1,-138 0,-120 Q1,-138 10.5,-168"
+    stroke="#665" stroke-width="3" fill="none"/>
+   <g id="X" stroke="#665" stroke-width="3">
+    <line x1="-10.5" y1="-168" x2="10.5" y2="-120"/>
+    <line x1="10.5" y1="-168" x2="-10.5" y2="-120"/>
+   </g>
+   <g id="II">
+    <use x="-7.5" xlink:href="#I"/><use x="7.5" xlink:href="#I"/>
+   </g>
+   <g id="III">
+    <use x="-15" xlink:href="#I"/>
+    <use xlink:href="#I"/>
+    <use x="15" xlink:href="#I"/>
+   </g>
+   <g id="IV">
+    <use x="-15" xlink:href="#I"/><use x="6" xlink:href="#V"/>
+   </g>
+   <g id="VI">
+    <use x="-6" xlink:href="#V"/><use x="15" xlink:href="#I"/>
+   </g>
+   <g id="VII">
+    <use x="-21" xlink:href="#V"/>
+    <use xlink:href="#I"/><use x="15" xlink:href="#I"/>
+   </g>
+   <g id="VIII">
+    <use x="-21" xlink:href="#V"/><use xlink:href="#I"/>
+    <use x="15" xlink:href="#I"/><use x="30" xlink:href="#I"/>
+   </g>
+   <g id="IX">
+    <use x="-15" xlink:href="#I"/><use x="6" xlink:href="#X"/>
+   </g>
+  <desc> a dash after a Roman numeral </desc>
+   <line id="nd" x1="-6" y1="-150" x2="6" y2="-150"
+    stroke="#665" stroke-width="3"/>
+  <desc> extension line for Roman numerals </desc>
+   <!-- a dashed 'line' in a 'g' is used directly without a 'use' in order
+    to lengthen or shorten it without stretching -->
+   <path id="exlnd" d="M18,0 H30 V18"
+    stroke="#665" stroke-width="3" fill="none"/>
+    <!-- extension line end / put inside of dashed line 'g' -->
+   <g transform="translate(,)"><desc> dashed line; at note coords </desc>
+    <line x1="0" y1="-150" x2="0" y2="-150"
+     stroke="#665" stroke-dasharray="12,18" stroke-width="3"/>
+    <use x="" y="-150" xlink:href="#exlnd"/><!-- x = x2 of dashed line -->
+   </g><!-- must copy this group - not use 'use' -->
+  <desc> numbers for Rom. num. </desc><!--  -->
+   <text class="barno" id="n1" y="-168">1</text>
+   <text class="barno" id="n2" y="-168">2</text>
+   <text class="barno" id="n3" y="-168">3</text>
+   <text class="barno" id="n4" y="-168">4</text>
+   <text class="barno" id="n5" y="-168">5</text>
+   <text class="barno" id="n6" y="-168">6</text>
+   <g id="n24">
+    <use x="0" y="0" xlink:href="#n2"/><use x="0" y="24" xlink:href="#n4"/>
+   </g>
+   <g id="n35">
+    <use x="0" y="0" xlink:href="#n3"/><use x="0" y="24" xlink:href="#n5"/>
+   </g>
+   <g id="n46">
+    <use x="0" y="0" xlink:href="#n4"/><use x="0" y="24" xlink:href="#n6"/>
+   </g>
+  <desc> pinky bar; end only </desc>
+   <desc> a 'line' in a 'g' is used directly without a 'use' in order
+    to lengthen or shorten it without stretching the ends </desc>
+   <line id="pbnd" x1="0" y1="0" x2="0" y2="9"
+    style="stroke:#665; stroke-width:3; stroke-linecap:square"/>
+   <!--  pinky bar ends only / put inside of pinky-bar line 'g' -->
+  <desc> pinky bar with ends </desc>
+   <g transform="translate(,)"><!-- note coordinates go here -->
+    <line x1="-24" y1="-117" x2="24" y2="-117" style="stroke:#665; stroke-width:3"/>
+    <use x="-24" y="-117" xlink:href="#pbnd"/><use x="24" y="-117" xlink:href="#pbnd"/><!-- add additional length to x24 as needed -->
+   </g><!-- must copy this group - not use 'use' -->
+  <desc> knuckle fret </desc>
+   <g id="kn" transform="translate(-18,-99)">
+    <text class="instruct">kn</text>
+   </g>
+   
+  <desc> INTRUCTION SYMBOLS </desc>
+
+  <desc> dynamics symbols </desc>
+   <path id="mod" stroke="#000" stroke-width=".25" fill="#000"
+    d="M2,2.5
+    L1.75,3.25 C5.25,2.5 6.375,2.875 5.25,6.25 L4,10 Q2,16 0,20.75
+    L5.125,19.625 L8.25,10.25 C10,6 14,3 17,3 C18.75,3 18.75,5.5 18.25,7
+    L17.25,10 Q15.25,16 13.25,20.75 L18.375,19.625 L21.5,10.25
+    C23,5.75 27,3 30,3 C31.75,3 31.75,5.5 31.25,7 L28,16.75
+    C26.25,22 30,20.75 33,19.75 L37.5,18.25 37.75,17.5
+    C34.5,18.5 32.25,18.25 33.25,15.25 L36.75,4.75
+    C39.75,-4.25 26.75,1.5 23,5.75 L23.5,4.25 C26.25,-4 14,1.5 9.75,5.75
+    C12.25,-1.75 11.75,-.75 2,2.5"/>
+   <g id="forte">
+    <path stroke="#000" stroke-width=".5" fill="#000"
+     d="M4.5,40.25
+     C3.5,40.75 3.88,41.5 5,41.5 C7.5,41.5 10,36 14,24 L15,21
+     C20,6 25,.5 32,.5 C35.5,.5 37,2.5 37,5
+     Q37,6.5 36,7.5 L33.5,10 Q32.5,11 31,9.5 Q29.5,8 30.5,7 L32.5,5
+     C34,3.5 33.5,2 31.5,2 C28.5,2 26.5,4.5 22,18 L21,21
+     C16,36 11,43 5,43 C1.75,43 .5,40.75 .5,38
+     C.5,36.5 1.5,34.5 3.75,34.5 C5.75,34.5 6.25,36.25 6.25,37
+     C6.25,38.5 6,39.5 4.5,40.25"/>
+    <rect x="10" y="14.25" width="21" height="1.5"/>
+   </g>
+   <path id="piano" stroke="#000" stroke-width=".25" fill="#000" fill-rule="evenodd"
+    d="M6,2.5
+    L5.75,3.25 C9.25,2.5 10.375,2.875 8.75,7.75 L6,16 Q2.5,26.5 -1,34.5
+    L4.625,33.125 L9,20 Q11.25,20.75 13,20.75 C21,20.75 28.25,12 28.25,5
+    C28.25,2 26.5,.25 23,.25 C20.25,.25 18,.75 14.75,2.75
+    C15.75,-.5 13.5,0 11.25,.75 L6,2.5
+    M10.25,16.25
+    L13.5,6.5 C15.25,1.25 26.25,-1.75 22,11 C18.5,21.5 8.75,20.75 10.25,16.25"/>
+   <g id="pp">
+    <use xlink:href="#piano"/><use x="24" xlink:href="#piano"/>
+   </g>
+   <g id="mf">
+    <use x="-30" y="12" xlink:href="#mod"/><use xlink:href="#forte"/>
+   </g>
+   <g id="mp">
+    <use x="-33" xlink:href="#mod"/><use xlink:href="#piano"/>
+   </g>
+   <g id="sf" transform="translate(-12,0)">
+    <path id="s" stroke="#000" stroke-width=".5" fill="#000"
+     transform="translate(-9,12)"
+     d="M13.5,2.5
+     L12.5,3.5 Q11.75,4.25 13,5.5 Q14.25,6.75 15,6 L16,5 Q16.5,4.5 16.5,3.75
+     C16.5,1.75 14.75,.25 12,.25 C7.25,.25 4,3.25 4,6.75
+     C4,9.5 6,10.75 8.5,12 C10,12.75 10.75,13.75 10.75,15
+     C10.75,17 8,18.5 6,18.5 C4.5,18.5 3,18 3,17.5
+     C4.5,17 5,16.5 5,15 C5,14.25 4.5,13 3,13 C1,13 0,14.25 0,16.5
+     C0,18.5 2.75,20.25 5.5,20.25 C10,20.25 14,17.5 14,13.5
+     C14,11.25 13.5,10.25 10,8.5 C8,7.5 7.25,6.25 7.25,5.25
+     C7.25,3 8.5,1.25 11.5,1.25 Q14.5,1.25 13.5,2.5"/>
+    <use xlink:href="#forte"/>
+   </g>
+  <desc> triplet symbol with slur </desc>
+   <!-- copy ths 'g' (no 'use') to reshape arc only, but use #triarc -->
+   <g transform="translate(0,0)"><!-- same coordinates as first note -->
+    <path id="triarc" d="M0,0 C6,-42 94,-42 100,0 C88,-36 12,-36 0,0 z"/>
+    <text class="instruct" x="48" y="-108">3</text>
+    <!-- the '3' will need adjusting as the arc reshapes -->
+   </g>
+  <desc> triplet symbol bracket </desc>
+   <line id="tribnd" x1="0" y1="0" x2="0" y2="12"
+    stroke="#777" stroke-width="3" stroke-linecap="square"/>
+   <!--  triplet bracket end only / put inside of triplet bracket line 'g' -->
+   <g transform="translate(,) skewY()"><!-- triplet bracket -->
+    <line x1="-18" y1="-156" x2="" y2="-156"
+     stroke="#777" stroke-width="3" stroke-dasharray="6,9"/>
+    <use x="-18" y="-156" xlink:href="#tribnd"/>
+    <use x="" y="-156" xlink:href="#tribnd"/>
+    <text x="" y="-132" class="instruct">3</text>
+   </g>
+  <desc> fermata </desc>
+   <g id="frm" transform="translate(-24,-117)">
+    <path id="fermarc" d="M0,3 C0,-27 47,-27 47,3 H46 C42,-21 5,-21 1,3 H0 z"/>
+    <circle id="fermdot" cx="24" cy="-2" r="4"/>
+   </g>
+  <desc> an arpeggio </desc>
+   <!-- this path is one segment; add as many as you need to group (+37y) -->
+   <path id="arpseg" d="M-14,1 L-2,25 Q1,31 -2,34 L-10,42 Q-11,44 -10,46
+    L-1,64 V69 L-14,43 Q-16,39 -13,36 L-5,28 Q-4,26 -5,24 L-14,6 V1 z"/>
+   <g id="arpe" transform="translate(-30,-30) scale(1)"><!-- 1 octave -->
+    <use xlink:href="#arpseg"/>
+    <use y="37" xlink:href="#arpseg"/><use y="74" xlink:href="#arpseg"/>
+   </g>
+   <g id="arpe.1"><!-- 1 octave plus a 4th/5th-->
+    <use xlink:href="#arpe"/>
+    <use x="-30" y="87" xlink:href="#arpseg" transform="scale(1)"/>
+   </g><!-- y87 is 37 times 3 = 111 - 24 -->
+   <g id="arpe.2"><!-- 1 octave plus 6th,7th,2oct.-->
+    <use xlink:href="#arpe.1"/>
+    <use x="-30" y="124" xlink:href="#arpseg"/>
+   </g>
+   <g id="arpe.3" transform="translate(-30,-27)"><!-- 2 octave plus 2nd,3rd,4th-->
+    <use x="0" y="0" xlink:href="#arpseg"/><use x="0" y="37" xlink:href="#arpseg"/>
+    <use x="0" y="74" xlink:href="#arpseg"/><use x="0" y="111" xlink:href="#arpseg"/>
+    <use x="0" y="148" xlink:href="#arpseg"/><use x="0" y="185" xlink:href="#arpseg"/>
+   </g>
+   <g id="arpe.4" transform="translate(-30,-27)"><!-- 2 octaves plus 4th,5th,6th-->
+    <use x="0" y="0" xlink:href="#arpseg"/><use x="0" y="37" xlink:href="#arpseg"/>
+    <use x="0" y="74" xlink:href="#arpseg"/><use x="0" y="111" xlink:href="#arpseg"/>
+    <use x="0" y="148" xlink:href="#arpseg"/><use x="0" y="185" xlink:href="#arpseg"/>
+    <use x="0" y="222" xlink:href="#arpseg"/>
+   </g>
+   <g id="arpe.5" transform="translate(-30,-27)"><!-- from .4 to 3 octaves -->
+    <use x="0" y="0" xlink:href="#arpseg"/><use x="0" y="37" xlink:href="#arpseg"/>
+    <use x="0" y="74" xlink:href="#arpseg"/><use x="0" y="111" xlink:href="#arpseg"/>
+    <use x="0" y="148" xlink:href="#arpseg"/><use x="0" y="185" xlink:href="#arpseg"/>
+    <use x="0" y="222" xlink:href="#arpseg"/><use x="0" y="259" xlink:href="#arpseg"/>
+   </g>
+  <desc> trill </desc>
+   <g id="tr" transform="translate(-6,-141)">
+    <polygon points="5,7 7,5 30,5 28,7 5,7" stroke="#000" fill="#000"/><!-- cross -->
+    <path d="M13,1 L2,30 C-2.55,41 10,47 16.83,29 L12.5,30 C8,38.91 4,37.91 6,31 L17,-1 L13,1 z"
+     fill="#000" stroke="#000"/><!-- t -->
+    <path d="M17,14 Q17,21 14.5,25 L19,24 Q22,17 30,20 V18 Q27,13 21,16 V12 L17,14 z"
+     fill="#000" stroke="#000"/><!-- r -->
+   </g>
+  <desc> crescendo/decrescendo - 1 small, 2 large </desc>
+   <path id="cres1" stroke="#000" stroke-width="3" fill="none"
+    d="M0,-9 L-176,-1 Q-198,0 -220,0 Q-198,0 -176,1 L0,9"/>
+   <path id="cres2" stroke="#000" stroke-width="3" fill="none"
+    d="M0,-15 L-450,-1.5 Q-500,0 -550,0 Q-500,0 -450,1.5 L0,15"/>
+   <path id="dec1" stroke="#000" stroke-width="3" fill="none"
+    d="M0,-9 L176,-1 Q198,0 220,0 Q198,0 176,1 L0,9"/>
+   <path id="dec2" stroke="#000" stroke-width="3" fill="none"
+    d="M0,-15 L450,-1.5 Q500,0 550,0 Q500,0 450,1.5 L0,15"/>
+  <desc> repeat bars, left and right </desc>
+   <g id="repl">
+    <rect x="0" y="0" width="12" height="336" shape-rendering="crispEdges"/>
+    <rect x="20" y="0" width="6" height="336" shape-rendering="crispEdges"/>
+    <use x="36" y="36" xlink:href="#dotl"/><use x="36" y="60" xlink:href="#dotl"/>
+    <use x="36" y="276" xlink:href="#dotl"/><use x="36" y="300" xlink:href="#dotl"/>
+   </g>
+   <use id="repr" xlink:href="#repl" transform="matrix(-1,0,0,1,0,0)"/>
+  <desc> measure repeats </desc>
+   <g id="msrrp1">
+    <polygon id="slash" points="-24,21 18,-21 24,-21 -18,21 -24,21"/>
+    <use x="-15" y="-12" xlink:href="#dotl"/><use x="15" y="12" xlink:href="#dotl"/>
+   </g>
+   <g id="msrrp2">
+    <use x="-12" y="0" xlink:href="#slash"/><use x="12" y="0" xlink:href="#slash"/>
+    <use x="-27" y="-12" xlink:href="#dotl"/><use x="27" y="12" xlink:href="#dotl"/>
+   </g>
+  <desc> segno </desc>
+   <g id="segno" transform="translate(-8,-150)">
+    <path fill="#000" stroke="#000"
+     d="M12,38 L2,18 C-1,12 1,1 9,1 Q13,1 13,5 Q13,9 9,9 Q6,9 6,5 Q2,7.5 3.75,12
+     L14.25,33 C19.25,43 16,54 9,54 Q5,54 5,50 Q5,46 9,46 Q12,46 12,50 Q17,48 12,38 z"/>
+    <polygon points="-6.25,50 20.25,4 23.25,4 -3.25,50 6.25,50"/>
+    <use x="1" y="28" xlink:href="#dotl"/><use x="16.5" y="25.5" xlink:href="#dotl"/>
+   </g>
+  <desc> coda </desc>
+   <g id="coda" transform="translate(0,-96)" fill-rule="evenodd">
+    <path d="M0,-18
+     A1,1.2 0 0,1 0,18 A1,1.2 0 0,1 0,-18 z
+     M0,-16.5
+     A1,2.25 0 0,1 0,16.5 A1,2.25 0 0,1 0,-16.5 z"/>
+    <polygon points="-1,-23 1,-25 1,23 -1,25 -1,-23"/>
+    <polygon points="-20,-1 22,-1 20,1 -22,1 -20,-1"/>
+   </g>
+  <desc> mordents; from upper note and lower note </desc>
+   <g id="moru" transform="translate(-24,-135)"><!-- from upper -->
+    <path stroke="#000" stroke-width=".5" fill="#000"
+     d="M2,0 L1,2 L15.5,31 H16 L17,29 L2,0 z"/>
+    <path id="morseg" stroke="#000" stroke-width=".5" fill="#000"
+     d="M21,13 L16,26 V31 H18.5 L24.25,17 L31.75,31 H32 V27 L24.5,13 H21 z"/>
+    <use x="15" y="0" xlink:href="#morseg"/>
+   </g>
+   <!-- from lower -->
+   <use id="mord" xlink:href="#moru" transform="matrix(1,0,0,-1,0,-270)"/>
+  <desc> page numbers and circle </desc>
+   <circle id="pageO" cx="0" cy="0" r="19.5"
+    stroke="#665" stroke-width="3" fill="none"/>
+   <g id="pg1" transform="translate(2289,21)">
+    <text class="pgno" x="-6" y="11">1</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg2" transform="translate(2289,21)">
+    <text class="pgno" x="-8.5" y="11.5">2</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg3" transform="translate(2289,21)">
+    <text class="pgno" x="-7" y="11">3</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg4" transform="translate(2289,21)">
+    <text class="pgno" x="-10.5" y="12">4</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg5" transform="translate(2289,21)">
+    <text class="pgno" x="-8" y="11.5">5</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg6" transform="translate(2289,21)">
+    <text class="pgno" x="-9.5" y="11">6</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg7" transform="translate(2289,21)">
+    <text class="pgno" x="-8.5" y="12">7</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg8" transform="translate(2289,21)">
+    <text class="pgno" x="-9" y="11">8</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   <g id="pg9" transform="translate(2289,21)">
+    <text class="pgno" x="-10" y="11">9</text>
+    <use xlink:href="#pageO"/>
+   </g>
+   
+  <desc> first and second ending brackets </desc>
+   <g transform="translate(0,0)"><!-- first ending; note coords here -->
+    <line x1="-42" y1="42" x2="-42" y2="0" transform="translate(0,-150)"
+     style="stroke:#333;stroke-width:3;shape-rendering:crispEdges"/>
+    <line x1="-42" y1="0" x2="42" y2="0" transform="translate(0,-150)"
+     style="stroke:#333;stroke-width:3;shape-rendering:crispEdges"/>
+    <text class="repno" x="-33" y="-117">1.</text>
+   </g>
+   <g transform="translate(0,0)"><!-- second ending; note coords here -->
+    <line x1="-42" y1="42" x2="-42" y2="0" transform="translate(0,-150)"
+     style="stroke:#333;stroke-width:3;shape-rendering:crispEdges"/>
+    <line x1="-42" y1="0" x2="42" y2="0" transform="translate(0,-150)"
+     style="stroke:#333;stroke-width:3;shape-rendering:crispEdges"/>
+    <text class="repno" x="-33" y="-117">2.</text>
+   </g>
+  <desc> octava </desc>
+   <g id="oct" transform="translate(0,0)"><!-- note coordinates here -->
+    <polyline points="-42,42 -42,0 12,0" transform="translate(0,-150)"
+     style="fill:none;stroke:#333;stroke-width:3;shape-rendering:crispEdges"/>
+    <text class="repno" x="-15" y="-117">8va</text>
+    <line x1="57" y1="-150" x2="0" y2="-150"
+     style="stroke:#333; stroke-dasharray:12,18; stroke-width:3"/>
+    <use x="0" y="-150" xlink:href="#exlnd"/>
+   </g>
+  <desc> tenuto </desc>
+   <rect id="tenu" x="-12" y="-2" width="24" height="4"/>
+  <desc> staccato </desc>
+   <circle id="stac" cx="0" cy="0" r="2.5"/>
+  <desc> accent </desc>
+   <polyline id="acc" points="-21,-12 21,0 -21,12" transform="translate(0,-123)"
+    stroke="#000" stroke-width="3" fill="none"/>
+  <desc> breath/break </desc>
+   <path id="bre" stroke="#000" stroke-width=".25" fill="#000"
+    d="M3.75,22.5
+    L9,17.25 C15.5,10.75 15.5,7.5 10,2
+    Q7.5,-.5 3.5,3.5 C.25,6.75 0,8 3,11
+    Q5,13 7,11 Q7.5,17 3.25,20.5 z"/>
+  <desc> Pedal </desc>
+   <g id="ped">
+    <path stroke="#000" stroke-width=".25" fill="#000"
+     d="M10.5,9
+     C8.75,13 7.25,13.5 5.5,13.5 C3.75,13.5 2.5,12.5 2.5,10.5
+     C2.5,6.5 7.5,2.125 14.5,1.5
+     L12.875,8 C12,11.5 12,14 14,18 L16,22 C16.75,23.5 17.25,25 17.25,26
+     C17.25,29 13.875,32.25 10.5,34.5 C6.75,37 6.375,37.125 6.375,37
+     C6.375,36.5 13,32 16,32 C19,32 22,36.5 23.5,39
+     H24.25 C34.5,30 38.5,24 38.5,23.5
+     C38.5,22 36,19.5 33,19.5 C29.75,19.5 27,22.75 27,27
+     C27,34.5 31.5,39 35.25,39 C38.75,39 40.5,36.5 42,33.5
+     C43.5,37 47,39 50.5,39 C55,39 57,35 57,30
+     C57,21.5 49,13.5 32,12.75 L31.75,13.25
+     C50,14 54,26 54,33 C54,36 52.75,37.75 51,37.75
+     C47.5,37.75 43.75,33 43.75,26 C43.75,23.75 44.75,21 46.5,20
+     L46.25,19.5 C42,21 40.25,27 41.5,32.25
+     C39,36.5 37.5,37 36.25,37 C32.5,37 29.25,30.5 29.25,25.5
+     C29.25,23 30.25,21.5 31.75,21.5 C34,21.5 35.25,23.5 35.75,25.25
+     C35,27.5 31,32 26.25,35.75
+     C25,33 21.5,29.75 17.5,29.75 C11,29.75 4.25,35.5 4.25,38.25
+     C4.25,38.75 4.5,39 5,39 C6,39 20,33.5 20,21.5
+     C20,20 19.25,17.75 16.25,13.25 C14.75,11 14,8.5 14.75,5.5 L15.75,1.5
+     C23,1.5 27.25,5 27.25,8.25 C27.25,10.5 25,12 22.5,12
+     C20,12 18.5,11.5 17,9 L16.5,9.25
+     C18.75,13.5 21.5,15 24.5,15 C27,15 29.5,13 29.5,10.5
+     C29.5,4.75 23.25,.5 16,.5 C6,.5 .5,7 .5,12.5
+     C.5,16 2.5,17.5 4.5,17.5 C7.5,17.5 10.5,14 11,9 z"/>
+    <circle cx="60" cy="37" r="2"/>
+   </g>
+  <desc> release pedal </desc>
+   <g id="relpd" transform="translate(-16.5,0)">
+    <path id="arm2" transform="translate(16.5,16.5)"
+     stroke="#000" stroke-width=".25" fill="#000"
+     d="M-.5,-3
+     V-7.5 Q-.5,-10 -1.5,-11 C-8.5,-18 8.5,-18 1.5,-11 Q.5,-10 .5,-7.5 V-3 z"/>
+    <use xlink:href="#arm2" transform="rotate(45,16.5,16.5)"/>
+    <use xlink:href="#arm2" transform="rotate(90,16.5,16.5)"/>
+    <use xlink:href="#arm2" transform="rotate(135,16.5,16.5)"/>
+    <use xlink:href="#arm2" transform="rotate(180,16.5,16.5)"/>
+    <use xlink:href="#arm2" transform="rotate(225,16.5,16.5)"/>
+    <use xlink:href="#arm2" transform="rotate(270,16.5,16.5)"/>
+    <use xlink:href="#arm2" transform="rotate(315,16.5,16.5)"/>
+    <circle cx="16.5" cy="16.5" r="3"
+     stroke="#000" stroke-width="1.5" fill="none"/>
+   </g>
+  <desc> marcato </desc>
+   <polygon id="marc"
+    points="-10,20 0,0 10,20 4,20 -2,8 -8,20 -10,20"/>
+  <desc> tremulo(s) </desc>
+   <polygon id="trem8" points="-12,0 12,-12 12,0 -12,12 -12,0"/>
+   <g id="trem16">
+    <use xlink:href="#trem8"/><use y="17" xlink:href="#trem8"/>
+   </g>
+   <g id="trem32">
+    <use xlink:href="#trem8"/>
+    <use y="17" xlink:href="#trem8"/><use y="34" xlink:href="#trem8"/>
+   </g>
+  <desc> glissando(s) </desc>
+   <g id="glis">
+    <path id="gliseg" stroke="#000" stroke-width=".25" fill="#000" transform="translate(24,-9)"
+     d="M0,8
+     L12,2 Q16,0 18,4 L19,6 Q20,8 22,7 L32,2 V4
+     L20,10 Q16,12 14,8 L13,6 Q12,4 10,5 L0,10 V8"/>
+    <use x="20" xlink:href="#gliseg"/><use x="40" xlink:href="#gliseg"/>
+    <use x="60" xlink:href="#gliseg"/><use x="80" xlink:href="#gliseg"/>
+   </g>
+   <g id="glis.1">
+    <use xlink:href="#glis"/>
+    <use x="100" xlink:href="#gliseg"/><use x="120" xlink:href="#gliseg"/>
+   </g>
+   <g id="glis.2">
+    <use xlink:href="#glis.1"/>
+    <use x="140" xlink:href="#gliseg"/><use x="160" xlink:href="#gliseg"/>
+   </g>
+   <g id="glis.3">
+    <use xlink:href="#glis.2"/>
+    <use x="180" xlink:href="#gliseg"/><use x="200" xlink:href="#gliseg"/>
+   </g>
+   <g id="glis.4">
+    <use xlink:href="#glis.3"/>
+    <use x="220" xlink:href="#gliseg"/><use x="240" xlink:href="#gliseg"/>
+   </g>
+  <desc> a turn </desc>
+   <g id="turn" transform="translate(-24,-12)">
+    <path id="tHalf" stroke="#000" stroke-width=".25" fill="#000"
+     d="M6,19
+     Q6.5,17.5 9,17.5 C14.5,17.5 14.5,24 9,24
+     C4,24 0,18.5 0,12 C0,5.5 5,0 11,0
+     C16,0 19,3 25,9 L26.5,10.5 22.5,14.5 21,13 C15,7 12.5,5.5 8.5,5.5
+     C4.5,5.5 1.5,8.5 1.5,12 C1.5,16 4,18 6,19"/>
+    <use xlink:href="#tHalf" transform="rotate(180,24,12)"/>
+   </g>
+
+ </defs>
+ 
+ <g transform="translate(240,240) scale(1)">
+  <text style="font:bold 24px serif;fill:#555">
+   This library comes with the W3C&#174; software licence:</text>
+  <a xlink:href="copyright-software-short-notice-20021231.html"
+   target="_blank" xlink:show="new">
+   <text x="45" y="60"
+    style="font:bold 24px serif;fill:#396;text-decoration:underline">
+    Copyright Software Short Notice 2002-12-31</text>
+  </a>
+  <image x="171" y="120" width="202" height="130" xlink:href="VectorGraving2.png"/>
+  <text x="272" y="270"
+   style="font:normal 16px serif;fill:#555" text-anchor="middle">
+   dastgo9@gmail.com - 2015
+  </text>
+ </g>
+
+</svg>

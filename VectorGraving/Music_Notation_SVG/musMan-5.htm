@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Music Notation SVG page 5</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="musMan.css" type="text/css">
+  <link rel=icon href=vectorgraving.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <style>
+   a.ml4 {margin-left:4em;
+   }
+  </style>
+  <!--[if IE]>
+   <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('article');
+    document.createElement('footer');
+   </script>
+  <![endif]-->
+ </head>
+ 
+ <body>
+  <section>
+   <a class="home" href="../StartHere.htm">Home</a>
+   <h2>Converting To Other File Types</h2>
+   <hr>
+   <div>
+    <p>Certainly you can distribute your SVG files as they are, but the best way
+     is to compile all of them (one piece of music that is) into one PDF file.</p>
+    <p>Batik has several options to begin with. In the file menu
+     of Squiggle (Batik) you will find:</p>
+    <ul>
+     <li>File
+      <ul>
+       <li>Export As</li></ul>
+      <ul>
+       <li>PNG</li>
+       <li>JPEG</li>
+       <li>TIFF</li>
+      </ul>
+     </li>
+    </ul>
+    <p>Do not use this. It only creates a screen shot conversion, which is inadequate
+     for these files. You need to use the command line, which includes a PDF
+     option.</p>
+    <p>At the command line 'cd' to the Batik folder, then enter:</p>
+    <p>java -jar batik-rasterizer.jar -m application/pdf -bg 255.255.255.255 -dpi 300 C:/folder/nameOfFile.svg</p>
+    <p>where -m is the file type you want; -bg is the background (the default is transparent);
+     -dpi is dots per inch; and the address of the file to be converted. Other options
+     are available. Batik will not, however, concatenate multiple files
+     into one PDF.</p>
+    <p>There are a number of programs available that can combine multiple files
+     into one. I use the command line version of
+     <a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/"
+      target="_blank">PDFtk.</a> A GUI version is available also. In addition
+     to this, you may edit:</p>
+    <ul>
+     <li>Creator</li>
+     <li>Title</li>
+     <li>Subject</li>
+     <li>Author</li>
+     <li>Producer</li>
+     <li>Keywords</li>
+     <li>ModDate</li>
+     <li>CreationDate</li>
+     <li>NumberOfPages</li>
+    </ul>
+    <p>plus many more options.</p>
+    <p class="ml4"><a href="Pre995.pdf">Here</a>&#160;is a PDF sample.</p>
+    <p class="ml4"><a href="../SamG-1.svg">Here</a>&#160;
+     is a full SVG sample, useing the system library, for people with
+     SVG compliant browsers.
+    </p>
+   </div>
+   <hr>
+   <a href="ReadMeFirst.htm">Next&#160;<b class="arrow">&#8658;</b></a>
+   <a class="prev"
+    href="musMan-4.htm"><b class="arrow">&#8656;</b>&#160;Previous</a>
+   <hr>
+   <footer>Copyright &#169; 2017 Dana Steven Gormel</footer>
+  </section>
+  
+ </body>
+</html>

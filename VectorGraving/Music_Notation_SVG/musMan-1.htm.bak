@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Music Notation SVG page 1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="musMan.css">
+  <link rel=icon href=vectorgraving.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <style>
+   /**/
+   img#y-ord {margin:.5em 0 .5 2em
+   }
+  </style>
+  <!--[if lt IE 9]>
+   <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('article');
+    document.createElement('footer');
+   </script>
+  <![endif]-->
+ </head>
+ 
+ <body>
+  <section>
+   <a class="home" href="../StartHere.htm">Home</a>
+   <h2>Introduction</h2>
+   <hr>
+   <article>
+    <p>A page of sheet music is divided into multiple groups (&#60;g&#62;).</p>
+    <p>This makes it easy to move parts around according to the music or your
+     own taste, and makes it easier to navigate the source.</p>
+    <p>Below is a code sample.</p>
+    <p>The pages are created to be printed at 300dpi for U.S. letter size paper;
+     so are 2550px by 3300px initially, with 120px margins [.4 inch] on the
+     pages I make. This, as with all else, can be changed to suite you're needs.</p>
+   </article>
+   <aside>
+    <img width="425" height="432" src="man-sheet1.png" alt="music engraving"/>
+   </aside>
+   <hr>
+   <div>
+    Here is a skeleton of the source:<br>
+     <pre>
+      <code>
+       &#60;g id="body" transform="translate(120,780) scale(1)"&#62;
+        &#60;g&#62;&#60;desc&#62;............................. staff 1-1 &#60;/desc&#62;
+         &#60;use xlink:href="#staff"/&#62;&#60;use xlink:href="#G-clf"/&#62;
+         &#60;g transform="translate(96,0)"&#62;&#60;desc&#62; msr 1-1 &#60;/desc&#62;
+          &#60;!-- ................................ beat 1 --&#62;
+          &#60;!-- ................................ beat 2 --&#62;
+         &#60;/g&#62;
+         &#60;g transform="translate(1140,0)"&#62;&#60;desc&#62; msr 2-1 &#60;/desc&#62;
+          &#60;use xlink:href="#bar"/&#62;
+          &#60;!-- ................................ beat 1 --&#62;
+          &#60;!-- ................................ beat 2 --&#62;
+         &#60;/g&#62;
+         &#60;use x="2304" y="0" xlink:href="#bar"/&#62;&#60;!-- end of staff --&#62;
+        &#60;/g&#62;
+       &#60;/g&#62;&#60;!-- end of body --&#62;
+      </code>
+     </pre>
+     Re-scaling the body or root svg is convenient for viewing in a web browser.
+     I use <a href="http://xmlgraphics.apache.org/" target="_blank">Batik</a>
+     most of the time; a java-based svg toolkit (more on that later).
+    <p>The staves are marked by a &#60;desc&#62;... staff 1-1. That would be
+     staff one of page one, and so on. The measures are marked also by a &#60;desc&#62;
+     msr 1-1. That would be measure one of staff one, and so on. The beats of a
+     measure are marked by a comment, and the music content of the measures
+     goes below their corresponding beat:</p>
+     <pre>
+      <code>
+       &#60;g transform="translate(96,0)"&#62;&#60;desc&#62; msr 1-1 &#60;/desc&#62;
+        &#60;!-- ................................ beat 1 --&#62;
+        &#60;use x="50" y="24" xlink:href="#solnu"/&#62;
+        &#60;use x="150" y="60" xlink:href="#solnu"/&#62;
+        &#60;use x="250" y="108" xlink:href="#solnu"/&#62;
+        &#60;use x="350" y="60" xlink:href="#solnu"/&#62;
+        &#60;!-- ................................ beat 2 --&#62;
+        &#60;use x="450" y="108" xlink:href="#solnu"/&#62;
+        &#60;use x="550" y="144" xlink:href="#solnu"/&#62;
+        &#60;use x="650" y="108" xlink:href="#solnu"/&#62;
+        &#60;use x="750" y="24" xlink:href="#solnu"/&#62;
+       &#60;/g&#62;
+      </code>
+     </pre>
+    <p>Most glyphs are referenced from the library with a &#60;use.../&#62;.
+     In order to work you must have the attributes 'xml:base' and 'xmlns:xlink' in
+     the root svg:</p>
+    <pre>
+     <code>
+      &#60;svg version="1.1" width="2550" height="3300" viewBox="0,0,2550,3300"
+      &#160;xmlns="http://www.w3.org/2000/svg" <span class="red">xml:base</span><span class="blue">="music-notation.svg"</span>
+      <span class="red">&#160;xmlns:xlink</span><span class="blue">="http://www.w3.org/1999/xlink"</span>&#62;
+     </code>
+    </pre>
+    <p>The index for the single staff library is
+     <a href="../munolib2_index.htm">munolib2_index.htm</a>
+     &#160;, and for the system library
+     <a href="../munolibS_index.htm">munolibS_index.htm</a><br>
+     The system layout is here:&#160;<a href="musMan-1sys.htm">Systems</a>
+    </p>
+   </div>
+   <hr id="bottom">
+   <article>
+    <p>The lines of a staff are 3px wide. The center pixel is the 'y' coordinate.
+     The top line is y=0. The spacing from line to line or space to space is 24px.</p>
+    <p>As many glyphs as possible that might accompany a note have been drawn
+     to use the same coordinates as the note, i.e.: an accidental that precedes a note
+     would use the same x,y as the note. For others that could be placed in a number
+     of locations, the author will have to choose. The index gives guidelines.
+     I will describe the use of 'transform="translate, skew, rotate, scale, matrix"'
+     later on.
+    </p>
+   </article>
+   <aside>
+    <img id="y-ord" width="231" height="336" src="staff-y-coordsys.png"
+     alt="music engraving"
+    />
+   </aside>
+   <hr>
+   <a href="musMan-2.htm">Next&#160;<b class="arrow">&#8658;</b></a>
+   <a style="float:right"
+    href="ReadMeFirst.htm"><b class="arrow">&#8656;</b>&#160;Previous</a>
+   <hr>
+   <footer>Copyright &#169; 2015 Dana Steven Gormel</footer>
+  </section>
+  
+ </body>
+</html>

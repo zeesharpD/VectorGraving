@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <title>Music Notation SVG page 4</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="musMan.css" type="text/css">
+  <link rel=icon href=vectorgraving.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <!--[if lt IE 9]>
+   <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('article');
+    document.createElement('footer');
+   </script>
+  <![endif]-->
+ </head>
+ 
+ <body>
+  <section>
+   <a class="home" href="../StartHere.htm">Home</a>
+   <h2>Type Setting</h2>
+   <hr>
+   <div>
+    <p>Some aspects of digital sheet music are no different than physical printing.
+     Before you begin creating an SVG sheet music document, you must decide
+     the spacing between notes; the number of measures per staff; and the number
+     of staves per page.</p>
+    <p>Naturally, having existing sheet music is most helpful (printed or hand written).
+     In addition, I make a chart of positioning for easy reference:</p>
+    <p><img src="type-set.png" width="900" height="150" alt="music engraving"/></p>
+    <p>This is a simplified version to give you an idea. I would also have written,
+     for example:</p>
+    <p>6 pages; page 1, 4 staves; pages 2-5, 5 staves; page 6, 4 staves</p>
+    <p>Keep in mind, the clef, key, and time signature are part of the staff,
+     not the measure; the reason for the 84px start of measure 1. It will always
+     need adjusting for different pieces. The exception would be when any of them
+     should change in the course of the music.</p>
+    <p>The more complex the music, the more planning you must do. I use a minimum
+     spacing of 39px between notes without accidentals, and 51px for notes
+     with accidentals (except for double sharp and flat; they're the widest).
+     Start by dividing a measure by <i>n</i>.5, or, as here (4/4):
+     1050 &#247; 4.5 = 233.33, rounded up to 234px between beats. If the beats
+     are filled with 16<sup>th</sup>&#160;notes; 234 &#247; 4 = 58.5, meets the
+     minimum requirement for notes with accidentals. I avoid using decimals,
+     so would next try spacing the 16<sup>th</sup>&#160;notes 60px. This would leave 
+     90px between the 0,x of the measure and the first beat, an acceptable spacing,
+     and 240px between beats.</p>
+    <p>If the music allows for it, keep the same spacings throughout the piece.
+     This isn't always possible, so update your chart as needed.</p>
+    <p>I've created templates so much of the beginning work is done for you.
+     Before you begin adding music, create all of your measures and beats, and
+     fill in the measure numbers; it will save a lot of time. I also insert a block
+     of empty &#60;use.../&#62;'s:</p>
+    <pre>
+     <code>
+      &#60;!--
+      &#60;use x="" y="" xlink:href="#"/&#62;&#60;use x="" y="" xlink:href="#"/&#62;
+      &#60;use x="" y="" xlink:href="#"/&#62;&#60;use x="" y="" xlink:href="#"/&#62;
+      &#60;use x="" y="" xlink:href="#"/&#62;&#60;use x="" y="" xlink:href="#"/&#62;
+      &#60;use x="" y="" xlink:href="#"/&#62;&#60;use x="" y="" xlink:href="#"/&#62;
+      --&#62;
+     </code>
+    </pre>
+    <p>for copying and pasting were needed. I place it between staves, and move it
+     as I go. You can include empty beam groups or whatever you will be using
+     frequently. Keep it commented out; a browser will still render your music,
+     but Batik will throw an error. If you have many pages to create,
+     save this page as a new template before adding any music.</p>
+    <p>I highly recommend, also, that you get a clipboard manager. There are
+     several available. I use <a href="http://bluemars.org/clipx/" target="_blank">
+     ClipX</a>. This will give you access to multiple 'clips'.</p>
+    <hr>
+    <p>A lot of music will not need any &#60;defs&#62;, but an example of when
+     you should have is when there are repeated figures in the piece:</p>
+    <p class="cen">
+     <img src="rep-fig.png" width="675" height="113" alt="music engraving"/></p>
+    <p>In cases like this, create the figure in the 'defs' and call it with a 'use':</p>
+    <pre>
+     <code>
+      &#60;g id="t43-1" xml:base="music-notation.svg"&#62;
+       &#60;use x="0" y="0" xlink:href="#solnu.1"/&#62;&#60;!--first note--&#62;
+       &#60;use xlink:href="#be"
+        transform="translate(14,-97) skewY(-20.85) scale(1.26,1.07)"/&#62;
+       &#60;use x="63" y="-36" xlink:href="#solnu"/&#62;&#60;use x="126" y="-60" xlink:href="#solnu"/&#62;
+      &#60;/g&#62;
+     </code>
+    </pre>
+    <p>There are three things to take note of here. Firstly, give your figure an #id.
+     I keep mine short and sensible: <u>t</u>riplet, a 4<sup>th</sup>,
+     a 3<sup>rd.</sup>, staff 1. Secondly, the xml:base attribute has been
+     <u>restated.</u> This is for a Batik bug (#47094) that has yet to be fixed by
+     Apache. It will need to be applied to each group in the 'defs' individually.
+     Even though
+     <span class="green">&#60;defs</span>
+     <span class="red">&#160;xml:base</span>
+     <span class="blue">="<i>file</i>"</span><span class="green">&#62;</span>
+     is legitimate it doesn't work. And thirdly, notice the first note is at 0,0.
+     This is so the 'use' can be at the actual note coordinates:</p>
+    <pre>
+     <code>
+      &#60;use x="96" y="108" xml:base="Sono14-1.svg" xlink:href="#t43-1"/&#62;
+     </code>
+    </pre>
+    <p>Now the xml:base is the current file, not the library, but only for items not
+     in the library; the root xml:base is still in effect.</p>
+    <p>The practice of reusing figures can be taken much farther than this. You can
+     give an #id to a whole measure and reuse not only the notes but all the symbols
+     and instructions. This would be in the body of the file, not the 'defs'.
+     You can use it later in the file or in a later page. Just get the xml:base right. I give them an #id of the measure number: id="msr27".
+    </p>
+   </div>
+   <hr>
+   <a href="musMan-5.htm">Next&#160;<b class="arrow">&#8658;</b></a>
+   <a style="float:right"
+    href="musMan-3.htm"><b class="arrow">&#8656;</b>&#160;Previous</a>
+   <hr>
+   <footer>Copyright &#169; 2015 Dana Steven Gormel</footer>
+  </section>
+ </body>
+ 
+</html>

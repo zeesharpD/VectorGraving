@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ 
+<svg version="1.1" width="2550" height="3300" viewBox="0,0,2550,3300"
+ xmlns="http://www.w3.org/2000/svg" xml:base="music-notasys.svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full">
+ 
+ <title>Samuel Goldenberg</title>
+
+ <metadata>
+  <rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <rdf:Description rdf:about="http://www.guitarscripts.heliohost.org/GS3_files/Music_Notation_SVG/ReadMeFirst.htm"
+    dc:created="2014-02-21"
+    dc:creator="Dana Steven Gormel"
+    dc:modified="2015-10-03"
+    dc:rights="&#169; 2015 Dana Steven Gormel"
+    dc:source="Modest Musorgsky">
+   </rdf:Description>
+  </rdf:RDF>
+ </metadata>
+ 
+ <defs>
+ 
+  <style type="text/css">
+   /**/
+   @font-face {
+    font-family:'Calligraphic421 BT'; src:url('TT1139M_.TTF');
+   }
+   @font-face {
+    font-family:Calligrapher; src:url('calligr0.ttf');
+   }
+   /* */
+   text.title {font-family:'calligraph421 bt',serif; font-size:63px;
+    fill:#333;
+   }
+   text.auth {font-family:'calligraph421 bt',serif; font-size:48px;
+    fill:#333;
+   }
+   text.msrno {font-family:'calligraph421 bt',serif; font-size:30px;
+    font-weight:bold;
+   }
+   text.instruct {font-family:calligrapher,cursive; font-size:33px;
+   }
+  </style>
+  
+  <desc> long system bar </desc><!-- long for system 3 -->
+   <rect id="sysbarL" width="6" height="360" shape-rendering="crispEdges"/>
+  <desc> long 2 staff system with treb.+bass; full </desc>
+   <g id="sys2L">
+    <use xlink:href="#brace" transform="scale(1,1.07)" xml:base="music-notasys.svg"/>
+    <use xlink:href="#sysbarL" xml:base="SamG-1.svg"/>
+    <use xlink:href="#staff" xml:base="music-notasys.svg"/>
+    <use x="6" xlink:href="#T-clef" xml:base="music-notasys.svg"/>
+    <use y="264" xlink:href="#staff" xml:base="music-notasys.svg"/>
+    <use x="37" y="264" xlink:href="#F-clef" xml:base="music-notasys.svg"/>
+   </g>
+  
+  <desc> parentheses </desc>
+   <g id="parl" xml:base="music-notasys.svg">
+    <use xlink:href="#slr" transform="rotate(-90) scale(.18,.5)"/>
+   </g>
+   <g id="parr" xml:base="music-notasys.svg">
+    <use xlink:href="#slr" transform="rotate(-90) matrix(.18,0,0,-.5,0,0)"/>
+   </g><!-- as long as parl references the lib, this doesn't need to -->
+   
+  <desc> 16th triplet with #acc and #gracex </desc>
+   <g id="tga11" xml:base="music-notasys.svg">
+    <use xlink:href="#gracex"/><use xlink:href="#acc"/>
+    <use xlink:href="#solnu"/>
+    <g transform="translate(14,-85)">
+     <use xlink:href="#be2" transform="scale(1.44,1)"/>
+    </g>
+    <text class="instruct" x="81" y="-93">3</text>
+    <use x="72" xlink:href="#solnu"/><use x="144" xlink:href="#solnu"/>
+   </g>
+   
+  <desc> wide double acciaccatura with flats </desc>
+   <g id="doac3f" transform="translate(-70,0) scale(.6)" xml:base="music-notasys.svg">
+    <g transform="translate(14,-135)">
+     <use xlink:href="#slr" transform="rotate(0) scale(1.11,1)"/>
+    </g>
+    <use xlink:href="#solnu.3"/>
+    <use xlink:href="#be3" transform="translate(14,-120.5) skewY(-10.5) scale(.57,1)"/>
+    <use x="60" y="-21" xlink:href="#flat"/>
+    <use x="57" y="-21" xlink:href="#solnu.2"/>
+   </g>
+   <g id="doac3df" transform="translate(-75,0) scale(.6)" xml:base="music-notasys.svg">
+    <use xlink:href="#solnu.3"/>
+    <use xlink:href="#be3" transform="translate(14,-120.5) skewY(-9) scale(.72,1)"/>
+    <use x="75" y="-21" xlink:href="#doflt"/>
+    <use x="72" y="-21" xlink:href="#solnu.2"/>
+   </g>
+  
+ </defs>
+ 
+ <g id="titles" transform="translate(180,180) scale(1)">
+  <image x="0" y="100" width="136" height="50" xlink:href="title-DSG.png"/>
+  <text class="title" x="1095" y="57" text-anchor="middle">Samuel Goldenberg</text>
+  <text class="auth" x="1095" y="132" text-anchor="middle">Pictures at an Exhibition</text>
+  <text class="auth" x="2187" y="150" text-anchor="end">Musorgsky</text>
+  <use x="-90" xlink:href="#pg1"/>
+ </g>
+ 
+ <g id="body" transform="translate(180,570) scale(1)">
+  <text class="auth" x="240" y="-54">Andante. Grave-energico</text>
+  <g><desc> system 1-1 </desc><!-- indent 216 -->
+   <use xlink:href="#sys2-1"/>
+   <g><desc>............................ staff 1-1 </desc>
+    <use x="216" xlink:href="#flt5"/><use x="354" xlink:href="#com"/>
+    <!-- ................................. pickup note -->
+    <use x="540" y="162" xlink:href="#forte"/>
+    <use x="600" y="132" xlink:href="#sx4nu"/><use x="600" y="24" xlink:href="#sldg"/>
+    <g transform="translate(606,147)">
+     <use xlink:href="#slr" transform="rotate(-19.98) matrix(1.32,0,0,-1,0,0)"/>
+    </g>
+    <g transform="translate(672,0)"><desc> msr 1-1 </desc>
+     <use xlink:href="#sysbar"/>
+     <!-- ................................. beat 1 -->
+     <use x="60" y="84" xlink:href="#eitnu"/>
+     <use x="135" y="48" xlink:href="#sxtr"/><use x="126" y="36" xlink:href="#dot"/>
+     <use x="186" y="96" xlink:href="#solnu.2"/><use x="186" y="96" xlink:href="#ntl"/>
+     <g transform="translate(200,-13)">
+      <use xlink:href="#be4" transform="skewY(-17.1) scale(.39,1)"/>
+     </g>
+     <use x="225" y="84" xlink:href="#solnu.2"/>
+     <!-- ................................. beat 2 -->
+     <use x="264" y="96" xlink:href="#solnu"/>
+     <g transform="translate(276,105)">
+      <use xlink:href="#slr" transform="matrix(.78,0,0,-1,0,0)"/>
+     </g>
+     <use x="264" y="162" xlink:href="#sf"/>
+     <!-- ................................. beat 3 -->
+     <use x="369" y="96" xlink:href="#eitnu"/><use x="435" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="495" y="144" xlink:href="#solnu"/><use x="495" y="48" xlink:href="#xsldg"/>
+     <use x="495" y="144" xlink:href="#ntl"/><use x="495" y="168" xlink:href="#tenu"/>
+     <g transform="translate(509,59)">
+      <use xlink:href="#be2" transform="skewY(-17.1) scale(.78,1)"/>
+     </g>
+     <use x="534" y="132" xlink:href="#solnu"/><use x="534" y="24" xlink:href="#xsldg"/>
+     <use x="534" y="156" xlink:href="#tenu"/><use x="573" y="144" xlink:href="#tenu"/>
+     <use x="573" y="120" xlink:href="#solnu"/><use x="573" y="24" xlink:href="#xsldg"/>
+     <use x="612" y="108" xlink:href="#thr2nu"/><use x="612" y="108" xlink:href="#dot"/>
+     <use x="612" y="132" xlink:href="#tenu"/>
+     <use x="711" y="132" xlink:href="#sx4nu"/><use x="711" y="24" xlink:href="#sldg"/>
+     <g transform="translate(717,147)">
+      <use xlink:href="#slr" transform="rotate(-24.57) matrix(1.11,0,0,-1,0,0)"/>
+     </g>
+    </g>
+    <g transform="translate(1428,0)"><desc> msr 2-1 </desc>
+     <use xlink:href="#sysbar"/>
+     <!-- ................................. beat 1 -->
+     <use x="60" y="84" xlink:href="#eitnu"/>
+     <use x="135" y="48" xlink:href="#sxtr"/><use x="126" y="36" xlink:href="#dot"/>
+     <use x="186" y="96" xlink:href="#solnu.3"/><use x="186" y="96" xlink:href="#ntl"/>
+     <g transform="translate(200,-25)">
+      <use xlink:href="#be4" transform="skewY(0) scale(.78,1)"/>
+     </g>
+     <g transform="translate(186,96)">
+      <use xlink:href="#triarc" transform="matrix(.9,0,0,-1,-6,15)"/>
+      <text class="instruct" x="33" y="33">3</text>
+     </g>
+     <use x="225" y="84" xlink:href="#solnu.2"/>
+     <use x="264" y="96" xlink:href="#solnu.3"/>
+     <!-- ................................. beat 2 -->
+     <use x="306" y="108" xlink:href="#solnu"/>
+     <g transform="translate(309,126)">
+      <use xlink:href="#slr" transform="matrix(1.11,0,0,-1,0,0)"/>
+     </g>
+     <use x="306" y="162" xlink:href="#sf"/>
+     <!-- ................................. beat 3 -->
+     <use x="417" y="108" xlink:href="#eitnu"/>
+     <use x="489" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="561" y="144" xlink:href="#solnu"/><use x="558" y="144" xlink:href="#ntl"/>
+     <use x="561" y="48" xlink:href="#xsldg"/><use x="561" y="168" xlink:href="#tenu"/>
+     <g transform="translate(575,59)">
+      <use xlink:href="#be2" transform="skewY(-14.93) scale(1.35,1)"/>
+     </g>
+     <use x="606" y="132" xlink:href="#solnu"/><use x="606" y="24" xlink:href="#xsldg"/>
+     <use x="606" y="156" xlink:href="#tenu"/>
+     <use x="651" y="120" xlink:href="#solnu"/><use x="651" y="24" xlink:href="#xsldg"/>
+     <use x="651" y="144" xlink:href="#tenu"/>
+     <use x="696" y="108" xlink:href="#solnu"/><use x="696" y="132" xlink:href="#tenu"/>
+    </g>
+   </g><!-- end of staff -->
+   <g transform="translate(0,240)">
+   <desc>.............................. staff 2-1 </desc>
+    <use x="216" y="24" xlink:href="#flt5"/><use x="354" xlink:href="#com"/>
+    <!-- ................................. pickup note -->
+    <use x="600" y="72" xlink:href="#sx4nu"/>
+    <g transform="translate(636,21)">
+     <use xlink:href="#slr" transform="rotate(-10.3) scale(.93,1)"/>
+    </g>
+    <g transform="translate(672,0)"><desc> msr 1.2-1 </desc>
+     <!-- ................................. beat 1 -->
+     <use x="60" y="24" xlink:href="#eitnd"/>
+     <use x="135" y="48" xlink:href="#sxtr"/><use x="117" y="60" xlink:href="#dot"/>
+     <use x="186" y="36" xlink:href="#solnd.2"/><use x="186" y="36" xlink:href="#ntl"/>
+     <g transform="translate(172,67)">
+      <use xlink:href="#be4" transform="skewY(-17.1) scale(.39,1)"/>
+     </g>
+     <use x="225" y="24" xlink:href="#solnd.2"/>
+     <!-- ................................. beat 2 -->
+     <use x="264" y="36" xlink:href="#solnd"/>
+     <g transform="translate(276,15)">
+      <use xlink:href="#slr" transform="matrix(.78,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................. beat 3 -->
+     <use x="369" y="36" xlink:href="#eitnd"/><use x="435" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="495" y="84" xlink:href="#solnu"/>
+     <use x="495" y="84" xlink:href="#ntl"/><use x="495" y="111" xlink:href="#tenu"/>
+     <g transform="translate(509,-1)">
+      <use xlink:href="#be2" transform="skewY(-17.1) scale(.78,1)"/>
+     </g>
+     <use x="534" y="72" xlink:href="#solnu"/>
+     <use x="534" y="105" xlink:href="#tenu"/>
+     <use x="573" y="60" xlink:href="#solnu"/><use x="573" y="87" xlink:href="#tenu"/>
+     <use x="612" y="48" xlink:href="#thr2nu"/><use x="612" y="57" xlink:href="#dot"/>
+     <use x="612" y="81" xlink:href="#tenu"/>
+     <use x="711" y="72" xlink:href="#sx4nu"/>
+     <g transform="translate(747,30)">
+      <use xlink:href="#slr" transform="rotate(-24.57) matrix(.78,0,0,1,0,0)"/>
+     </g>
+    </g>
+    <g transform="translate(1428,0)"><desc> msr 2.2-1 </desc>
+     <!-- ................................. beat 1 -->
+     <use x="60" y="24" xlink:href="#eitnd"/>
+     <use x="135" y="48" xlink:href="#sxtr"/><use x="117" y="60" xlink:href="#dot"/>
+     <use x="186" y="36" xlink:href="#solnd.2"/><use x="186" y="36" xlink:href="#ntl"/>
+     <g transform="translate(172,67)">
+      <use xlink:href="#be4" transform="skewY(0) scale(.78,1)"/>
+     </g>
+     <g transform="translate(186,36)">
+      <use xlink:href="#triarc" transform="matrix(.9,0,0,1,-6,-39)"/>
+      <text class="instruct" x="33" y="-42">3</text>
+     </g>
+     <use x="225" y="24" xlink:href="#solnd.3"/>
+     <use x="264" y="36" xlink:href="#solnd.2"/>
+     <!-- ................................. beat 2 -->
+     <use x="306" y="48" xlink:href="#solnd"/>
+     <g transform="translate(309,30)">
+      <use xlink:href="#slr" transform="matrix(1.11,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................. beat 3 -->
+     <use x="417" y="48" xlink:href="#eitnd"/>
+     <use x="489" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="561" y="84" xlink:href="#solnu"/><use x="558" y="84" xlink:href="#ntl"/>
+     <use x="561" y="111" xlink:href="#tenu"/>
+     <g transform="translate(575,-1)">
+      <use xlink:href="#be2" transform="skewY(-14.93) scale(1.35,1)"/>
+     </g>
+     <use x="606" y="72" xlink:href="#solnu"/><use x="606" y="105" xlink:href="#tenu"/>
+     <use x="651" y="60" xlink:href="#solnu"/><use x="651" y="87" xlink:href="#tenu"/>
+     <use x="696" y="48" xlink:href="#solnu"/><use x="696" y="81" xlink:href="#tenu"/>
+    </g>
+   </g><!-- end of staff -->
+   <use x="2184" y="0" xlink:href="#sysbar"/>
+  </g><!-- end of system -->
+  <g transform="translate(0,648)"><desc> system 2-1 </desc><!-- 240px interSys -->
+   <use xlink:href="#sys2"/>
+   <text class="msrno" x="21" y="-36">3</text><!-- measure number -->
+   <g><desc> ........................... staff 1-2 </desc>
+    <use xlink:href="#flt5"/>
+    <g transform="translate(240,0)"><desc> msr 1-2 (3) </desc>
+     <!-- ................................ beat 1 -->
+     <use x="54" y="96" xlink:href="#flat"/>
+     <use x="54" y="96" xlink:href="#solnu"/><use x="54" y="87" xlink:href="#dot"/>
+     <g transform="translate(68,11)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(2.16,1.01)"/>
+     </g>
+     <g transform="translate(141,20)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(.26,1.01)"/>
+     </g>
+     <use x="153" y="84" xlink:href="#solnu"/>
+     <g transform="translate(141,99)">
+      <use xlink:href="#slr" transform="rotate(-14.93) matrix(.69,0,0,-1,0,0)"/>
+     </g>
+     <!-- ................................ beat 2 -->
+     <use x="198" y="72" xlink:href="#solnu"/><use x="201" y="108" xlink:href="#stac"/>
+     <g transform="translate(354,156)">
+      <use xlink:href="#dec1" transform="matrix(-.84,0,0,1,0,0)"/>
+     </g>
+     <use x="270" y="60" xlink:href="#ntl"/>
+     <use x="270" y="60" xlink:href="#solnu"/><use x="270" y="84" xlink:href="#stac"/>
+     <!-- ................................ beat 3 -->
+     <use x="342" y="48" xlink:href="#solnd"/>
+     <g transform="translate(342,-12)">
+      <use xlink:href="#tie" transform="scale(4.92,1)"/>
+     </g>
+     <!-- ................................ beat 4 -->
+     <use x="486" y="60" xlink:href="#solnu"/><use x="486" y="60" xlink:href="#flat"/>
+     <g transform="translate(500,-25)">
+      <use xlink:href="#be" transform="skewY(9.46) scale(.72,1.01)"/>
+     </g>
+     <use x="558" y="72" xlink:href="#solnu"/>
+     <g transform="translate(510,156)">
+      <use xlink:href="#dec1" transform="matrix(.84,0,0,1,0,0)"/>
+     </g>
+    </g>
+    <g transform="translate(870,0)"><desc> msr 2-2 (4) </desc>
+     <use xlink:href="#sysbar"/>
+     <!-- ................................. beat 1 -->
+     <use x="60" y="60" xlink:href="#solnu"/><use x="60" y="60" xlink:href="#ntl"/>
+     <g transform="translate(74,-25)">
+      <use xlink:href="#be" transform="skewY(13.24) scale(1.02,1.03)"/>
+     </g>
+     <use x="111" y="72" xlink:href="#solnu"/>
+     <text class="instruct" x="105" y="120">3</text>
+     <use x="162" y="84" xlink:href="#solnu"/>
+     <!-- ................................. beat 2 -->
+     <use x="216" y="84" xlink:href="#solnu.1"/><use x="216" y="84" xlink:href="#dodot"/>
+     <g transform="translate(230,-13)">
+      <use xlink:href="#be.3r" transform="skewY(-12.2) scale(1.11,1.02)"/>
+     </g>
+     <use x="327" y="60" xlink:href="#solnu.1"/>
+     <g transform="translate(318,78)">
+      <use xlink:href="#slr" transform="rotate(20.85) matrix(.63,0,0,-1,0,0)"/>
+     </g>
+     <!-- ................................. beat 3 -->
+     <use x="372" y="84" xlink:href="#eitnu"/>
+     <use x="450" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="528" y="144" xlink:href="#solnu"/><use x="528" y="48" xlink:href="#xsldg"/>
+     <use x="528" y="144" xlink:href="#ntl"/><use x="528" y="168" xlink:href="#tenu"/>
+     <g transform="translate(542,59)">
+      <use xlink:href="#be2" transform="skewY(-17.1) scale(1.17,1.05)"/>
+     </g>
+     <use x="567" y="132" xlink:href="#solnu"/><use x="567" y="24" xlink:href="#xsldg"/>
+     <use x="567" y="156" xlink:href="#tenu"/>
+     <use x="606" y="120" xlink:href="#solnu"/><use x="606" y="24" xlink:href="#xsldg"/>
+     <use x="606" y="144" xlink:href="#tenu"/>
+     <use x="645" y="108" xlink:href="#solnu"/><use x="645" y="132" xlink:href="#tenu"/>
+    </g>
+    <g transform="translate(1554,0)"><desc> msr 3-2 (5) </desc>
+     <use xlink:href="#sysbar"/>
+     <!-- ................................. beat 1 -->
+     <use x="54" y="96" xlink:href="#solnu"/><use x="54" y="87" xlink:href="#dot"/>
+     <g transform="translate(68,11)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(2.16,1.01)"/>
+     </g>
+     <g transform="translate(141,20)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(.26,1.01)"/>
+     </g>
+     <use x="153" y="84" xlink:href="#solnu"/>
+     <g transform="translate(141,99)">
+      <use xlink:href="#slr" transform="rotate(-14.93) matrix(.69,0,0,-1,0,0)"/>
+     </g>
+     <!-- ................................ beat 2 -->
+     <use x="198" y="72" xlink:href="#solnu"/><use x="201" y="108" xlink:href="#stac"/>
+     <g transform="translate(162,156)">
+      <use xlink:href="#dec1" transform="matrix(-.66,0,0,1,0,0)"/>
+     </g>
+     <use x="270" y="60" xlink:href="#ntl"/>
+     <use x="270" y="60" xlink:href="#solnu"/><use x="270" y="84" xlink:href="#stac"/>
+     <!-- ................................ beat 3 -->
+     <use x="342" y="48" xlink:href="#solnd"/>
+     <g transform="translate(342,6)">
+      <use xlink:href="#tie" transform="rotate(-6.98) scale(2.94,1)"/>
+     </g>
+     <g transform="translate(342,156)">
+      <use xlink:href="#dec1" transform="matrix(.66,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................. beat 4 -->
+     <use x="486" y="48" xlink:href="#solnu"/><use x="486" y="48" xlink:href="#doflt"/>
+     <g transform="translate(500,-37)">
+      <use xlink:href="#be" transform="skewY(18.43) scale(.72,1.05)"/>
+     </g>
+     <use x="558" y="72" xlink:href="#solnu"/>
+    </g>
+   </g><!-- end of staff -->
+   <g transform="translate(0,240)">
+   <desc>.............................. staff 2-2 </desc>
+    <use y="24" xlink:href="#flt5"/>
+    <g transform="translate(240,0)"><desc> msr 1.2-2 (3) </desc>
+     <!-- ................................. beat 1 -->
+     <use x="54" y="36" xlink:href="#flat"/>
+     <use x="54" y="36" xlink:href="#solnd"/><use x="54" y="36" xlink:href="#dot"/>
+     <g transform="translate(40,106)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(2.16,1.01)"/>
+     </g>
+     <g transform="translate(114,73)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(.26,1.01)"/>
+     </g>
+     <use x="153" y="24" xlink:href="#solnd-1"/>
+     <g transform="translate(141,-3)">
+      <use xlink:href="#slr" transform="rotate(-14.93) matrix(.69,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................ beat 2 -->
+     <use x="198" y="12" xlink:href="#solnd"/><use x="201" y="-12" xlink:href="#stac"/>
+     <use x="270" y="0" xlink:href="#ntl"/>
+     <use x="270" y="0" xlink:href="#solnd"/><use x="270" y="-24" xlink:href="#stac"/>
+     <!-- ................................. beat 3 -->
+     <use x="342" y="-12" xlink:href="#solnd"/>
+     <g transform="translate(342,-27)">
+      <use xlink:href="#tie" transform="rotate(2.79) scale(4.92,1)"/>
+     </g>
+     <!-- ................................ beat 4 -->
+     <use x="486" y="0" xlink:href="#solnd"/><use x="486" y="0" xlink:href="#flat"/>
+     <g transform="translate(472,70)">
+      <use xlink:href="#be" transform="skewY(9.46) scale(.72,1.01)"/>
+     </g>
+     <use x="558" y="12" xlink:href="#solnd"/>
+    </g>
+    <g transform="translate(870,0)"><desc> msr 2.2-2 (4) </desc>
+     <!-- ................................. beat 1 -->
+     <use x="60" y="0" xlink:href="#solnd"/><use x="60" y="0" xlink:href="#ntl"/>
+     <g transform="translate(46,70)">
+      <use xlink:href="#be" transform="skewY(13.24) scale(1.02,1.03)"/>
+     </g>
+     <use x="111" y="12" xlink:href="#solnd"/>
+     <text class="instruct" x="105" y="-6">3</text>
+     <use x="162" y="24" xlink:href="#solnd"/>
+     <!-- ................................. beat 2 -->
+     <use x="216" y="24" xlink:href="#solnd.1"/><use x="216" y="15" xlink:href="#dodot"/>
+     <g transform="translate(202,121)">
+      <use xlink:href="#be.3r"
+       transform="matrix(1.11,-.24,0,-1.02,0,0)"/>
+     </g>
+     <use x="327" y="0" xlink:href="#solnd.1"/>
+     <g transform="translate(321,-18)">
+      <use xlink:href="#slr" transform="rotate(20.85) matrix(.63,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................. beat 3 -->
+     <use x="372" y="24" xlink:href="#eitnd"/>
+     <use x="450" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="528" y="84" xlink:href="#solnu"/>
+     <use x="528" y="84" xlink:href="#ntl"/><use x="528" y="111" xlink:href="#tenu"/>
+     <g transform="translate(542,-1)">
+      <use xlink:href="#be2" transform="skewY(-17.1) scale(1.17,1.05)"/>
+     </g>
+     <use x="567" y="72" xlink:href="#solnu"/><use x="567" y="105" xlink:href="#tenu"/>
+     <use x="606" y="60" xlink:href="#solnu"/><use x="606" y="87" xlink:href="#tenu"/>
+     <use x="645" y="48" xlink:href="#solnu"/><use x="645" y="81" xlink:href="#tenu"/>
+    </g>
+    <g transform="translate(1554,0)"><desc> msr 3.2-2 (5) </desc>
+     <!-- ................................. beat 1 -->
+     <use x="54" y="36" xlink:href="#solnd"/><use x="54" y="36" xlink:href="#dot"/>
+     <g transform="translate(40,106)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(2.16,1.01)"/>
+     </g>
+     <g transform="translate(114,73)">
+      <use xlink:href="#be" transform="skewY(-9.46) scale(.26,1.01)"/>
+     </g>
+     <use x="153" y="24" xlink:href="#solnd-1"/>
+     <g transform="translate(141,-3)">
+      <use xlink:href="#slr" transform="rotate(-14.93) matrix(.69,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................ beat 2 -->
+     <use x="198" y="12" xlink:href="#solnd"/><use x="201" y="-12" xlink:href="#stac"/>
+     <use x="270" y="0" xlink:href="#ntl"/>
+     <use x="270" y="0" xlink:href="#solnd"/><use x="270" y="-24" xlink:href="#stac"/>
+     <!-- ................................. beat 3 -->
+     <use x="342" y="-12" xlink:href="#solnd"/>
+     <g transform="translate(342,-39)">
+      <use xlink:href="#tie" transform="rotate(4.67) scale(2.85,1)"/>
+     </g>
+     <!-- ................................ beat 4 -->
+     <use x="486" y="-12" xlink:href="#solnd"/><use x="486" y="-12" xlink:href="#doflt"/>
+     <g transform="translate(472,58)">
+      <use xlink:href="#be" transform="skewY(18.43) scale(.72,1.05)"/>
+     </g>
+     <use x="558" y="12" xlink:href="#solnd"/>
+    </g>
+   </g><!-- end of staff -->
+   <use x="2184" y="0" xlink:href="#sysbar"/>
+  </g><!-- end of system -->
+  <g transform="translate(0,1296)"><desc> system 3-1 </desc>
+   <use xlink:href="#sys2L" xml:base="SamG-1.svg"/>
+   <text class="msrno" x="21" y="-36">6</text><!-- measure number -->
+   <g><desc> ........................... staff 1-3 </desc>
+    <use xlink:href="#flt5"/>
+    <g transform="translate(240,0)"><desc> msr 1-3 (6) </desc>
+     <!-- ................................ beat 1 -->
+     <g transform="translate(-18,-36)">
+      <use xlink:href="#tie" transform="rotate(3.66) scale(3.75,1)"/>
+     </g>
+     <use x="42" y="60" xlink:href="#solnu"/>
+     <g transform="translate(56,-25)">
+      <use xlink:href="#be" transform="skewY(12.53) scale(1.08,1.02)"/>
+     </g>
+     <use x="96" y="72" xlink:href="#solnu"/>
+     <use x="150" y="84" xlink:href="#solnu"/>
+     <text class="instruct" x="90" y="123">3</text>
+     <!-- ................................ beat 2 -->
+     <use x="204" y="84" xlink:href="#hanu"/>
+     <g transform="translate(213,102)">
+      <use xlink:href="#slr" transform="matrix(1.41,0,0,-1,0,0)"/>
+     </g>
+     <!-- ................................ beat 3; included -->
+     <!-- ................................ beat 4 -->
+     <use x="357" y="84" xlink:href="#eitnu"/>
+     <use x="441" y="48" xlink:href="#sxtr"/><use x="432" y="36" xlink:href="#dot"/>
+     <use x="483" y="45" xml:base="SamG-1.svg" xlink:href="#parl"/>
+     <use x="459" y="36" xlink:href="#dot"/>
+     <use x="489" y="45" xml:base="SamG-1.svg" xlink:href="#parr"/>
+     <use x="546" y="132" xlink:href="#sx4nu"/>
+     <use x="546" y="24" xlink:href="#sldg"/>
+     <g transform="translate(546,147)">
+      <use xlink:href="#slr" transform="rotate(-19.57) matrix(1.35,0,0,-1,0,0)"/>
+     </g>
+    </g>
+    <g transform="translate(840,0)"><desc> msr 2-3 (7) </desc>
+     <use xlink:href="#sysbarL" xml:base="SamG-1.svg"/><use x="-108" xlink:href="#a3-4"/>
+     <!-- ................................. beat 1 -->
+     <use x="81" y="84" xlink:href="#eitnu"/>
+     <use x="150" y="48" xlink:href="#sxtr"/><use x="141" y="36" xlink:href="#dot"/>
+     <use x="201" y="96" xlink:href="#solnu.3"/><use x="201" y="96" xlink:href="#ntl"/>
+     <g transform="translate(215,-25)">
+      <use xlink:href="#be4" transform="skewY(0) scale(.78,1)"/>
+     </g>
+     <g transform="translate(201,96)">
+      <use xlink:href="#triarc" transform="matrix(.9,0,0,-1,-6,15)"/>
+      <text class="instruct" x="33" y="33">3</text>
+     </g>
+     <use x="240" y="84" xlink:href="#solnu.2"/>
+     <use x="279" y="96" xlink:href="#solnu.3"/>
+     <!-- ................................. beat 2 -->
+     <use x="321" y="108" xlink:href="#solnu.2"/><use x="321" y="108" xlink:href="#dodot"/>
+     <g transform="translate(335,-1)">
+      <use xlink:href="#be" transform="skewY(0) scale(1.8,1)"/>
+     </g>
+     <use x="405" y="120" xlink:href="#solnu.3"/><use x="405" y="24" xlink:href="#sldg"/>
+     <g transform="translate(419,20)">
+      <use xlink:href="#be3" transform="skewY(0) scale(.96,1)"/>
+     </g>
+     <g transform="translate(396,144)">
+      <use xlink:href="#triarc" transform="rotate(13) matrix(1.14,0,0,-1,0,0)"/>
+      <text class="instruct" x="51" y="30">3</text>
+     </g>
+     <use x="447" y="108" xlink:href="#solnu.2"/>
+     <use x="501" y="144" xlink:href="#ntl"/>
+     <use x="501" y="144" xlink:href="#solnu.5"/><use x="501" y="48" xlink:href="#sldg"/>
+     <!-- ................................. beat 3 -->
+     <use x="546" y="108" xlink:href="#solnu.2"/><use x="546" y="108" xlink:href="#dodot"/>
+     <g transform="translate(560,-1)">
+      <use xlink:href="#be" transform="skewY(0) scale(2.73,1)"/>
+     </g>
+     <use x="705" y="120" xlink:href="#doac"/><use x="657" y="24" xlink:href="#gldg"/>
+     <g transform="translate(654,129)">
+      <use xlink:href="#slr" transform="rotate(8) matrix(.39,0,0,-.8,0,0)"/>
+     </g>
+     <use x="705" y="120" xlink:href="#solnu.3"/><use x="705" y="24" xlink:href="#sldg"/>
+     <g transform="translate(719,20)">
+      <use xlink:href="#be3" transform="skewY(0) scale(1.14,1)"/>
+     </g>
+     <g transform="translate(702,141)">
+      <use xlink:href="#triarc" transform="rotate(11.89) matrix(1.23,0,0,-1,0,0)"/>
+      <text class="instruct" x="54" y="30">3</text>
+     </g>
+     <use x="762" y="132" xlink:href="#solnu.4"/><use x="762" y="24" xlink:href="#sldg"/>
+     <use x="819" y="144" xlink:href="#solnu.5"/><use x="819" y="48" xlink:href="#sldg"/>
+    </g>
+    <g transform="translate(1734,0)"><desc> msr 3-3 (8) </desc>
+     <use xlink:href="#sysbarL" xml:base="SamG-1.svg"/><use x="-105" xlink:href="#com"/>
+     <!-- ................................. beat 1 -->
+     <use x="108" y="108" xlink:href="#hanu"/><use x="108" y="108" xlink:href="#dot"/>
+     <g transform="translate(120,126)">
+      <use xlink:href="#slr" transform="matrix(1.89,0,0,-1,0,0)"/>
+     </g>
+     <!-- ................................. beat 2; included -->
+     <!-- ................................. beat 3; included -->
+     <!-- ................................. beat 4 -->
+     <use x="315" y="108" xlink:href="#eitnu"/><use x="384" y="48" xlink:href="#etr"/>
+    </g>
+    <use x="2190" y="0" xlink:href="#dobar2" transform="scale(1,1.07)"/>
+   </g><!-- end of staff -->
+   <g transform="translate(0,264)">
+   <desc>.............................. staff 2-3 </desc>
+    <use y="24" xlink:href="#flt5"/>
+    <g transform="translate(240,0)"><desc> msr 1.2-3 (6) </desc>
+     <!-- ................................. beat 1 -->
+     <g transform="translate(-18,-36)">
+      <use xlink:href="#tie" transform="rotate(3.66) scale(3.75,1)"/>
+     </g>
+     <use x="42" y="0" xlink:href="#solnd"/>
+     <g transform="translate(28,70)">
+      <use xlink:href="#be" transform="skewY(12.53) scale(1.08,1.02)"/>
+     </g>
+     <use x="96" y="12" xlink:href="#solnd"/>
+     <use x="150" y="24" xlink:href="#solnd"/>
+     <text class="instruct" x="90" y="-9">3</text>
+     <!-- ................................ beat 2 -->
+     <use x="204" y="24" xlink:href="#hand"/>
+     <g transform="translate(213,6)">
+      <use xlink:href="#slr" transform="matrix(1.41,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................ beat 3; included -->
+     <!-- ................................ beat 4 -->
+     <use x="357" y="24" xlink:href="#eitnd"/>
+     <use x="441" y="48" xlink:href="#sxtr"/><use x="432" y="36" xlink:href="#dot"/>
+     <use x="483" y="45" xml:base="SamG-1.svg" xlink:href="#parl"/>
+     <use x="459" y="36" xlink:href="#dot"/>
+     <use x="489" y="45" xml:base="SamG-1.svg" xlink:href="#parr"/>
+     <use x="546" y="72" xlink:href="#sx4nu"/>
+     <g transform="translate(582,12)">
+      <use xlink:href="#slr" transform="rotate(-10.3) matrix(.99,0,0,1,0,0)"/>
+     </g>
+    </g>
+    <g transform="translate(840,0)"><desc> msr 2.2-3 (7) </desc>
+     <!-- ................................. beat 1 -->
+     <use x="-108" xlink:href="#a3-4"/>
+     <use x="81" y="24" xlink:href="#eitnd"/>
+     <use x="144" y="48" xlink:href="#sxtr"/><use x="123" y="60" xlink:href="#dot"/>
+     <use x="201" y="36" xlink:href="#solnd.2"/><use x="201" y="36" xlink:href="#ntl"/>
+     <g transform="translate(187,67)">
+      <use xlink:href="#be4" transform="skewY(0) scale(.78,1)"/>
+     </g>
+     <g transform="translate(195,-9)">
+      <use xlink:href="#triarc" transform="matrix(.9,0,0,1,0,0)"/>
+      <text class="instruct" x="39" y="-3">3</text>
+     </g>
+     <use x="240" y="24" xlink:href="#solnd.3"/>
+     <use x="279" y="36" xlink:href="#solnd.2"/>
+     <!-- ................................. beat 2 -->
+     <use x="321" y="48" xlink:href="#solnu.2"/><use x="321" y="39" xlink:href="#dodot"/>
+     <g transform="translate(335,-61)">
+      <use xlink:href="#be" transform="skewY(0) scale(1.8,1)"/>
+     </g>
+     <use x="405" y="60" xlink:href="#solnu.3"/>
+     <g transform="translate(419,-40)">
+      <use xlink:href="#be3" transform="skewY(0) scale(.96,1)"/>
+     </g>
+     <g transform="translate(396,84)">
+      <use xlink:href="#triarc" transform="rotate(13) matrix(1.14,0,0,-1,0,0)"/>
+      <text class="instruct" x="51" y="36">3</text>
+     </g>
+     <use x="447" y="48" xlink:href="#solnu.2"/>
+     <use x="501" y="84" xlink:href="#ntl"/>
+     <use x="501" y="84" xlink:href="#solnu.5"/>
+     <!-- ................................. beat 3 -->
+     <use x="546" y="48" xlink:href="#solnu.2"/><use x="546" y="39" xlink:href="#dodot"/>
+     <g transform="translate(560,-61)">
+      <use xlink:href="#be" transform="skewY(0) scale(2.73,1)"/>
+     </g>
+     <use x="705" y="60" xlink:href="#doac"/>
+     <g transform="translate(654,69)">
+      <use xlink:href="#slr" transform="rotate(8) matrix(.39,0,0,-.8,0,0)"/>
+     </g>
+     <use x="705" y="60" xlink:href="#solnu.3"/>
+     <g transform="translate(719,-40)">
+      <use xlink:href="#be3" transform="skewY(0) scale(1.14,1)"/>
+     </g>
+     <g transform="translate(702,84)">
+      <use xlink:href="#triarc" transform="rotate(11.89) matrix(1.23,0,0,-1,0,0)"/>
+      <text class="instruct" x="54" y="36">3</text>
+     </g>
+     <use x="762" y="72" xlink:href="#solnu.4"/>
+     <use x="819" y="84" xlink:href="#solnu.5"/>
+    </g>
+    <g transform="translate(1734,0)"><desc> msr 3.2-3 (8) </desc>
+     <use x="-105" xlink:href="#com"/>
+     <!-- ................................. beat 1 -->
+     <use x="108" y="48" xlink:href="#whln"/>
+     <g transform="translate(120,30)">
+      <use xlink:href="#slr" transform="matrix(2.91,0,0,1,0,0)"/>
+     </g>
+     <!-- ................................. beat 2; included -->
+     <!-- ................................. beat 3; included -->
+     <!-- ................................. beat 4; included -->
+    </g>
+   </g><!-- end of staff -->
+   <use x="2184" y="0" xlink:href="#sysbar"/>
+  </g><!-- end of system -->
+  <g transform="translate(0,1944) scale(1)"><desc> system 4-1 </desc>
+   <use xlink:href="#sys2"/>
+   <text class="msrno" x="21" y="-36">9</text><!-- measure number -->
+   <text class="auth" x="24" y="-90">Andantino</text>
+   <g><desc> ........................... staff 1-4 </desc>
+    <use xlink:href="#flt5"/>
+    <g transform="translate(240,0)"><desc> msr 1-4 (9) </desc>
+     <use x="9" xlink:href="#repl"/>
+     <!-- ................................ beat 1 -->
+     <use x="216" y="-36" xml:base="SamG-1.svg" xlink:href="#tga11"/>
+     <use x="300" y="-60" xlink:href="#doflt" transform="scale(.6)"/>
+     <use x="180" y="-24" xlink:href="#gldg"/>
+     <use x="216" y="-24" xlink:href="#xsldg"/><use x="288" y="-24" xlink:href="#xsldg"/>
+     <use x="360" y="-24" xlink:href="#xsldg"/>
+     <use x="198" y="162" xlink:href="#mf"/>
+     <use x="216" y="48" xlink:href="#hand"/><use x="216" y="48" xlink:href="#doflt"/>
+     <use x="216" y="72" xlink:href="#hand"/>
+     <use x="477" y="-36" xml:base="SamG-1.svg" xlink:href="#doac3f"/>
+     <use x="407" y="-24" xlink:href="#gldg"/><use x="441" y="-48" xlink:href="#gldg"/>
+     <use x="477" y="-36" xlink:href="#eitnu"/><use x="477" y="-24" xlink:href="#xsldg"/>
+     <!-- ................................ beat 2 -->
+     <use x="648" y="-36" xml:base="SamG-1.svg" xlink:href="#tga11"/>
+     <use x="612" y="-24" xlink:href="#gldg"/><use x="648" y="-24" xlink:href="#xsldg"/>
+     <use x="720" y="-24" xlink:href="#xsldg"/><use x="792" y="-24" xlink:href="#xsldg"/>
+     <use x="909" y="-36" xlink:href="#doac3"/>
+     <use x="843" y="-24" xlink:href="#gldg"/><use x="872" y="-48" xlink:href="#gldg"/>
+     <use x="909" y="-36" xlink:href="#eitnu"/><use x="909" y="-24" xlink:href="#xsldg"/>
+     <!-- ................................ beat 3 -->
+     <use x="1080" y="-24" xml:base="SamG-1.svg" xlink:href="#tga11"/>
+     <use x="1044" y="-24" xlink:href="#gldg"/><use x="1080" y="-24" xlink:href="#xsldg"/>
+     <use x="1152" y="-24" xlink:href="#sldg"/><use x="1224" y="-24" xlink:href="#sldg"/>
+     <use x="1341" y="-24" xml:base="SamG-1.svg" xlink:href="#doac3df"/>
+     <use x="1266" y="-24" xlink:href="#gldg"/><use x="1309" y="-24" xlink:href="#gldg"/>
+     <use x="1344" y="-24" xlink:href="#eitnu"/><use x="1344" y="-24" xlink:href="#xsldg"/>
+     <!-- ................................ beat 4 -->
+     <use x="1512" y="-12" xml:base="SamG-1.svg" xlink:href="#tga11"/>
+     <use x="1776" y="-12" xml:base="SamG-1.svg" xlink:href="#doac3df"/>
+     <use x="1744" y="-24" xlink:href="#gldg"/>
+     <use x="1776" y="-12" xlink:href="#eitnu"/>
+    </g>
+    <use x="2184" xlink:href="#sysbar"/>
+   </g><!-- end of staff -->
+   <g transform="translate(0,240)">
+   <desc>.............................. staff 2-4 </desc>
+    <use y="24" xlink:href="#flt5"/>
+    <g transform="translate(240,0)"><desc> msr 1.2-4 (9) </desc>
+     <!-- ................................. beat 1 -->
+     <g transform="translate(60,30)">
+      <use xlink:href="#slr" transform="rotate(0) scale(1.44,1)"/>
+     </g>
+     <use x="216" y="48" xlink:href="#hand"/>
+     <g transform="translate(234,30)">
+      <use xlink:href="#tie" transform="rotate(0) scale(8.34,1)"/>
+     </g>
+     <!-- ................................. beat 2; included -->
+     <!-- ................................. beat 3 -->
+     <use x="1080" y="48" xlink:href="#eitnd"/><use x="1344" y="48" xlink:href="#etr"/>
+     <!-- ................................. beat 4 -->
+     <use x="1512" y="48" xlink:href="#qrr"/>
+    </g>
+   </g><!-- end of staff -->
+   <use xlink:href="#sysbar"/>
+  </g><!-- end of system -->
+ </g><!-- end of body -->
+ 
+ <text id="sheat-code"
+  style="font:22pt arial,sans-serif; text-decoration:underline" x="192" y="3175">
+  SamGPxEx 042 &#169; 2015 DSG
+ </text>
+ <use xlink:href="#VG" xml:base="VGsheet.svg"
+  transform="translate(1820,3100) scale(2)"/>
+ 
+</svg>
