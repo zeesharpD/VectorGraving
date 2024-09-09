@@ -6,16 +6,18 @@
   <link rel=icon href="vectorgraving.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
   <style>
    /**/
-   body {margin:2em 3em; font:normal 17px sans-serif; color:#410;
+   body {margin:2em 3em; font:normal 16px sans-serif; color:#410;
     background:#ffe;
    }
    h1 {text-align:center; color:#366; border-bottom:2px solid #bcc;
-    padding:1em; text-shadow:5px 5px 4px #777;
+    padding:1em; text-shadow:5px 5px 4px #aaa;
    }
-   h2,h3 {text-align:center; color:#366;
-    padding:.5em; text-shadow:4px 4px 3px #777;
+   h2,h3,h4 {text-align:center; color:#366;
+    padding:.5em; text-shadow:4px 4px 3px #aaa;
    }
    p {padding:.4em;
+   }
+   p.note {font-size:90%; font-style:italic; color:#396;
    }
    a:link {color:#933;
    }
@@ -24,7 +26,7 @@
    a:hover {color:#393;
    }
    hr {color:#699; background:#699; border:0; width:40%; height:2px;
-    margin-top:2em; box-shadow:2px 2px 2px #999;
+    margin-top:2em; box-shadow:2px 2px 2px #bbb;
    }
    div {display:table-row;
    }
@@ -34,9 +36,13 @@
    section {border:1px solid #bcc; display:table-cell; width:67%; height:auto;
     padding:.3em; margin:0 2px 1px;
    }
+   span {color:#60c; font-style:italic;
+   }
    .sig {stroke:#5f5f5f; stroke-width:3; stroke-linecap:round; fill:none;
    } /* for #VG svg */
-   svg {margin:3% 0 0 15%;
+   svg {margin-left:39%;
+   }
+   img.cen {margin-left:39%;
    }
   </style>
   <!--[if lt IE 9]>
@@ -76,23 +82,25 @@
    complex symbols are already in the library. It only takes me a matter of minutes
    to create the ones that aren't there yet, and I will gladly provide them for you
    at you're request, while also showing you how easy it is to do you're self.</p>
-  <p>Viewing the files/templates is a matter of choice. Most modern browsers can read
-   SVG files. Whereas I use my default browser for designing glyphs, I use
-   <a href="http://xmlgraphics.apache.org/" target="_blank">Batik</a>
-   for creating sheet music. You will need to install Java to run this
-   program, if you don't already have it.</p>
-  <p>If you don't already have one, I highly recommend getting an advanced text/code
-   editor.
-   <a href="http://www.flos-freeware.ch/" target="_blank">Notepad2</a>
-   is my favorite. I also use
-   <a href="http://www.pnotepad.org/" target="_blank">Programmer's Notepad</a>
-   because you can open multiple files in tabs. There are many others available.
+  <p>Viewing the files/templates is <span>no longer</span> a matter of choice.
+   Modern browsers can read 'stand alone' SVG files, but these files are linked to the libraries;
+   <span> an attribute removed from the latest version of the SVG(2) specification -without explanation-,
+   and all the browser developers have complied with it's removal!</span> Apache's
+   <a href="http://xmlgraphics.apache.org/" target="_blank">Batik</a> application remains <i>unbroken</i>.
+   It still recognizes SVG 1.1. You will need to install it for both *viewing and converting to PDF.
+   You will also need 'Java' installed for Batik, if you don't already have it.</p>
+  <p class="note">* Having a browser also is very convenient. I'm using an old version of Firefox (v.10.0),
+   just for typesetting music.</p>
+  <p>If you don't already have one, I highly recommend getting an advanced text/code editor.
+   There are many available:
+   <a href="https://www.texteditors.org/cgi-bin/wiki.pl?EditorIndex">Editor Index</a>.
    Programs such as these make editing code much easier, and the files you will be
    creating are, after all, text files.</p>
   <p>Here is a finished PDF:&nbsp;
    <a href="Fantasy.pdf">Fantasy - Fernando Sor</a><br>
    Here is the first page of an SVG file:&nbsp;
-   <a href="SamG-1.svg">Samuel Goldenberg - Modest Musorgsky</a></p>
+   <a href="SamG-1.svg">Samuel Goldenberg - Modest Musorgsky</a><br>
+   or top of '.png': <img src="../SamG_.png" alt="Samuel Goldenberg" style="margin-top:1em"></p>
   <hr>
   <h2>Contents</h2>
   <div>
@@ -143,10 +151,13 @@
    'save as' and the new name you choose. Make whatever changes you like as
    pointed-out in 'TemplateUse.htm'. Replace the words 'Title', 'sub title', and
    'Composer', with the actual names. If there is no sub title, delete that line.</p>
-  <h3>Dana Steven Gormel - dastgo9@gmail.com</h3>
+  <h4>Dana Steven Gormel - dastgo9@gmail.com</h4>
+  <!--
   <svg width="360" height="36" xmlns="http://www.w3.org/2000/svg">
    <use xlink:href="#VG" xml:base="VGsheet.svg" opacity=".8"
     transform="translate(0,-18) scale(1.33)"/>
   </svg>
+  -->
+  <img class="cen" src="VGsheet.png" alt="VG logo">
  </body>
 </html>

@@ -1,6 +1,15 @@
 @charset "utf-8";
 
- /* Music Notation library */
+@font-face {font-family:'calligraph421 bt'; src:url('TT1139M_.TTF');
+}
+@font-face {font-family:calligrapher; src:url('calligr0.ttf');
+}
+@font-face {font-family:urwalcuint; src:url('A056013T.TTF');
+}
+@font-face {font-family:'futura bk bt'; src:url('TT0142M_.TTF');
+}
+
+/* Music Notation library */
 text.finger {font:bold 21px 'futura bk bt',sans-serif; fill:#036;
 }
 text.finger2 {font:bold 21px 'futura bk bt',sans-serif; fill:#630;
@@ -13,14 +22,14 @@ text.pgno {font:39px calligrapher,cursive; fill:#665;
 }
 text.repno {font:italic 39px urwalcuint,serif; fill:#333; letter-spacing:5px;
 }
- /* 'repnoS' is for systems */
+/* 'repnoS' is for systems */
 text.repnoS {font:italic 39px 'calligraph421 bt',serif; fill:#333; letter-spacing:4px;
 }
 text.sx2L {font:39px urwalcuint,serif; fill:#333;
 }
 text.sx2S {font:30px urwalcuint,serif; fill:#333;
 }
- /* sheet music templates; class '*S' for systems */
+/* sheet music templates; class '*S' for systems */
 text.title {font:63px calligrapher,cursive; fill:#333;
 }
 .auth {font:48px calligrapher,cursive; fill:#333; /* removed 'text' for last page info group */

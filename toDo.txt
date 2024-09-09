@@ -10,3 +10,5 @@
  make 'tenuto' 24px
  -
  shorten stems at top .25px
+ -
+ add: <?xml-stylesheet type="text/css" href="munocss.css"?> : to all templates
