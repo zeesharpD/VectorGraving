@@ -1,6 +1,6 @@
 # VectorGraving
 
-![Samuel Goldenberg](/VectorGraving/SamG.png) 
+![Samuel Goldenberg](SamG.png) 
 
 ---
 
@@ -34,4 +34,4 @@ program, and nothing that I want in it is missing.
 
 I've named the process VectorGraving.
 
-&emsp;&emsp;&emsp;&emsp; ![logo](/VectorGraving/vgtm.png)
+&emsp;&emsp;&emsp;&emsp; ![logo](vgtm.png)

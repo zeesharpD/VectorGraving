@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* The fonts included in this directory */
 @font-face {font-family:'calligraph421 bt'; src:url('TT1139M_.TTF');
 }
 @font-face {font-family:calligrapher; src:url('calligr0.ttf');
@@ -9,7 +10,7 @@
 @font-face {font-family:'futura bk bt'; src:url('TT0142M_.TTF');
 }
 
-/* Music Notation library */
+/* Music Notation libraries */
 text.finger {font:bold 21px 'futura bk bt',sans-serif; fill:#036;
 }
 text.finger2 {font:bold 21px 'futura bk bt',sans-serif; fill:#630;

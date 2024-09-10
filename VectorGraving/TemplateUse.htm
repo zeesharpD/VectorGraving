@@ -8,6 +8,8 @@
    /**/
    body {margin:2pc 3pc; font:normal 15px sans-serif; color:#420;
    }
+   h1 {color:#366; text-align:center;
+   }
    p {border:1px solid #cc9; padding:.4em;
    }
    a:link {color:#933;
@@ -49,33 +51,39 @@
  </head>
  
  <body>
+  <h1>Staff Templates</h1>
   <p>This is the code for a single staff template, title page. There are many
-   programs that will read/display SVG, including most browsers. The 'viewBox'
-   attribute of the &lt;svg&gt; element is not necessary. I use it so&nbsp;
-   <a href="http://xmlgraphics.apache.org/">Batik</a>&nbsp;
-   &horbar;the program I use&horbar; will open the file 'fit to window'. Otherwise
-   it will open at the upper left-hand corner at full size. All the browsers
-   I've used will do the same, even with it. The 'xml:base' attribute is the
-   music library.
-  </p>
-  <img width="699" height="442" src="staffTP-1.png" alt="source"/>
+   programs that can display/produce SVG, but these files use the 'xml:base' attribute
+   which links the staff paper to the libraries. The only program I know of
+   that still supports it is <a href="http://xmlgraphics.apache.org/">Batik</a>,
+   which is fortunate, as I had already chosen it as the most reliable validator of xml,
+   and converter to pdf, png, tiff, jpeg.
+  <p>The 'viewBox' attribute of the &lt;svg&gt; element is not necessary. I use it so
+   'batik' will open the file 'fit to window'. Otherwise it will open at the upper
+   left-hand corner at full size. The 'xml:base' attribute links to the music library.</p>
+  <img width="793" height="430" src="staffTP-1.png" alt="source"/>
   <p>The &lt;metadata&gt; element is not necessary either. It will not translate as
    'document properties' in a PDF file. I use it to preserve information for the
    original file. If you want to use it, go to:&nbsp;
    <a href="http://dublincore.org/documents/dcmi-terms/">
     http://dublincore.org/documents/dcmi-terms/
    </a>
-   &nbsp;for additional attributes you might want, and, of cource, fill in the
+   &nbsp;for additional attributes you might want. And, of cource, fill in the
    values of the &lt;rdf:Description...&gt; with you're own information.
    Dates are yyyy-mm-dd. Otherwise, you can delete the whole block.</p>
   <p>The &lt;defs&gt;<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- - - -<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/defs&gt;<br>
-   block is where your CSS style, and definitions of figures (if any) that are not in
-   the library are placed. Nothing in this block will render (show) on the page
-   unless you call it with a &lt;use.../&gt; in the following sections of the file.</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- - - -<br>
+   &nbsp;&nbsp;&nbsp;&lt;/defs&gt;<br>
+   block is where the CSS style (for a 'stand alone' svg), and definitions of figures/groups
+   that you create (if any), that are not in the library are placed. Nothing in this block
+   will render (show) on the page, unless you call it with a &lt;use.../&gt; in the following
+   sections of the file. I don't recall the exact message, but a few years ago, servers started
+   issuing warnings (errors?) about having links to other xml files when both have internal css.
+   I now have all of the css from both libraries and the staff templates placed in a single
+   seperate file: 'munocss.css'. I left this image of the old usage here because it's still
+   a good example of what's in munocss.css.</p>
   <svg width="966" height="477" xmlns="http://www.w3.org/2000/svg">
-   <image width="699" height="477" xlink:href="staffTP-2.png"/>
+   <image width="734" height="455" xlink:href="staffTP-2.png"/>
    <g id="press">
     <rect id="bttn1" x="420" y="1" rx="9" ry="9" width="75" height="30"
      stroke="#964" stroke-width="2" fill="#eee"/>
@@ -132,19 +140,18 @@
     </g>
    </g>
   </svg>
-  <p>If you choose to use 'Batik' for converting SVG to PDF, stick with pixels
-   for font sizes. Batik triples the size of fonts in 'points (pt)' when converting
-   to 300dpi (could be a bug).</p>
-  <img width="608" height="270" src="staffTP-3.png" alt="source"/>
+  <p>When useing 'Batik' for converting SVG to PDF, stick with pixels for font sizes.
+   Batik triples the size of fonts in 'points (pt)' when converting to 300dpi (could be a bug).</p>
+  <img width="677" height="260" src="staffTP-3.png" alt="source"/>
   <p>A &lt;desc&gt;&nbsp;&nbsp;&lt;/desc&gt; is a more prominent way of including
-   information into the file, rather than using a comment: &lt;!--&nbsp;&nbsp;--&gt;.
+   information in the file, rather than using a comment: &lt;!--&nbsp;&nbsp;--&gt;.
    The contents of both will not render on the page.<br>
    The &lt;g...&gt;...&lt;/g&gt; above is a simple blank example of a figure
    that might occur frequently in a piece: note, beam, note. Some music will not
    need any pre-defined figures; others may need many.<br>
    I discovered that slurs that are both flipped and rotated will distort.
    Moving the 'translate' out of the 'matrix' solves the problem.</p>
-  <img width="607" height="154" src="staffTP-4.png" alt="source"/>
+  <img width="679" height="150" src="staffTP-4.png" alt="source"/>
   <p>The &lt;image.../&gt; here is my initials at the upper left-hand of the page.
    You can replace it with you're own, or a logo, or whatever you want,
    or delete it altogether.</p>
@@ -169,7 +176,7 @@
    is at x="216" because the first staff is indented. Clefs, time signatures, bar lines,
    and others, are pre-positioned for y in the library. You only need x and, or y when
    an item is other than 0.</p>
-  <img width="749" height="459" src="staffTP-5.png" alt="source"/>
+  <img width="844" height="433" src="staffTP-5.png" alt="source"/>
   <p>The block between the comment is empty 'use's' for copying and pasting below
    the 'beat' comments. The contents can be whatever you want or need. The top one
    has an 'xml:base' for anything defined in this file. Replace 'this' with the name
@@ -179,10 +186,10 @@
   <p>Beginning with staff 2 there is a text element for the measure numbers that
    appear on the page, and empty parenthesis '()' to be filled in with measure numbers
    for internal navigation.</p>
-  <img width="540" height="271" src="staffTP-6.png" alt="source"/>
+  <img width="595" height="254" src="staffTP-6.png" alt="source"/>
   <p>This text element is what I use for the 'identifier' and copyright of the music
    I typeset. Use it for you're own information, or delete it. The 'use' is my
    Vector Graving trademark. I would appreciate it if you would leave it here.</p>
-  <img width="367" height="179" src="staffTP-7.png" alt="source"/>
+  <img width="412" height="166" src="staffTP-7.png" alt="source"/>
  </body>
 </html>
