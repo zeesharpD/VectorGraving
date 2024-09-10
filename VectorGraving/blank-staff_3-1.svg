@@ -24,6 +24,13 @@
  
  <defs>
   
+  <style type="text/css">
+   /* Note: text class 'repnoS' has 'letter-spacing:4px;'
+    * some browsers won't recognize this
+    * check it's appearance in Sqiggle before converting to PDF
+    */
+  </style>
+  
   <desc>
    xml:base="music-notation2.svg" for all groups in defs; for the Batik bug
   </desc>
