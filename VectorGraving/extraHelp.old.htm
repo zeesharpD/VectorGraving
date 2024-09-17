@@ -4,10 +4,9 @@
   <title>Extra Help</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel=icon href="vectorgraving.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
-  <link rel="stylesheet" href="munocss.css" type="text/css">
   <style>
    /**/
-   body {margin:2pc 3pc; font:normal 15px sans-serif; color:#420;
+   body {margin:2pc 3pc; font:normal 15px sans-serif; color:#520;
    }
    p {border:1px solid #cc9; padding:.4em;
    }
@@ -43,57 +42,6 @@
    <circle id="mark" r="1.5" stroke="none" fill="#933"/>
    <defs></defs>
   -->
-  <svg version="1.1" width="100" height="1"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full">
-   <defs>
-    <desc> staff </desc>
-    <g id="staff" stroke="#000" stroke-width="3" shape-rendering="crispEdges">
-     <line id="stfLine" x1="0" y1="0" x2="2310" y2="0"/>
-     <use y="24" xlink:href="#stfLine"/><use y="48" xlink:href="#stfLine"/>
-     <use y="72" xlink:href="#stfLine"/><use y="96" xlink:href="#stfLine"/>
-    </g>
-    <desc> ledger lines </desc>
-    <g id="ldg" stroke="#000" stroke-width="3" shape-rendering="crispEdges">
-     <line x1="-24" y1="0" x2="24" y2="0"/>
-     <line x1="-24" y1="24" x2="24" y2="24"/>
-     <line x1="-24" y1="48" x2="24" y2="48"/>
-     <line x1="-24" y1="72" x2="24" y2="72"/>
-     <line x1="-24" y1="96" x2="24" y2="96"/>
-    </g>
-    
-    <desc> solid note head </desc>
-    <path id="note" d="M-13.5,0 A1.55,1 -36 1,1 13.5,0 A1.55,1 -36 1,1 -13.5,0 z"/>
-    <desc> stem </desc>
-    <polygon id="stem" points="11.75,-82.25 14.75,-85.25 14.75,-5.5 14,-3.75
-     11.75,-11 11.75,-82.5" shape-rendering="crispEdges"/>
-    <desc> long stem: +12 </desc>
-    <polygon id="stem.1" points="11.75,-94.25 14.75,-97.25 14.75,-5.5 14,-3.75
-     11.75,-11 11.75,-94.5" shape-rendering="crispEdges"/>
-    <desc> solid note with stem up </desc>
-    <g id="solnu">
-     <use xlink:href="#note"/><use xlink:href="#stem"/>
-    </g>
-    <desc> solid note stem up 1 half step long </desc>
-    <g id="solnu.1">
-     <use xlink:href="#note"/><use xlink:href="#stem.1"/>
-    </g>
-    <desc> solid note with stem down </desc>
-    <g id="solnd">
-     <use xlink:href="#solnu" transform="rotate(180)"/>
-    </g>
-    <desc> beam </desc>
-     <rect id="be" width="100" height="15"/>
-    <desc> 2 beams </desc>
-    <g id="be2">
-     <use xlink:href="#be"/><use y="21" xlink:href="#be"/>
-    </g>
-    <g id="be2.1">
-     <use xlink:href="#be2"/>
-     <use xlink:href="#be" transform="translate(64,42) scale(.18,1)"/>
-    </g>
-   </defs>
-  </svg>
  </head>
  
  <body>
@@ -104,7 +52,8 @@
   <div>
    <button id="an1" value="animate" type="button">animate</button>
   </div>
-  <svg width="480" height="204" xmlns="http://www.w3.org/2000/svg">
+  <svg width="480" height="204" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
    <g transform="translate(0,78)">
     <use xlink:href="#staff" transform="scale(.2,1)">
      <animate attributeName="opacity" values="1;.2;.2;.2;.2;.2;.2;1"
@@ -129,7 +78,8 @@
   <div>
    <button id="an2" value="animate" type="button">animate</button>
   </div>
-  <svg width="480" height="120" xmlns="http://www.w3.org/2000/svg" style="margin-top:1.5em">
+  <svg width="480" height="120" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg" style="margin-top:1.5em">
    <g transform="translate(36,18) scale(1)">
     <use x="-14" y="85" xlink:href="#solnu" opacity=".7">
      <animate attributeName="opacity" values=".7;0"
@@ -162,7 +112,8 @@
   <div>
    <button id="an3" value="animate" type="button">animate</button>
   </div>
-  <svg width="480" height="138" xmlns="http://www.w3.org/2000/svg">
+  <svg width="480" height="138" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
    <g transform="translate(36,30) scale(1)">
     <use x="-14" y="0" xlink:href="#solnd" opacity=".7"/>
     <g transform="translate(-28,70)">
@@ -179,12 +130,12 @@
        begin="an3.click" dur="6s" fill="freeze"
       />
      </use>
-     <use xlink:href="#mark">
+     <use xlink:href="#mark" xml:base="extraHelp.htm">
       <animate attributeName="y" values="0;0;0;-21"
        begin="an3.click" dur="6s" fill="freeze"
       />
      </use>
-     <use xlink:href="#point" transform="rotate(-45)">
+     <use xlink:href="#point" xml:base="extraHelp.htm" transform="rotate(-45)">
       <animateTransform attributeName="transform" attributeType="XML"
        type="translate" values="0,0;0,0;0,0;0,-21"
        begin="an3.click" dur="6s" fill="freeze"
@@ -211,7 +162,8 @@
   <div>
    <button id="an4" value="animate" type="button">animate</button>
   </div>
-  <svg width="300" height="126" xmlns="http://www.w3.org/2000/svg">
+  <svg width="300" height="126" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg">
    <g transform="translate(36,30) scale(1)">
     <use x="-14" y="0" xlink:href="#solnd" opacity=".7"/>
     <g transform="translate(-28,49)">
@@ -231,12 +183,12 @@
        type="scale" begin="an4.click" values=".5,1;.5,1;.5,0;.5,1" dur="5s" fill="freeze"
       />
      </use>
-     <use xlink:href="#mark">
+     <use xlink:href="#mark" xml:base="extraHelp.htm">
       <animate attributeName="y" values="0;0;0;35"
        begin="an4.click" dur="5s" fill="freeze"
       />
      </use>
-     <use transform="rotate(-45)">
+     <use xlink:href="#point" xml:base="extraHelp.htm" transform="rotate(-45)">
       <animateTransform attributeName="transform" attributeType="XML"
        type="translate" values="0,0;0,0;0,0;0,50"
        begin="an4.click" dur="5s" fill="freeze"
@@ -260,15 +212,16 @@
    beam is placed from the first stem head, which in this case is a half-step long
    (solnu.1). In most cases you can round the number to the nearest pixel.
   </p>
-  <svg width="612" height="210" xmlns="http://www.w3.org/2000/svg" opacity="1">
+  <svg width="540" height="210" xmlns="http://www.w3.org/2000/svg"
+   xml:base="music-notation2.svg" opacity="1">
    <g transform="translate(0,96)">
     <use xlink:href="#staff"/>
     <g id="math" transform="translate(74,-85)">
      <line stroke="#c63" stroke-width="1" stroke-dasharray="99,45" x2="243"/>
-     <text x="106" y="5" class="calc">234</text>
+     <text x="108" y="5" class="calc">234</text>
      <line stroke="#c63" stroke-width="1" x1="150" y1="6" x2="150" y2="48"/>
-     <text x="120" y="21" class="calc">150</text>
-     <line stroke="#c63" stroke-width="1" stroke-dasharray="21,16"
+     <text x="126" y="21" class="calc">150</text>
+     <line stroke="#c63" stroke-width="1" stroke-dasharray="21,15"
       x1="234" y1="-9" x2="234" y2="48"/>
      <text x="227" y="25" class="calc">48 &#247; 234 = .205, invert tan = 11.59°</text>
     </g>
@@ -300,15 +253,21 @@
    <button id="an5" value="animate" type="button">animate</button>
   </div>
   <svg width="360" height="126" xmlns="http://www.w3.org/2000/svg"
-   viewBox="-180,-30,390,126">
-   <use xlink:href="#be2.1" transform="translate(0,0)">
+   xml:base="music-notation2.svg">
+   <defs>
+    <g id="be2.1">
+     <use xlink:href="#be2"/>
+     <use xlink:href="#be" transform="translate(64,42) scale(.18,1)"/>
+    </g>
+   </defs>
+    <animateTransform attributeName="transform" attributeType="XML"
+     type="scale" begin="an5.click" values="1,1;2.34,1.02" dur="5s" fill="freeze"
+    />
+   <use x="26" y="12" xlink:href="#be2.1" xml:base="extraHelp.htm">
     <animateTransform attributeName="transform" attributeType="XML"
      type="skewY" begin="an5.click" from="0" to="25" dur="5s" fill="freeze"
     />
    </use>
-   <animateTransform attributeName="transform" attributeType="XML"
-    type="scale" begin="an5.click" values="1,1;2.34,1.02" dur="5s" fill="freeze"
-   />
   </svg>
   <p>Creating a custom beam by itself would be used when the notes that accompany
    it are at different intervals. If the notes are identical, then you can include
