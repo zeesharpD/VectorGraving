@@ -46,9 +46,9 @@
  <g id="titles" transform="translate(120,120)">
   <image y="100" width="136" height="50" xlink:href="title-DSG.png"/>
    <!-- 100y for title page only; others 0 -->
-  <text class="title" x="1155" y="57" text-anchor="middle">Title</text>
-  <text class="auth" x="1155" y="132" text-anchor="middle">sub title</text>
-  <text class="auth" x="2307" y="150" text-anchor="end">Composer</text>
+  <text class="titleS" x="1155" y="57" text-anchor="middle">Title</text>
+  <text class="authS" x="1155" y="132" text-anchor="middle">sub title</text>
+  <text class="authS" x="2307" y="150" text-anchor="end">Composer</text>
   <use xlink:href="#pg1"/>
  </g>
  
@@ -58,7 +58,7 @@
    <g><desc> ........................... staff 1-1 </desc>
     <g transform="translate(336,0)"><desc> msr 1-1 </desc>
      <!-- ................................. beat 1 -->
-     <text x="0" y="-72" class="repno">Andantino</text>
+     <text x="0" y="-72" class="repnoS">Andantino</text>
      <!-- ................................. beat 2 -->
     </g>
     <g transform="translate(1281,0)"><desc> msr 2-1 </desc>
@@ -81,7 +81,7 @@
   </g><!-- end of system -->
   <g transform="translate(0,876)"><desc> system 2-1 </desc>
    <use xlink:href="#sys2"/>
-   <text x="21" y="-36" class="msrno">3</text><!-- measure number -->
+   <text class="msrnoS" x="21" y="-36">3</text><!-- measure number -->
    <g><desc> ........................... staff 1-2 </desc>
     <g transform="translate(336,0)"><desc> msr 1-1 </desc>
      <!-- ................................. beat 1 -->
@@ -107,7 +107,7 @@
   </g><!-- end of system -->
   <g transform="translate(0,1752)"><desc> system 3-1 </desc>
    <use xlink:href="#sys2"/>
-   <text x="21" y="-36" class="msrno">5</text><!-- measure number -->
+   <text class="msrnoS" x="21" y="-36">3</text><!-- measure number -->
    <g><desc> ........................... staff 1-3 </desc>
     <g transform="translate(336,0)"><desc> msr 1-1 </desc>
      <!-- ................................. beat 1 -->

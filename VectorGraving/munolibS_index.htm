@@ -8,11 +8,11 @@
   <meta name="Keywords" content="music notation, svg, music, staff, system, note, stem, beam, rest, symbol">
   <meta name="Description" content="Scalable Vector Graphics Music Notation Library Index; Systems">
   <meta name="Author" content="Dana Steven Gormel">
-  <meta name="copyright" content="&copy; 2015 Dana Steven Gormel">
+  <meta name="copyright" content="&copy; 2024 Dana Steven Gormel">
   <link rel="shortcut icon" type="image/x-icon" href="sm.ico">
   <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
   <meta name="dcterms.created" content="2014-03-05">
-  <meta name="dcterms.modified" content="2017-02-08">
+  <meta name="dcterms.modified" content="2024-10-04">
   <link rev="prev" title="Music Notation SVG page 1" href="musMan-1.htm">
   <style type="text/css">
    /* */
@@ -36,6 +36,8 @@
     color:#363; border-bottom:1px solid #ccc; padding:3px;
    }
    p.srf {font:bold 11pt 'courier new',serif;
+   }
+   span {text-decoration:underline;
    }
   </style>
  </head>
@@ -125,8 +127,8 @@
      shorter ones for close notes<br>
      extra short<br>
      and grace notes et. al.<br>
-     wide ledger lines<br>
-     when a half step note is along side</p></div>
+     wide ledger lines;<br>
+     <i>when a half step note is along side</i></p></div>
     <div class="sm"><p>ldg<br>
      sldg<br>
      xsldg<br>
@@ -138,14 +140,21 @@
     </div>
    </div>
    <p class="info">
-    All accidentals can be placed up to +5px 'x' for tight situations. All accidentals
-    have a default &#8722;x for placing at note coords.<br>
+    All accidentals can be placed up to +5px 'x' for tight situations.
+    All accidentals have a default -x for placing at note coords.<br>
     The widest accidental is a double flat, and the minimum spacing
     between notes for that is 69px.</p>
    <div class="lg">
     <div class="sm"><p>a sharp</p></div>
     <div class="sm"><p>sharp</p></div>
     <div class="sm2"><p>at note; for key x+156,y=0</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>a small sharp<br>
+     for grace notes, et.al.</p></div>
+    <div class="sm"><p>ssharp</p></div>
+    <div class="sm2"><p>x -39 of parent note, when used for a grace note<br>
+     y at grace note</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>sharp keys</p></div>
@@ -158,6 +167,13 @@
     <div class="sm2"><p>at note; for key x+156,y+48</p></div>
    </div>
    <div class="lg">
+    <div class="sm"><p>a small flat<br>
+     for grace notes, et.al.</p></div>
+    <div class="sm"><p>sflat</p></div>
+    <div class="sm2"><p>x -39 of parent note, when used for a grace note<br>
+     y at grace note</p></div>
+   </div>
+   <div class="lg">
     <div class="sm"><p>flat keys</p></div>
     <div class="sm"><p>flt2, flt3, etc.</p></div>
     <div class="sm2"><p>0,0</p></div>
@@ -165,21 +181,31 @@
    <div class="lg">
     <div class="sm"><p>a natural</p></div>
     <div class="sm"><p>ntl</p></div>
-    <div class="sm2"><p>at note</p></div>
+    <div class="sm2"><p>at note<br>
+     minimum spacing between notes; 48px</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>a small natural<br>
+     for grace notes, et.al.</p></div>
+    <div class="sm"><p>sntl</p></div>
+    <div class="sm2"><p>x -39 of parent note, when used for a grace note<br>
+     y at grace note</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>a double sharp</p></div>
     <div class="sm"><p>doshrp</p></div>
-    <div class="sm2"><p>at note</p></div>
+    <div class="sm2"><p>at note<br>
+     minimum spacing between notes; 57px</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>a double flat</p></div>
     <div class="sm"><p>doflt</p></div>
-    <div class="sm2"><p>at note</p></div>
+    <div class="sm2"><p>at note<br>
+     minimum spacing between notes; 66px</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>time signatures</p></div>
-    <div class="sm"><p>a3-4, a4-4, a5-4, etc.<br>com &amp; ct for
+    <div class="sm"><p>a2-4, a3-4, a4-4, etc.<br>com &amp; ct for
      common &amp; cut-time<br>
      [id's in xml cannot start with a number]</p></div>
     <div class="sm2"><p>0,0 for C major and A minor;
@@ -190,17 +216,17 @@
    <div class="lg">
     <div class="sm"><p>solid note head</p></div>
     <div class="sm"><p>note</p></div>
-    <div class="sm2"><p>were needed; when adding a half-step note to a chord: x&#177;27</p></div>
+    <div class="sm2"><p>where needed; when adding a half-step note to a chord: x&#177;27</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>hollow note head</p></div>
     <div class="sm"><p>holno</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>whole note</p></div>
     <div class="sm"><p>whln</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>stem</p></div>
@@ -210,90 +236,113 @@
      &lt;transform="translate(x,y) rotate(180)"&gt;</p>
     </div>
    </div>
-   <p class="info">The minimum spacing between notes is 39px.<br>
+   <p class="info">The minimum spacing between notes without accidentals
+    is 39px.<br>
     The minimum spacing for a note after a bar is 51px, to allow for an accidental.</p>
-   <p class="info">To create a longer stem on a note simply place another 'stem' at the note
-    coords and scale it's 'y'; for stem down rotate(180,x,y);
-    or use long and short stemmed notes listed below.</p>
    <div class="lg">
     <div class="sm"><p>solid note stem up</p></div>
     <div class="sm"><p>solnu</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>solid note stem down</p></div>
     <div class="sm"><p>solnd</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>solid note long stem,<br>
      in half-step increments</p></div>
     <div class="sm"><p>solnu.1, solnu.2, etc.<br>solnd.1, solnd.2, etc.</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>solid note short stem</p></div>
     <div class="sm"><p>solnu-1, solnu-2<br>solnd-1, solnd-2</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>half note stem up</p></div>
     <div class="sm"><p>hanu</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>half note stem down</p></div>
     <div class="sm"><p>hand</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>half note long and short stems,<br>
+     in half-step increments</p></div>
+    <div class="sm"><p>hanu.1, hanu.2, etc.<br>hand.1, hand.2, etc.<br>(and short -1, -2)</p></div>
+    <div class="sm2"><p>where needed</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>one flag and stem up, no note</p></div>
+    <div class="sm"><p>eistmu, eistmu.1<br>(.2, .3, etc.)</p></div>
+    <div class="sm2"><p>where needed</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>one flag and stem down, no note</p></div>
+    <div class="sm"><p>eistmd, eistmd.1<br>(.2, .3, etc.)</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>eighth note stem up</p></div>
-    <div class="sm"><p>eitnu, eitnu.1<br>(.2, .3, etc.)</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm"><p>eitnu, eitnu.1<br>(.2, .3, etc.)<br>(and short -1, -2)</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>eighth note stem down</p></div>
-    <div class="sm"><p>eitnd, eitnd.1<br>(.2, .3, etc.)</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm"><p>eitnd, eitnd.1<br>(.2, .3, etc.)<br>(and short -1, -2)</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
+   <p class="info">sixteenth notes also have long stems, but no short ones (so far)</p>
    <div class="lg">
     <div class="sm"><p>sixteenth note stem up</p></div>
     <div class="sm"><p>sxtnu</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>sixteenth note stem down</p></div>
     <div class="sm"><p>sxtnd</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
+   <p class="info">32<sup>nd</sup> and 64<sup>th</sup> notes have no long or short stems, as yet</p>
    <div class="lg">
     <div class="sm"><p>32nd note stem up</p></div>
     <div class="sm"><p>thr2nu</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>32nd note stem down</p></div>
     <div class="sm"><p>thr2nd</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>64th note stem up</p></div>
     <div class="sm"><p>sx4nu</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>64th note stem down</p></div>
     <div class="sm"><p>sx4nd</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>grace notes with slur<br>
-     &mdash;<br style="margin-top:3.4em">no slur, same note</p></div>
-    <div class="sm"><p>grace_ (lower to upper)<br>grace- (upper to lower)<br>
-     grace-w (wide)<br>&mdash;<br>
+     &nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
+     &mdash;<br style="margin-top:3.5em">
+     no slur, same note</p></div>
+    <div class="sm"><p>grace_&emsp;(lower to upper)<br>grace-&emsp;(upper to lower)<br>
+     (plus their stem down counter parts):<br>
+     grace_d and grace-d<br>
+     grace-w&emsp;(wide)<br>
+     grace-3&emsp;(a third, upper to lower)<br>
+     grace-3d&emsp;(a third, upper to lower, stem down)<br>
+     &mdash;<br>
      gracex</p></div>
-    <div class="sm2"><p>at note; all<br>&#160;<br style="margin-top:1em">
-     'wide' allows room for chromatics</p></div>
+    <div class="sm2"><p>at note; all<br>&#160;<br style="margin-top:3.5em">
+     'wide' allows room for chromatics for the parent note</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>double acciaccatura, lower to upper, two beams</p></div>
@@ -306,24 +355,41 @@
     <div class="sm2"><p>at parent note</p></div>
    </div>
    <div class="lg">
+    <div class="sm"><p>a whole note harmonic</p></div>
+    <div class="sm"><p>whlhr</p></div>
+    <div class="sm2"><p>where needed</p></div>
+   </div>
+   <div class="lg">
     <div class="sm"><p>half note harmonic stem up</p></div>
     <div class="sm"><p>hahru</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>half note harmonic stem down</p></div>
     <div class="sm"><p>hahrd</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
+   <p class="info">The solid head harmonics have long and short stems, like regular notes:
+    &emsp;<i>slhru.1, .2 etc., and slhru-1 &hellip;</i></p>
    <div class="lg">
     <div class="sm"><p>solid hamonic stem up</p></div>
     <div class="sm"><p>slhru</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>solid hamonic stem down</p></div>
     <div class="sm"><p>slhrd</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>solid harmonic stem up, one flag</p></div>
+    <div class="sm"><p>eihru</p></div>
+    <div class="sm2"><p>where needed</p></div>
+   </div>
+   <div class="lg">
+    <div class="sm"><p>solid harmonic stem down, one flag</p></div>
+    <div class="sm"><p>eihrd</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <p class="info">beams will often need to be skewed and scaled: always skew first!<br>
     slurs will often need to be rotated and scaled: rotate first!<br>
@@ -340,17 +406,17 @@
     <div class="sm"><p>1, 2, 3 and 4 beams;<br>
      beam and &#189; beam left or right<br>
      beam with a short beam left or right;<br>
-     beam with two short beams left <u>and</u> right<br>
+     beam with two short beams left <span>and</span> right<br>
      beam with two partial beams right</p></div>
     <div class="sm"><p>be, be2, be3, be4<br>
-     be1.5l, be1.5r<br>&#160;<br>
-     be.1l, be.1r<br>&#160;<br>
-     be.2<br>&#160;<br>
+     be1.5l, be1.5r<br>
+     be.1l, be.1r<br>
+     be.2<br>
      be.3r</p></div>
     <div class="sm2">
      <p>needs a transform="translate(x,y)" that moves +14,&#8722;85
       (for stem up) or &#8722;14, +70 (for a single beam, stem down) from the
-      note coords to put it at the stem head (85&#8722;15);<br>
+      note coords to put it at the stem head (85 minus 15);<br>
       flipped beams can stay at +85y;<br>
       beams at an angle will need to be scaled y regardless of the x scaling
       (if any) to compensate for the thinning of the beam as the angle increases;<br>
@@ -365,7 +431,7 @@
     <div class="sm"><p>a slur / tie</p></div>
     <div class="sm"><p>slr</p></div>
     <div class="sm2"><p class="info">from stem to stem</p>
-     <p>needs a transform="translate(x,y)" &#177;15,&#177;93
+     <p>needs a transform="translate(x,y)" &#177;14,&#177;90
       from the note coords to put it @ stem head</p><p class="info">from note to note</p>
      <p>x &#177;21, y &#177;18 (@)
      </p>
@@ -402,18 +468,19 @@
    <div class="lg">
     <div class="sm"><p>a larger dot for repeats<br>et. al.</p></div>
     <div class="sm"><p>dotl</p></div>
-    <div class="sm2"><p>were needed</p></div>
+    <div class="sm2"><p>where needed</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>a whole / half rest</p></div>
     <div class="sm"><p>hlfr</p></div>
-    <div class="sm2"><p>whole; x at beat; y at line (any) / half; x at beat; y at space (any)</p>
+    <div class="sm2"><p>whole; x at beat; y at line (any)&emsp;
+     /&emsp;half; x at beat; y at space (any)</p>
     </div>
    </div>
    <div class="lg">
     <div class="sm"><p>a quarter rest</p></div>
     <div class="sm"><p>qrr</p></div>
-    <div class="sm2"><p>were needed; at beat (x,y are centered)</p></div>
+    <div class="sm2"><p>where needed; at beat (x,y are centered)</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>an eighth rest</p></div>
@@ -434,7 +501,7 @@
     <div class="sm"><p>fingering numbers</p></div>
     <div class="sm"><p>f1, f2, f3, etc.</p></div>
     <div class="sm2">
-     <p>x 30px from note at stem side, 15px at opposite side,
+     <p>x 30px(+) from note at stem side, 15px(+) at opposite side,
       and y at next space up or down;<br>
       in many cases you will have to decide for yourself
      </p>
@@ -445,10 +512,11 @@
     <div class="sm"><p class="srf">I, II, III, etc.</p></div>
     <div class="sm2"><p>at note; (default y&#8722;150)</p></div>
    </div>
+   <p class="info">See 'musMan-3.htm' for using groups without #id's.</p>
    <div class="lg">
     <div class="sm"><p>a dashed line</p></div>
     <div class="sm"><p>no #id</p></div>
-    <div class="sm2"><p>must copy 'g' and use directly, default y&#8722;150 of note</p></div>
+    <div class="sm2"><p>must copy 'g' from library and use directly, default y&#8722;150 of note</p></div>
    </div>
    </div>
    <div class="lg">
@@ -457,6 +525,11 @@
     <div class="sm2"><p>x @&#8722;27 to &#8722;54 from the first numeral: will vary with
      numeral;<br>y at note</p></div>
    </div>
+   <p class="info">the possible locations of the following symbols [ mod to sf ]
+    are too numerous for a standard location<br>
+    as a rough guide:<br>
+    y -132 to -138 above a stem / +96 to +102 below a stem (measured from a note head)<br>
+    y -48 to -60 above a staff / @+120 below a staff</p>
    <div class="lg">
     <div class="sm"><p>moderato/mezzo symbol</p></div>
     <div class="sm"><p>mod</p></div>
@@ -487,8 +560,9 @@
     <div class="sm"><p>sf</p></div>
     <div class="sm2"><p>y=144 is midway between staves</p></div>
    </div>
+   <p class="info">See 'musMan-3.htm' for using groups without #id's.</p>
    <div class="lg">
-    <div class="sm"><p>triplet symbol</p></div>
+    <div class="sm"><p>triplet symbol with slur</p></div>
     <div class="sm"><p>no #id</p></div>
     <div class="sm2"><p>copy 'g'; treat like a slur</p></div>
    </div>
@@ -516,22 +590,24 @@
    </div>
    <div class="lg">
     <div class="sm"><p>crescendo / decrescendo</p></div>
-    <div class="sm"><p>dec1 (small), dec2 (large)</p></div>
-    <div class="sm2"><p>were needed; must be put in a 'g' when 'scaled' and or 'flipped'
-     to control 0,0; the center of the open end is 0,0<br>
-     I drew these as decrescendos; use 'matrix' flip for crescendo</p>
+    <div class="sm"><p>cres1 (small), cres2 (large)<br>
+     dec1, dec2</p></div>
+    <div class="sm2"><p>where needed; must use:<br>
+     transform="translate(x,y) scale(n,1)"
+     when 'scaled' to control 0,0;<br>
+     the center of the open end is 0,0</p>
     </div>
    </div>
    <div class="lg">
     <div class="sm"><p>repeat bars, left and right</p></div>
     <div class="sm"><p>repl, repr</p></div>
-    <div class="sm2"><p>were needed; 0,0 is upper outside corner
+    <div class="sm2"><p>where needed; 0,0 is upper outside corner
      of the wide bar</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>similes, measure repeats</p></div>
     <div class="sm"><p>msrrp1, msrrp2</p></div>
-    <div class="sm2"><p>were needed; center of symbol is 0,0</p></div>
+    <div class="sm2"><p>where needed; center of symbol is 0,0</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>segno</p></div>
@@ -553,6 +629,7 @@
     <div class="sm"><p>pg1, pg2, etc.</p></div>
     <div class="sm2"><p>0,0 in 'titles g'</p></div>
    </div>
+   <p class="info">See 'musMan-3.htm' for using groups without #id's.</p>
    <div class="lg">
     <div class="sm"><p>first and second ending brackets</p></div>
     <div class="sm"><p>no #id<br>
@@ -569,8 +646,8 @@
     <div class="sm"><p>tenuto</p></div>
     <div class="sm"><p>tenu</p></div>
     <div class="sm2"><p>a tenuto can go above or below a note head;
-     these are drawn with the center of the rectangle as 0,0; so x at note
-     y &#177;24 as a suggestion (33 to clear a staff or ledger line)</p></div>
+     these are drawn with the center of the rectangle as 0,0; so x at note,
+     y &#177;24 as a suggestion, (33 to clear a staff or ledger line)</p></div>
    </div>
    <div class="lg">
     <div class="sm"><p>staccato</p></div>
@@ -612,8 +689,8 @@
    <div class="lg">
     <div class="sm"><p>tremulo(s)</p></div>
     <div class="sm"><p>trem8, trem16, trem32</p></div>
-    <div class="sm2"><p>to place on a stem: x&#177;13, y&#177;48: trem8; /
-     y&#177;57: trem16 / y&#177;66: trem32<br>
+    <div class="sm2"><p>to place on a stem: all, x&#177;13 / trem8; y&#177;48 /
+     trem16; y&#177;57 / trem32; y&#177;66<br>
      to place in between notes:<br>
      &#60;use xlink:href="#trem8" transform="translate(,) scale(1,1)"/&#62;<br>
      where 'translate(,)' is x the mid point between notes plus 14, and
@@ -636,7 +713,7 @@
    </div>
    <div class="lg">
     <p style="text-align:center;font:italic 10pt monospace;padding:1em;border:2px outset #995">
-     Copyright &#169; 2017 Dana Steven Gormel</p>
+     Copyright &#169; 2014-2024 Dana Steven Gormel</p>
    </div>
   </div>
  </body>

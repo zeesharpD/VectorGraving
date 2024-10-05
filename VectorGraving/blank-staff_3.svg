@@ -15,8 +15,8 @@
    <rdf:Description rdf:about="http://www.guitarscripts.heliohost.org/GS3_files/Music_Notation_SVG/ReadMeFirst.htm"
     dc:created="2016--"
     dc:creator="Dana Steven Gormel"
-    dc:modified="2016--"
-    dc:rights="&#169; 2016 Dana Steven Gormel"
+    dc:modified="2019--"
+    dc:rights="&#169; 2024 Dana Steven Gormel"
     dc:source="">
    </rdf:Description>
   </rdf:RDF>
@@ -25,7 +25,7 @@
  <defs>
  
   <style type="text/css">
-   /* Note: text class 'repnoS' has 'letter-spacing:4px;'
+   /* Note: text class 'repno' has 'letter-spacing:5px;'
     * some browsers won't recognize this
     * check it's appearance in Sqiggle before converting to PDF
     */
@@ -46,9 +46,6 @@
   <image width="136" height="50" xlink:href="title-DSG.png"/>
   <use xlink:href="#pg1"/>
  </g>
- 
- <rect id="border" x="120" y="300" width="2310" height="2770"
-  stroke="#c33" stroke-width="3" fill="none"/>
  <g id="body" transform="translate(120,840) scale(1)">
   <g><desc>............................. staff 1- </desc>
    <use xlink:href="#staff"/><use xlink:href="#G-clf"/>
@@ -105,10 +102,11 @@
  </g><!-- end of body -->
  
  <text class="sheco" x="123" y="3174">
-  code 000 &#169; 2016 DSG
+  code 000 &#169; 2024 DSG
  </text>
  <use xlink:href="#VG" xml:base="VGsheet.svg"
-  transform="translate(1880,3096) scale(2)"/><!-- x995, last page -->
+  transform="translate(1880,3096) scale(2)"/><!-- set x995 for last page -->
+ <!--
  <polyline stroke="#393" stroke-width="2" fill="none"
   points="1530,3180 2430,3180 2430,2880"/>
  <g id="info" class="auth" transform="translate(1908,2958)">
@@ -117,5 +115,6 @@
   <text y="162">by Dana Steven Gormel</text>
   <text y="216">2000</text>
  </g>
+ -->
  
 </svg>

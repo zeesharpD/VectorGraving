@@ -181,5 +181,14 @@
  </text>
  <use xlink:href="#VG" xml:base="VGsheet.svg"
   transform="translate(1880,3100) scale(2)"/><!-- x995, last page -->
+ <!--
+ <polyline stroke="#393" stroke-width="2" fill="none"
+  points="1530,3180 2430,3180 2430,2880"/>
+ <g id="info" class="auth" transform="translate(1908,3012)">
+  <text y="54">Transcribed from (?)</text>
+  <text y="108">by Your're Name Here</text>
+  <text y="162">2016</text>
+ </g>
+ -->
  
 </svg>

@@ -118,16 +118,18 @@
  
  <text class="sheco" x="123" y="3174">
   code 000 &#169; 2016 DSG
- </text><!-- 
+ </text>
  <use xlink:href="#VG" xml:base="VGsheet.svg"
-  transform="translate((x995, last)1880,3100) scale(2)"/> -->
+  transform="translate(1880,3096) scale(2)"/><!-- set x995 for last page -->
+ <!--
  <polyline stroke="#393" stroke-width="2" fill="none"
   points="1530,3180 2430,3180 2430,2880"/>
  <g id="info" class="auth" transform="translate(1908,2958)">
-  <text y="54">Transcribed from</text>
+  <text y="54">Transcribed from (?)</text>
   <text y="108">for guitar</text>
   <text y="162">by Dana Steven Gormel</text>
   <text y="216">2000</text>
  </g>
+ -->
  
 </svg>

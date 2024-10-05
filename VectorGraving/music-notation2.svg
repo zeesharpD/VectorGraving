@@ -16,8 +16,8 @@
    <rdf:Description rdf:about="http://www.guitarscripts.heliohost.org/GS3_files/Music_Notation_SVG/ReadMeFirst.htm"
     dc:created="2014-07-07"
     dc:creator="Dana Steven Gormel"
-    dc:modified="2022-02-28"
-    dc:rights="&#169; 2014 Dana Steven Gormel">
+    dc:modified="2024-09-29"
+    dc:rights="&#169; 2024 Dana Steven Gormel">
    </rdf:Description>
   </rdf:RDF>
  </metadata>
@@ -127,7 +127,7 @@
   <desc> extra short ledger lines </desc>
    <use id="xsldg" xlink:href="#ldg" transform="scale(.75,1)"/>
   <desc> for grace notes, et.al. </desc>
-   <use id="gldg" xlink:href="#ldg" transform="scale(.5,1)"/>
+   <use id="gldg" xlink:href="#ldg" transform="translate(-36,0) scale(.5,1)"/>
   <desc> extentions for ledger lines (on the right side) </desc>
    <line id="ldgx" x1="24" y1="0" x2="54" y2="0" stroke="#000" stroke-width="3"
     shape-rendering="crispEdges"/>
@@ -276,8 +276,6 @@
    <g id="a2-4" transform="translate(63,0)">
     <use x="1" y="1.25" xlink:href="#a2"/><use y="48" xlink:href="#a4"/>
    </g>
-   <!-- x78 is default for a key of C or A_m; add: 27 for each accidental;
-    subtract: 75 following a bar -->
   <desc> 3/2 time </desc>
    <g id="a3-2" transform="translate(63,0)">
     <use x="4" y="1" xlink:href="#a3"/><use y="50" xlink:href="#a2"/>
@@ -657,6 +655,27 @@
    <g id="eitnu.6">
     <use xlink:href="#solnu.6"/><use x="15" y="-153" xlink:href="#flagu"/>
    </g>
+  <desc> eighth note stem up, 7 half steps long </desc>
+   <g id="eitnu.7">
+    <use xlink:href="#solnu.7"/><use x="15" y="-165" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem up, 8 half steps long </desc>
+   <g id="eitnu.8">
+    <use xlink:href="#solnu.8"/><use x="15" y="-177" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem up, 9 half steps long </desc>
+   <g id="eitnu.9">
+    <use xlink:href="#solnu.9"/><use x="15" y="-189" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem up, 1 half step short </desc>
+   <g id="eitnu-1">
+    <use xlink:href="#solnu-1"/><use x="15" y="-69" xlink:href="#flagu"/>
+   </g>
+  <desc> eighth note stem up, 1 whole step short </desc>
+   <g id="eitnu-2">
+    <use xlink:href="#solnu-2"/>
+    <use xlink:href="#flagu" transform="translate(14.5,-57) skewX(-5)"/>
+   </g><!-- skewX -5 to bring the flag in -->
   <desc> eighth note stem down </desc>
    <g id="eitnd">
     <use xlink:href="#solnd"/><use xlink:href="#flagd"/>
@@ -819,7 +838,8 @@
     <use y="1" xlink:href="#stem.4" transform="rotate(180) scale(1,1.13)"/>
    </g>
   <desc> grace notes
-   (there is a custom grace-c in SrbWis-1.svg) </desc>
+   (there is a custom grace-c in SrbWis-1.svg
+    and a double grace in sondmin-1.svg) </desc>
    <g id="grace_" transform="translate(-36,12)"><!-- lower to upper -->
     <use xlink:href="#eitnu" transform="scale(.6)"/>
     <line x1="-3" y1="-15" x2="24" y2="-42" stroke="#000" stroke-width="2"/>
@@ -872,6 +892,10 @@
     <use xlink:href="#be3" transform="translate(14,-120.5) skewY(-11) scale(.48,1)"/>
     <use x="48" y="-21" xlink:href="#solnu.2"/>
    </g>
+  <desc> whole note harmonic </desc>
+   <path id="whlhr" stroke="#000" stroke-width="3" fill="none"
+    d="M-18,3 Q-12,-6 -9,-15 Q4.5,-7 18,-3 Q12,6 9,15 Q-4.5,7 -18,3 z
+    M-9,-12.5 Q4.5,-4 18,-1.5 M9,12.5 Q-4.5,4 -18,1.5"/>
   <desc> hollow harmonic head </desc>
    <path id="hohar" stroke="#000" stroke-width="3" fill="none"
     d="M-14,0 Q-6,-6 0,-14 Q6,-6 14,0 Q6,6 0,14 Q-6,6 -14,0 z
@@ -1084,9 +1108,6 @@
      Q5,25.5 9.5,23.75 L10.5,20 z"
     />
    </g>
-
-  <desc> LEFT-OFF HERE; 1 </desc>
-
   <desc> fingering numbers </desc>
    <circle id="fnrng" r="15"
     stroke="#036" stroke-width="3" fill="none"/><!-- fnrng +42,+36Ln or 24Sp -->
@@ -1177,18 +1198,20 @@
    <path id="exlnd" d="M18,0 H30 V18"
     stroke="#665" stroke-width="3" fill="none"/>
     <!-- extension line end / put inside of dashed line 'g' -->
-   <g transform="translate(,)"><desc> dashed line; at note coords </desc>
+  <desc> dashed line with end marker; copy this group, put at note coords </desc>
+   <g transform="translate(,)">
     <line x1="42" y1="-150" x2="" y2="-150"
      stroke="#665" stroke-dasharray="12,18" stroke-width="3"/>
     <use x="" y="-150" xlink:href="#exlnd"/><!-- x = x2 of dashed line -->
    </g><!-- must copy this group - not use 'use' -->
-  <desc> numbers for Rom. num. </desc><!--  -->
+  <desc> numbers for Roman numerals </desc><!--  -->
    <text class="barno" id="n1" y="-168">1</text>
    <text class="barno" id="n2" y="-168">2</text>
    <text class="barno" id="n3" y="-168">3</text>
    <text class="barno" id="n4" y="-168">4</text>
    <text class="barno" id="n5" y="-168">5</text>
    <text class="barno" id="n6" y="-168">6</text>
+  <desc> numbers for partial bars </desc>
    <g id="n24">
     <use xlink:href="#n2"/><use y="24" xlink:href="#n4"/>
    </g>
@@ -1201,7 +1224,7 @@
   
   <desc> a 'line' in a 'g' is used directly without a 'use' in order
     to lengthen or shorten it without stretching the ends </desc>
-   <desc> pinky bar; end only </desc>
+  <desc> pinky bar; end only </desc>
    <line id="pbnd" x1="0" y1="0" x2="0" y2="9"
     stroke="#665" stroke-width="3" stroke-linecap="square"/>
   <desc> pinky bar with ends </desc>
@@ -1403,7 +1426,7 @@
    </g>
    <!-- from lower -->
    <use id="mord" xlink:href="#moru" transform="matrix(1,0,0,-1,0,-228)"/>
-  <desc> page numbers and circle; ellipse </desc>
+  <desc> page numbers and circle, and ellipse for 2 digits </desc>
    <circle id="pageO" cx="0" cy="0" r="19.5"
     stroke="#665" stroke-width="3" fill="none"/>
    <ellipse id="pageElp" rx="25.5" ry="19.5"
@@ -1549,11 +1572,31 @@
 
  </defs>
  
- <g transform="translate(240,120) scale(1)">
+ <g transform="translate(210,210) scale(1)">
+  <foreignObject x="-60" y="0" width="1296" height="60"
+   requiredExtensions="http://www.w3.org/1999/xhtml">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+    <base href="music-notation2.svg" /><!---->
+   </head>
+  
+   <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+    <a property="dct:title" rel="cc:attributionURL" href="https://github.com/zeesharpD/VectorGraving.git">
+     VectorGraving</a>
+    by <span property="cc:attributionName">Dana Steven Gormel</span> is licensed under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license  noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0
+     <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""/>
+     <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""/>
+     <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""/>
+     <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""/>
+     </a>
+    </p>
+   </html>
+  </foreignObject>
   <image x="171" y="120" width="202" height="130" xlink:href="VectorGraving2.png"/>
   <text x="272" y="270"
    style="font:normal 16px serif;fill:#333" text-anchor="middle">
-   Copyright &#169; 2014-2022 Dana Steven Gormel - dastgo9@gmail.com
+   Copyright &#169; 2014-2024 Dana Steven Gormel - dastgo9@gmail.com
   </text>
  </g>
 
